@@ -1,26 +1,19 @@
 package org.example.components;
 
-import org.example.editor.GameViewWindow;
 import org.example.jade.*;
 import org.example.observers.EventSystem;
 import org.example.observers.events.Event;
 import org.example.observers.events.EventType;
 import org.example.physics2d.Physics2D;
-import org.example.physics2d.RaycastInfo;
-import org.example.physics2d.components.OvalCollider;
 import org.example.physics2d.components.PillboxCollider;
 import org.example.physics2d.components.Rigidbody2D;
 import org.example.physics2d.enums.BodyType;
-import org.example.renderer.DebugDraw;
 import org.example.scenes.LevelEditorSceneInitializer;
 import org.example.scenes.LevelSceneInitializer;
 import org.example.utils.AssetPool;
 import org.jbox2d.dynamics.contacts.Contact;
 import org.joml.Vector2f;
-import org.joml.Vector3f;
 import org.joml.Vector4f;
-
-import java.util.Objects;
 
 import static org.lwjgl.glfw.GLFW.*;
 
@@ -93,7 +86,7 @@ public class PlayerController extends Component {
                 dyingTime -= dt;
             } else {
                 this.rb.setBodyType(BodyType.Kinematic);
-                Window.changeScene(new LevelSceneInitializer());
+                Window.changeScene(new LevelSceneInitializer(), false);
             }
             return;
         }
@@ -121,7 +114,7 @@ public class PlayerController extends Component {
                 walkTime -= dt;
 
                 if (timeToCastle <= 0) {
-                    Window.changeScene(new LevelEditorSceneInitializer());
+                    Window.changeScene(new LevelEditorSceneInitializer(), false);
                     EventSystem.notify(null, new Event(EventType.GameEngineStopPlay));
                 }
             }

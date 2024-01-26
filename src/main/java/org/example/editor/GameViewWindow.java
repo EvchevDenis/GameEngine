@@ -11,6 +11,8 @@ import org.example.observers.events.EventType;
 import org.example.utils.AssetPool;
 import org.joml.Vector2f;
 
+import java.util.Objects;
+
 
 public class GameViewWindow {
 
@@ -21,19 +23,23 @@ public class GameViewWindow {
         ImGui.begin("Game Viewport", ImGuiWindowFlags.NoScrollbar | ImGuiWindowFlags.NoScrollWithMouse
                 | ImGuiWindowFlags.MenuBar | ImGuiWindowFlags.NoResize);
 
+        MenuBar.imgui();
+
         ImGui.beginMenuBar();
+        if (ImGui.menuItem("|", "")) {
+
+        }
         if (ImGui.menuItem("Play", "", isPlaying, !isPlaying)) {
             isPlaying = true;
-            //AssetPool.getSound("assets/sounds/sus_musica.ogg").play();
+            //Objects.requireNonNull(AssetPool.getSound("assets/sounds/sus_musica.ogg")).play();
             EventSystem.notify(null, new Event(EventType.GameEngineStartPlay));
         }
         if (ImGui.menuItem("Stop", "", !isPlaying, isPlaying)) {
             isPlaying = false;
-            //AssetPool.getSound("assets/sounds/sus_musica.ogg").stop();
+            //Objects.requireNonNull(AssetPool.getSound("assets/sounds/sus_musica.ogg")).stop();
             EventSystem.notify(null, new Event(EventType.GameEngineStopPlay));
         }
         ImGui.endMenuBar();
-
 
         ImGui.setCursorPos(ImGui.getCursorPosX(), ImGui.getCursorPosY());
         ImVec2 windowSize = getLargestSizeForViewport();

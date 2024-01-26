@@ -59,14 +59,18 @@ public class Window implements Observer {
         EventSystem.addObserver(this);
     }
 
-    public static void changeScene(SceneInitializer sceneInitializer) {
+    public static void changeScene(SceneInitializer sceneInitializer, boolean loadFromFile) {
         if (currentScene != null) {
             currentScene.destroy();
         }
 
         getImguiLayer().getPropertiesWindow().setActiveGameObject(null);
         currentScene = new Scene(sceneInitializer);
-        currentScene.load();
+        if(!loadFromFile) {
+            currentScene.load();
+        } else {
+            currentScene.loadFrom();
+        }
         currentScene.init();
         currentScene.start();
     }
@@ -175,7 +179,7 @@ public class Window implements Observer {
         this.imguiLayer = new ImGuiLayer(glfwWindow, pickingTexture);
         this.imguiLayer.initImGui();
 
-        Window.changeScene(new LevelEditorSceneInitializer());
+        Window.changeScene(new LevelEditorSceneInitializer(), false);
     }
 
     public void loop() {
@@ -271,17 +275,23 @@ public class Window implements Observer {
             case GameEngineStartPlay:
                 this.runtimePlaying = true;
                 currentScene.save();
-                Window.changeScene(new LevelSceneInitializer());
+                Window.changeScene(new LevelSceneInitializer(), false);
                 break;
             case GameEngineStopPlay:
                 this.runtimePlaying = false;
-                Window.changeScene(new LevelEditorSceneInitializer());
+                Window.changeScene(new LevelEditorSceneInitializer(), false);
                 break;
             case LoadLevel:
-                Window.changeScene(new LevelEditorSceneInitializer());
+                Window.changeScene(new LevelEditorSceneInitializer(), false);
+                break;
+            case LoadLevelFrom:
+                Window.changeScene(new LevelEditorSceneInitializer(), true);
                 break;
             case SaveLevel:
                 currentScene.save();
+                break;
+            case SaveLevelAs:
+                currentScene.saveAs();
                 break;
         }
     }

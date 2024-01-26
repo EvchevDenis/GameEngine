@@ -12,15 +12,13 @@ import org.joml.Vector2f;
 import javax.swing.*;
 import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.Properties;
 
 public class Scene {
 
@@ -32,6 +30,7 @@ public class Scene {
     private Physics2D physics2D;
 
     private SceneInitializer sceneInitializer;
+    private String currentLevel;
 
     public Scene(SceneInitializer sceneInitializer) {
         this.sceneInitializer = sceneInitializer;
@@ -181,7 +180,7 @@ public class Scene {
                 .create();
 
         try {
-            FileWriter writer = new FileWriter("level.txt");
+            FileWriter writer = new FileWriter(currentLevel);
             List<GameObject> objsToSerialize = new ArrayList<>();
             for (GameObject obj : this.gameObjects) {
                 if (obj.doSerialization()) {
@@ -195,46 +194,7 @@ public class Scene {
         }
     }
 
-    public void load() {
-        Gson gson = new GsonBuilder()
-                .setPrettyPrinting()
-                .registerTypeAdapter(Component.class, new ComponentDeserializer())
-                .registerTypeAdapter(GameObject.class, new GameObjectDeserializer())
-                .enableComplexMapKeySerialization()
-                .create();
-
-        String inFile = "";
-        try {
-            inFile = new String(Files.readAllBytes(Paths.get("level.txt")));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        if (!inFile.equals("")) {
-            int maxGoId = -1;
-            int maxCompId = -1;
-            GameObject[] objs = gson.fromJson(inFile, GameObject[].class);
-            for (int i=0; i < objs.length; i++) {
-                addGameObjectToScene(objs[i]);
-
-                for (Component c : objs[i].getAllComponents()) {
-                    if (c.getUid() > maxCompId) {
-                        maxCompId = c.getUid();
-                    }
-                }
-                if (objs[i].getUid() > maxGoId) {
-                    maxGoId = objs[i].getUid();
-                }
-            }
-
-            maxGoId++;
-            maxCompId++;
-            GameObject.init(maxGoId);
-            Component.init(maxCompId);
-        }
-    }
-
-    /*public void save() {
+    public void saveAs() {
         Gson gson = new GsonBuilder()
                 .setPrettyPrinting()
                 .registerTypeAdapter(Component.class, new ComponentDeserializer())
@@ -243,7 +203,7 @@ public class Scene {
                 .create();
 
         JFileChooser saveChooser = new JFileChooser();
-        saveChooser.setCurrentDirectory(new java.io.File("."));
+        saveChooser.setCurrentDirectory(new File("."));
         FileFilter filter = new FileNameExtensionFilter("TXT file", "txt");
         saveChooser.setFileFilter(filter);
         saveChooser.addChoosableFileFilter(filter);
@@ -266,53 +226,60 @@ public class Scene {
                 e.printStackTrace();
             }
         }
-    }*/
+    }
 
-   /*public void load() {
+    public void load() {
+        Properties properties = new Properties();
+        String loadPath = null;
+        try (FileInputStream input = new FileInputStream("config.cfg")) {
+            properties.load(input);
+            loadPath = properties.getProperty("PreviousLevel");
+            currentLevel = loadPath;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        loadDataFromFile(loadPath);
+    }
+
+    public void loadFrom() {
+        Properties properties = new Properties();
+
+        String loadPath;
+
+        JFileChooser loadChooser = new JFileChooser();
+        loadChooser.setCurrentDirectory(new File("."));
+        FileFilter filter = new FileNameExtensionFilter("TXT file", "txt");
+        loadChooser.setFileFilter(filter);
+        loadChooser.addChoosableFileFilter(filter);
+        loadChooser.setDialogTitle("Load File");
+        loadChooser.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
+        loadChooser.setAcceptAllFileFilterUsed(false);
+
+        if (loadChooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
+            File file = loadChooser.getSelectedFile();
+            loadPath = file.getAbsolutePath();
+            System.out.println("Path to file : " + loadPath);
+        } else {
+            loadPath = "level.txt";
+        }
+
+        properties.setProperty("PreviousLevel", loadPath);
+
+        try (FileOutputStream output = new FileOutputStream("config.cfg")) {
+            properties.store(output, null);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        loadDataFromFile(loadPath);
+    }
+
+    public void loadDataFromFile(String loadPath) {
         Gson gson = new GsonBuilder()
                 .setPrettyPrinting()
                 .registerTypeAdapter(Component.class, new ComponentDeserializer())
                 .registerTypeAdapter(GameObject.class, new GameObjectDeserializer())
                 .enableComplexMapKeySerialization()
                 .create();
-
-        String loadPath;
-
-        File appConfig = new File("config.cfg");
-        Path appConfigPath = Paths.get("config.cfg");
-
-        if(!appConfig.exists()) {
-            JFileChooser loadChooser = new JFileChooser();
-            loadChooser.setCurrentDirectory(new java.io.File("."));
-            FileFilter filter = new FileNameExtensionFilter("TXT file", "txt");
-            loadChooser.setFileFilter(filter);
-            loadChooser.addChoosableFileFilter(filter);
-            loadChooser.setDialogTitle("Load File");
-            loadChooser.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
-            loadChooser.setAcceptAllFileFilterUsed(false);
-
-            if (loadChooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
-                File file = loadChooser.getSelectedFile();
-                loadPath = file.getAbsolutePath();
-                System.out.println("Path to file : " + loadPath);
-            } else {
-                loadPath = "level.txt";
-            }
-
-            try {
-                FileWriter writer = new FileWriter("config.cfg");
-                writer.write(loadPath);
-                writer.close();
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        } else {
-            try {
-                loadPath = new String(Files.readAllBytes(appConfigPath));
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        }
 
         String inFile = "";
         try {
@@ -343,93 +310,8 @@ public class Scene {
             GameObject.init(maxGoId);
             Component.init(maxCompId);
         }
-    }*/
 
-    /*public void load() {
-        Gson gson = new GsonBuilder()
-                .setPrettyPrinting()
-                .registerTypeAdapter(Component.class, new ComponentDeserializer())
-                .registerTypeAdapter(GameObject.class, new GameObjectDeserializer())
-                .enableComplexMapKeySerialization()
-                .create();
-
-        String loadPath;
-
-        File appConfig = new File("config.cfg");
-        Path appConfigPath = Paths.get("config.cfg");
-
-        boolean useConfigFile = false;
-
-        if (appConfig.exists()) {
-            String[] options = new String[] {"Open Previous", "Import New File"};
-            int option = JOptionPane.showOptionDialog(null, "Open previous level file or import another one?", "Choose option",
-                    JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE,
-                    null, options, options[0]);
-            useConfigFile = option == JOptionPane.YES_OPTION;
-        }
-
-        if (useConfigFile) {
-            try {
-                loadPath = new String(Files.readAllBytes(appConfigPath));
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        } else {
-            JFileChooser loadChooser = new JFileChooser();
-            loadChooser.setCurrentDirectory(new java.io.File("."));
-            FileFilter filter = new FileNameExtensionFilter("TXT file", "txt");
-            loadChooser.setFileFilter(filter);
-            loadChooser.addChoosableFileFilter(filter);
-            loadChooser.setDialogTitle("Load File");
-            loadChooser.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
-            loadChooser.setAcceptAllFileFilterUsed(false);
-
-            if (loadChooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
-                File file = loadChooser.getSelectedFile();
-                loadPath = file.getAbsolutePath();
-                System.out.println("Path to file : " + loadPath);
-
-                try {
-                    FileWriter writer = new FileWriter("config.cfg");
-                    writer.write(loadPath);
-                    writer.close();
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
-            } else {
-                loadPath = "level.txt";
-            }
-        }
-
-        String inFile = "";
-        try {
-            inFile = new String(Files.readAllBytes(Paths.get(loadPath)));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        if (!inFile.equals("")) {
-            int maxGoId = -1;
-            int maxCompId = -1;
-            GameObject[] objs = gson.fromJson(inFile, GameObject[].class);
-            for (int i=0; i < objs.length; i++) {
-                addGameObjectToScene(objs[i]);
-
-                for (Component c : objs[i].getAllComponents()) {
-                    if (c.getUid() > maxCompId) {
-                        maxCompId = c.getUid();
-                    }
-                }
-                if (objs[i].getUid() > maxGoId) {
-                    maxGoId = objs[i].getUid();
-                }
-            }
-
-            maxGoId++;
-            maxCompId++;
-            GameObject.init(maxGoId);
-            Component.init(maxCompId);
-        }
-    }*/
+        currentLevel = loadPath;
+    }
 }
 
