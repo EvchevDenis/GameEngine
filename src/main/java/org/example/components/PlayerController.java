@@ -15,6 +15,8 @@ import org.jbox2d.dynamics.contacts.Contact;
 import org.joml.Vector2f;
 import org.joml.Vector4f;
 
+import java.util.Objects;
+
 import static org.lwjgl.glfw.GLFW.*;
 
 public class PlayerController extends Component {
@@ -230,7 +232,7 @@ public class PlayerController extends Component {
     public void jumpUsage(float dt, int jumpingTime, boolean jumpWithSpace) {
         if (jumpWithSpace ? (KeyListener.isKeyPressed(GLFW_KEY_SPACE) && (jumpTime > 0 || onGround || groundDebounce > 0)) : ((jumpTime > 0 || onGround || groundDebounce > 0))) {
             if ((onGround || groundDebounce > 0) && jumpTime == 0) {
-                AssetPool.getSound("assets/sounds/jump.ogg").play();
+                Objects.requireNonNull(AssetPool.getSound("assets/sounds/jump.ogg")).play();
                 jumpTime = jumpingTime;
                 this.velocity.y = jumpImpulse;
             } else if (jumpTime > 0) {

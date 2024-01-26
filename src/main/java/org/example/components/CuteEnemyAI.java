@@ -17,7 +17,7 @@ public class CuteEnemyAI extends Component {
     private transient float walkSpeed = 0.6f;
     private transient Vector2f velocity = new Vector2f();
     private transient Vector2f acceleration = new Vector2f();
-    private transient Vector2f terminalVelocity = new Vector2f();
+    private transient Vector2f terminalVelocity = new Vector2f(2.1f, 3.1f);
     private transient boolean onGround = false;
     private final transient float enemyWidth = 0.25f;
     private transient boolean isDead = false;
@@ -92,13 +92,13 @@ public class CuteEnemyAI extends Component {
             this.acceleration.y = 0;
             this.velocity.y = 0;
         } else {
-            this.velocity.y *= 0.35f;
             this.acceleration.y = Window.getPhysics().getGravity().y * 0.7f;
         }
 
         this.velocity.y += this.acceleration.y * dt;
         this.velocity.y = Math.max(Math.min(this.velocity.y, this.terminalVelocity.y), -terminalVelocity.y);
         this.rb.setVelocity(velocity);
+        this.rb.setAngularVelocity(0);
     }
 
     private boolean isStuckCooldownActive() {
