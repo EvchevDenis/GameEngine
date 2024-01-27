@@ -260,7 +260,7 @@ public class Scene {
             loadPath = file.getAbsolutePath();
             System.out.println("Path to file : " + loadPath);
         } else {
-            loadPath = "level.txt";
+            loadPath = currentLevel;
         }
 
         properties.setProperty("PreviousLevel", loadPath);

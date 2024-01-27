@@ -11,9 +11,11 @@ import org.example.scenes.LevelSceneInitializer;
 import org.example.scenes.Scene;
 import org.example.scenes.SceneInitializer;
 import org.example.utils.AssetPool;
+import org.example.utils.ImageParser;
 import org.joml.Vector4f;
 import org.lwjgl.Version;
 import org.lwjgl.glfw.GLFWErrorCallback;
+import org.lwjgl.glfw.GLFWImage;
 import org.lwjgl.openal.AL;
 import org.lwjgl.openal.ALC;
 import org.lwjgl.openal.ALCCapabilities;
@@ -52,6 +54,8 @@ public class Window implements Observer {
     private long audioDevice;
 
     private static Scene currentScene;
+
+    private final ImageParser resource_01 = ImageParser.loadImage("assets/icon.png");
 
     private Window() {
         this.width = 1920;
@@ -177,6 +181,11 @@ public class Window implements Observer {
         this.imguiLayer.initImGui();
 
         Window.changeScene(new LevelEditorSceneInitializer(), false);
+        GLFWImage image = GLFWImage.malloc();
+        GLFWImage.Buffer imagebf = GLFWImage.malloc(1);
+        image.set(resource_01.getWidth(), resource_01.getHeight(), resource_01.getImage());
+        imagebf.put(0, image);
+        glfwSetWindowIcon(glfwWindow, imagebf);
     }
 
     public void loop() {
