@@ -55,7 +55,7 @@ public class Window implements Observer {
 
     private static Scene currentScene;
 
-    private final ImageParser resource_01 = ImageParser.loadImage("assets/icon.png");
+    private final ImageParser iconImage = ImageParser.loadImage("assets/icon.png");
 
     private Window() {
         this.width = 1920;
@@ -182,10 +182,10 @@ public class Window implements Observer {
 
         Window.changeScene(new LevelEditorSceneInitializer(), false);
         GLFWImage image = GLFWImage.malloc();
-        GLFWImage.Buffer imagebf = GLFWImage.malloc(1);
-        image.set(resource_01.getWidth(), resource_01.getHeight(), resource_01.getImage());
-        imagebf.put(0, image);
-        glfwSetWindowIcon(glfwWindow, imagebf);
+        GLFWImage.Buffer imageBuffer = GLFWImage.malloc(1);
+        image.set(iconImage.getWidth(), iconImage.getHeight(), iconImage.getImage());
+        imageBuffer.put(0, image);
+        glfwSetWindowIcon(glfwWindow, imageBuffer);
     }
 
     public void loop() {

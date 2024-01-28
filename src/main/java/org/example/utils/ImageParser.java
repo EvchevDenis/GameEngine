@@ -23,9 +23,9 @@ public class ImageParser {
     private ByteBuffer image;
     private int width, height;
 
-    ImageParser(int width, int heigh, ByteBuffer image) {
+    ImageParser(int width, int height, ByteBuffer image) {
         this.image = image;
-        this.height = heigh;
+        this.height = height;
         this.width = width;
     }
     public static ImageParser loadImage(String path) {
@@ -38,10 +38,12 @@ public class ImageParser {
 
             image = stbi_load(path, w, h, comp, 4);
             if (image == null) {
-                // throw new resource_error("Could not load image resources.");
+                throw new Exception("Can not find image");
             }
             width = w.get();
             height = h.get();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
         return new ImageParser(width, height, image);
     }

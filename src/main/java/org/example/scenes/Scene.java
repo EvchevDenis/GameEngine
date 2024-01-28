@@ -202,7 +202,7 @@ public class Scene {
                 .enableComplexMapKeySerialization()
                 .create();
 
-        JFileChooser saveChooser = new JFileChooser();
+        JFileChooser saveChooser = windowsJFileChooser(new JFileChooser());
         saveChooser.setCurrentDirectory(new File("."));
         FileFilter filter = new FileNameExtensionFilter("TXT file", "txt");
         saveChooser.setFileFilter(filter);
@@ -213,7 +213,7 @@ public class Scene {
 
         if (saveChooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
             try {
-                FileWriter writer = new FileWriter(saveChooser.getSelectedFile()+".txt");
+                FileWriter writer = new FileWriter(saveChooser.getSelectedFile());
                 List<GameObject> objsToSerialize = new ArrayList<>();
                 for (GameObject obj : this.gameObjects) {
                     if (obj.doSerialization()) {
@@ -243,10 +243,9 @@ public class Scene {
 
     public void loadFrom() {
         Properties properties = new Properties();
-
-        String loadPath;
-
-        JFileChooser loadChooser = new JFileChooser();
+        String loadPath = null;
+        boolean fileChooserClosed = false;
+        JFileChooser loadChooser = windowsJFileChooser(new JFileChooser());
         loadChooser.setCurrentDirectory(new File("."));
         FileFilter filter = new FileNameExtensionFilter("TXT file", "txt");
         loadChooser.setFileFilter(filter);
@@ -260,16 +259,24 @@ public class Scene {
             loadPath = file.getAbsolutePath();
             System.out.println("Path to file : " + loadPath);
         } else {
-            loadPath = currentLevel;
+            try (FileInputStream input = new FileInputStream("config.cfg")) {
+                properties.load(input);
+                loadPath = properties.getProperty("PreviousLevel");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            fileChooserClosed = true;
         }
 
-        properties.setProperty("PreviousLevel", loadPath);
-
-        try (FileOutputStream output = new FileOutputStream("config.cfg")) {
-            properties.store(output, null);
-        } catch (IOException e) {
-            e.printStackTrace();
+        if(!fileChooserClosed) {
+            properties.setProperty("PreviousLevel", loadPath);
+            try (FileOutputStream output = new FileOutputStream("config.cfg")) {
+                properties.store(output, null);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
+
         loadDataFromFile(loadPath);
     }
 
@@ -288,7 +295,7 @@ public class Scene {
             e.printStackTrace();
         }
 
-        if (!inFile.equals("")) {
+        if (!inFile.isEmpty()) {
             int maxGoId = -1;
             int maxCompId = -1;
             GameObject[] objs = gson.fromJson(inFile, GameObject[].class);
@@ -312,6 +319,18 @@ public class Scene {
         }
 
         currentLevel = loadPath;
+    }
+
+    public static JFileChooser windowsJFileChooser(JFileChooser chooser){
+        LookAndFeel previousLF = UIManager.getLookAndFeel();
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+            chooser = new JFileChooser();
+            UIManager.setLookAndFeel(previousLF);
+        } catch (IllegalAccessException | UnsupportedLookAndFeelException | InstantiationException | ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+        return chooser;
     }
 }
 
