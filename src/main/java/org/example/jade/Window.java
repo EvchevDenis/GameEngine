@@ -39,7 +39,7 @@ import static org.lwjgl.opengl.GL11.*;
 import static org.lwjgl.opengl.GL14.glBlendFuncSeparate;
 import static org.lwjgl.system.MemoryUtil.NULL;
 
-public class Window implements Observer {
+public class Window implements Observer{
     private int width, height;
     private String title;
     private long glfwWindow;
@@ -247,11 +247,11 @@ public class Window implements Observer {
         }
     }
 
-    public static int getWidth() {
+    public static int getWindowWidth() {
         return 1920;
     }
 
-    public static int getHeight() {
+    public static int getWindowHeight() {
         return 1080;
     }
 

@@ -182,7 +182,7 @@ public class ImGuiLayer {
 
     private void endFrame() {
         glBindFramebuffer(GL_FRAMEBUFFER, 0);
-        glViewport(0, 0, Window.getWidth(), Window.getHeight());
+        glViewport(0, 0, Window.getWindowWidth(), Window.getWindowHeight());
         glClearColor(0, 0, 0, 1);
         glClear(GL_COLOR_BUFFER_BIT);
 
@@ -211,7 +211,7 @@ public class ImGuiLayer {
         ImGui.setNextWindowSize(mainViewport.getWorkSizeX(), mainViewport.getWorkSizeY());
         ImGui.setNextWindowViewport(mainViewport.getID());
         ImGui.setNextWindowPos(0.0f, 0.0f);
-        ImGui.setNextWindowSize(Window.getWidth(), Window.getHeight());
+        ImGui.setNextWindowSize(Window.getWindowWidth(), Window.getWindowHeight());
         ImGui.pushStyleVar(ImGuiStyleVar.WindowRounding, 0.0f);
         ImGui.pushStyleVar(ImGuiStyleVar.WindowBorderSize, 0.0f);
         windowFlags |= ImGuiWindowFlags.NoTitleBar | ImGuiWindowFlags.NoCollapse |

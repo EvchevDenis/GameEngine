@@ -150,8 +150,8 @@ public class MouseListener {
 
     public static Vector2f screenToWorld(Vector2f screenCoords) {
         Vector2f normalizedScreenCords = new Vector2f(
-                screenCoords.x / Window.getWidth(),
-                screenCoords.y / Window.getHeight()
+                screenCoords.x / Window.getWindowWidth(),
+                screenCoords.y / Window.getWindowHeight()
         );
         normalizedScreenCords.mul(2.0f).sub(new Vector2f(1.0f, 1.0f));
         Camera camera = Window.getScene().camera();
@@ -171,7 +171,7 @@ public class MouseListener {
         ndcSpacePos.mul(projection.mul(view));
         Vector2f windowSpace = new Vector2f(ndcSpacePos.x, ndcSpacePos.y).mul(1.0f / ndcSpacePos.w);
         windowSpace.add(new Vector2f(1.0f, 1.0f)).mul(0.5f);
-        windowSpace.mul(new Vector2f(Window.getWidth(), Window.getHeight()));
+        windowSpace.mul(new Vector2f(Window.getWindowWidth(), Window.getWindowHeight()));
 
         return windowSpace;
     }

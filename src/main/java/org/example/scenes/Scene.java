@@ -5,6 +5,7 @@ import com.google.gson.GsonBuilder;
 import org.example.components.Component;
 import org.example.components.ComponentDeserializer;
 import org.example.jade.*;
+import org.example.jade.Window;
 import org.example.physics2d.Physics2D;
 import org.example.renderer.Renderer;
 import org.joml.Vector2f;
@@ -12,6 +13,7 @@ import org.joml.Vector2f;
 import javax.swing.*;
 import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
+import java.awt.*;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -202,7 +204,7 @@ public class Scene {
                 .enableComplexMapKeySerialization()
                 .create();
 
-        JFileChooser saveChooser = windowsJFileChooser(new JFileChooser());
+        JFileChooser saveChooser = windowsJFileChooser();
         saveChooser.setCurrentDirectory(new File("."));
         FileFilter filter = new FileNameExtensionFilter("TXT file", "txt");
         saveChooser.setFileFilter(filter);
@@ -210,6 +212,7 @@ public class Scene {
         saveChooser.setDialogTitle("Save File");
         saveChooser.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
         saveChooser.setAcceptAllFileFilterUsed(false);
+        disableToolTips(saveChooser);
 
         if (saveChooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
             try {
@@ -243,9 +246,11 @@ public class Scene {
 
     public void loadFrom() {
         Properties properties = new Properties();
+
         String loadPath = null;
         boolean fileChooserClosed = false;
-        JFileChooser loadChooser = windowsJFileChooser(new JFileChooser());
+
+        JFileChooser loadChooser = windowsJFileChooser();
         loadChooser.setCurrentDirectory(new File("."));
         FileFilter filter = new FileNameExtensionFilter("TXT file", "txt");
         loadChooser.setFileFilter(filter);
@@ -253,6 +258,7 @@ public class Scene {
         loadChooser.setDialogTitle("Load File");
         loadChooser.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
         loadChooser.setAcceptAllFileFilterUsed(false);
+        disableToolTips(loadChooser);
 
         if (loadChooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
             File file = loadChooser.getSelectedFile();
@@ -321,8 +327,9 @@ public class Scene {
         currentLevel = loadPath;
     }
 
-    public static JFileChooser windowsJFileChooser(JFileChooser chooser){
+    public static JFileChooser windowsJFileChooser(){
         LookAndFeel previousLF = UIManager.getLookAndFeel();
+        JFileChooser chooser;
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
             chooser = new JFileChooser();
@@ -331,6 +338,17 @@ public class Scene {
             throw new RuntimeException(e);
         }
         return chooser;
+    }
+
+    private static void disableToolTips(Container container) {
+        for (java.awt.Component component : container.getComponents()) {
+            if (component instanceof JComponent) {
+                ((JComponent) component).setToolTipText(null);
+            }
+            if (component instanceof Container) {
+                disableToolTips((Container) component);
+            }
+        }
     }
 }
 
