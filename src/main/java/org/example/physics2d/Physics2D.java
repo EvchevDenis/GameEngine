@@ -60,6 +60,7 @@ public class Physics2D {
             Box2DCollider boxCollider;
             PillboxCollider pillboxCollider;
             OvalCollider ovalCollider;
+            GlideBox2DCollider glideBox2DCollider;
 
             if ((circleCollider = go.getComponent(CircleCollider.class)) != null) {
                 addCircleCollider(rb, circleCollider);
@@ -75,6 +76,10 @@ public class Physics2D {
 
             if ((ovalCollider = go.getComponent(OvalCollider.class)) != null) {
                 addOvalCollider(rb, ovalCollider);
+            }
+
+            if ((glideBox2DCollider = go.getComponent(GlideBox2DCollider.class)) != null) {
+                addGlideBoxCollider(rb, glideBox2DCollider);
             }
         }
     }
@@ -169,6 +174,30 @@ public class Physics2D {
 
         addOvalCollider(rb, oc);
         body.resetMassData();
+    }
+
+    public void resetGlideBoxCollider(Rigidbody2D rb, GlideBox2DCollider gbc) {
+        Body body = rb.getRawBody();
+        if (body == null) return;
+
+        int size = fixtureListSize(body);
+        for (int i = 0; i < size; i++) {
+            body.destroyFixture(body.getFixtureList());
+        }
+
+        addGlideBoxCollider(rb, gbc);
+        body.resetMassData();
+    }
+
+    public void addGlideBoxCollider(Rigidbody2D rb, GlideBox2DCollider gbc) {
+        Body body = rb.getRawBody();
+        assert body != null : "Raw body must not be null";
+
+        addCircleCollider(rb, gbc.getLeftUpperCircle());
+        addCircleCollider(rb, gbc.getRightUpperCircle());
+        addCircleCollider(rb, gbc.getLeftBottomCircle());
+        addCircleCollider(rb, gbc.getRightBottomCircle());
+        addBox2DCollider(rb, gbc.getBox2DCollider());
     }
 
     public void addOvalCollider(Rigidbody2D rb, OvalCollider oc) {

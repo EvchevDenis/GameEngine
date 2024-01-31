@@ -1,10 +1,7 @@
 package org.example.jade;
 
 import org.example.components.*;
-import org.example.physics2d.components.Box2DCollider;
-import org.example.physics2d.components.CircleCollider;
-import org.example.physics2d.components.PillboxCollider;
-import org.example.physics2d.components.Rigidbody2D;
+import org.example.physics2d.components.*;
 import org.example.physics2d.enums.BodyType;
 import org.example.utils.AssetPool;
 import org.joml.Vector2f;
@@ -451,9 +448,10 @@ public class Prefabs {
         rb.setContinuousCollision(false);
         crate.addComponent(rb);
 
-        Box2DCollider boxCollider = new Box2DCollider();
-        boxCollider.setHalfSize(new Vector2f(0.25f, 0.25f));
-        crate.addComponent(boxCollider);
+        GlideBox2DCollider glideBox2DCollider = new GlideBox2DCollider();
+        glideBox2DCollider.setCircleRadius(0.02f);
+        glideBox2DCollider.setBoxSize(0.22f, 0.22f);
+        crate.addComponent(glideBox2DCollider);
         crate.addComponent(new Ground());
 
         return crate;

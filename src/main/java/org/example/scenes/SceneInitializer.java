@@ -5,3 +5,4 @@ public abstract class SceneInitializer {
     public abstract void loadResources(Scene scene);
     public abstract void imgui();
 }
+

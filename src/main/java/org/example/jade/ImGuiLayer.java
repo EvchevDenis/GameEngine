@@ -162,7 +162,7 @@ public class ImGuiLayer {
     }
 
     public void update(float dt, Scene currentScene) {
-        startFrame(dt);
+        startFrame();
 
         // Any Dear ImGui code SHOULD go between ImGui.newFrame()/ImGui.render() methods
         setupDockspace();
@@ -175,7 +175,7 @@ public class ImGuiLayer {
         endFrame();
     }
 
-    private void startFrame(final float deltaTime) {
+    private void startFrame() {
         imGuiGlfw.newFrame();
         ImGui.newFrame();
     }
