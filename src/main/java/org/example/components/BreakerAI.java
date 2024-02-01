@@ -17,9 +17,9 @@ public class BreakerAI extends Component {
     private transient float flySpeed = 0.6f;
     private transient Vector2f velocity = new Vector2f();
     private transient Vector2f acceleration = new Vector2f();
-    private transient Vector2f terminalVelocity = new Vector2f();
-    private final transient float enemyWidth = 0.50f;
+    private transient Vector2f terminalVelocity = new Vector2f(0.5f, 0.5f);
     private transient StateMachine stateMachine;
+    private boolean shouldMoveUpDown = false;
 
     @Override
     public void start() {
@@ -32,32 +32,53 @@ public class BreakerAI extends Component {
 
     @Override
     public void update(float dt) {
-        if (Math.abs(player.transform.position.x - this.gameObject.transform.position.x) <= 5.0f) {
-            if (Math.abs(player.transform.position.x - this.gameObject.transform.position.x) <= 0.25f) {
+        float distanceX = player.transform.position.x - this.gameObject.transform.position.x;
+        float distanceY = player.transform.position.y - this.gameObject.transform.position.y;
+
+        if (Math.abs(distanceX) <= 5.0f) {
+            if (Math.abs(distanceX) <= 0.25f) {
                 stopFlying();
             } else {
-                if (player.transform.position.x - this.gameObject.transform.position.x > 0) {
-                    moveRight();
+                if (Math.abs(distanceY) <= 0.1f) {
+                    shouldMoveUpDown = true;
                 } else {
-                    moveLeft();
+                    shouldMoveUpDown = false;
+
+                    if (distanceX > 0) {
+                        moveRight();
+                    } else if (distanceX < 0) {
+                        moveLeft();
+                    }
+
+                    if (distanceY > 0) {
+                        moveUp();
+                    } else if (distanceY < 0) {
+                        moveDown();
+                    }
                 }
             }
         } else {
-            stopFlying();
+            this.gameObject.destroy();
         }
 
+        if (shouldMoveUpDown) {
+            this.acceleration.y = Math.signum(distanceY);
+        } else {
+            this.acceleration.y = 0.0f;
+        }
+
+        this.velocity.x += this.acceleration.x * dt;
         this.velocity.y += this.acceleration.y * dt;
-        this.velocity.y = Math.max(Math.min(this.velocity.y, this.terminalVelocity.y), -terminalVelocity.y);
+        this.velocity.x = Math.max(Math.min(this.velocity.x, this.terminalVelocity.x), -this.terminalVelocity.x);
+        this.velocity.y = Math.max(Math.min(this.velocity.y, this.terminalVelocity.y), -this.terminalVelocity.y);
         this.rb.setVelocity(velocity);
     }
 
     public void stopFlying() {
-        this.gameObject.transform.scale.x = enemyWidth;
         velocity.x = 0;
     }
 
     public void moveRight() {
-        this.gameObject.transform.scale.x = enemyWidth;
         velocity.x = flySpeed;
 
         if (this.velocity.x < 0) {
@@ -68,10 +89,29 @@ public class BreakerAI extends Component {
     }
 
     public void moveLeft() {
-        this.gameObject.transform.scale.x = -enemyWidth;
         velocity.x = -flySpeed;
 
         if (this.velocity.x > 0) {
+            this.stateMachine.trigger("switchDirection");
+        } else {
+            this.stateMachine.trigger("startWalking");
+        }
+    }
+
+    public void moveDown() {
+        velocity.y = -flySpeed;
+
+        if (this.velocity.y > 0) {
+            this.stateMachine.trigger("switchDirection");
+        } else {
+            this.stateMachine.trigger("startWalking");
+        }
+    }
+
+    public void moveUp() {
+        velocity.y = flySpeed;
+
+        if (this.velocity.y > 0) {
             this.stateMachine.trigger("switchDirection");
         } else {
             this.stateMachine.trigger("startWalking");
