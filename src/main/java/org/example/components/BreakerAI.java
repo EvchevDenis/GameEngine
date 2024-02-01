@@ -11,8 +11,8 @@ import org.joml.Vector2f;
 import java.security.SecureRandom;
 
 public class BreakerAI extends Component {
-    private transient boolean goingRight = false;
-    private transient boolean goingUp = false;
+
+    private transient GameObject player;
     private transient Rigidbody2D rb;
     private transient float flySpeed = 0.6f;
     private transient Vector2f velocity = new Vector2f();
@@ -23,6 +23,7 @@ public class BreakerAI extends Component {
 
     @Override
     public void start() {
+        this.player = Window.getScene().getGameObjectWith(PlayerController.class);
         this.stateMachine = gameObject.getComponent(StateMachine.class);
         this.rb = gameObject.getComponent(Rigidbody2D.class);
         this.acceleration.y = Window.getPhysics().getGravity().y;
@@ -31,29 +32,50 @@ public class BreakerAI extends Component {
 
     @Override
     public void update(float dt) {
-        if (goingRight) {
-            this.gameObject.transform.scale.x = enemyWidth;
-            velocity.x = flySpeed;
-
-            if (this.velocity.x < 0) {
-                this.stateMachine.trigger("switchDirection");
+        if (Math.abs(player.transform.position.x - this.gameObject.transform.position.x) <= 5.0f) {
+            if (Math.abs(player.transform.position.x - this.gameObject.transform.position.x) <= 0.25f) {
+                stopFlying();
             } else {
-                this.stateMachine.trigger("startWalking");
+                if (player.transform.position.x - this.gameObject.transform.position.x > 0) {
+                    moveRight();
+                } else {
+                    moveLeft();
+                }
             }
         } else {
-            this.gameObject.transform.scale.x = -enemyWidth;
-            velocity.x = -flySpeed;
-
-            if (this.velocity.x > 0) {
-                this.stateMachine.trigger("switchDirection");
-            } else {
-                this.stateMachine.trigger("startWalking");
-            }
+            stopFlying();
         }
 
         this.velocity.y += this.acceleration.y * dt;
         this.velocity.y = Math.max(Math.min(this.velocity.y, this.terminalVelocity.y), -terminalVelocity.y);
         this.rb.setVelocity(velocity);
+    }
+
+    public void stopFlying() {
+        this.gameObject.transform.scale.x = enemyWidth;
+        velocity.x = 0;
+    }
+
+    public void moveRight() {
+        this.gameObject.transform.scale.x = enemyWidth;
+        velocity.x = flySpeed;
+
+        if (this.velocity.x < 0) {
+            this.stateMachine.trigger("switchDirection");
+        } else {
+            this.stateMachine.trigger("startWalking");
+        }
+    }
+
+    public void moveLeft() {
+        this.gameObject.transform.scale.x = -enemyWidth;
+        velocity.x = -flySpeed;
+
+        if (this.velocity.x > 0) {
+            this.stateMachine.trigger("switchDirection");
+        } else {
+            this.stateMachine.trigger("startWalking");
+        }
     }
 
     @Override
@@ -64,8 +86,6 @@ public class BreakerAI extends Component {
             if (!playerController.isDead() && !playerController.isInvincible()) {
                 playerController.die();
             }
-        } else if (Math.abs(contactNormal.y) < 0.1f) {
-            goingRight = contactNormal.x < 0;
         }
 
         CuteEnemyAI cuteEnemy = obj.getComponent(CuteEnemyAI.class);

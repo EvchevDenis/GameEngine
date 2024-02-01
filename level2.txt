@@ -20452,7 +20452,7 @@
             "y": 0.25
           },
           "rotation": 0.0,
-          "zIndex": 2,
+          "zIndex": -3,
           "uid": 338772
         }
       },
@@ -20475,19 +20475,19 @@
             },
             "texCoords": [
               {
-                "x": 0.5625,
+                "x": 0.4375,
                 "y": 1.0
               },
               {
-                "x": 0.5625,
+                "x": 0.4375,
                 "y": 0.0
               },
               {
-                "x": 0.53125,
+                "x": 0.40625,
                 "y": 0.0
               },
               {
-                "x": 0.53125,
+                "x": 0.40625,
                 "y": 1.0
               }
             ]
@@ -21464,7 +21464,7 @@
                   "frameTime": 0.1
                 }
               ],
-              "time": 0.041669466,
+              "time": 0.07500086,
               "doesLoop": true
             }
           ],
@@ -21536,7 +21536,7 @@
             "y": 0.25
           },
           "rotation": 0.0,
-          "zIndex": 2,
+          "zIndex": -3,
           "uid": 338772
         }
       },
@@ -21559,19 +21559,19 @@
             },
             "texCoords": [
               {
-                "x": 0.5625,
+                "x": 0.4375,
                 "y": 1.0
               },
               {
-                "x": 0.5625,
+                "x": 0.4375,
                 "y": 0.0
               },
               {
-                "x": 0.53125,
+                "x": 0.40625,
                 "y": 0.0
               },
               {
-                "x": 0.53125,
+                "x": 0.40625,
                 "y": 1.0
               }
             ]
@@ -22548,7 +22548,7 @@
                   "frameTime": 0.1
                 }
               ],
-              "time": 0.041669466,
+              "time": 0.07500086,
               "doesLoop": true
             }
           ],
@@ -22620,7 +22620,7 @@
             "y": 0.25
           },
           "rotation": 0.0,
-          "zIndex": 2,
+          "zIndex": -3,
           "uid": 338772
         }
       },
@@ -22643,19 +22643,19 @@
             },
             "texCoords": [
               {
-                "x": 0.5625,
+                "x": 0.4375,
                 "y": 1.0
               },
               {
-                "x": 0.5625,
+                "x": 0.4375,
                 "y": 0.0
               },
               {
-                "x": 0.53125,
+                "x": 0.40625,
                 "y": 0.0
               },
               {
-                "x": 0.53125,
+                "x": 0.40625,
                 "y": 1.0
               }
             ]
@@ -23632,7 +23632,7 @@
                   "frameTime": 0.1
                 }
               ],
-              "time": 0.041669466,
+              "time": 0.07500086,
               "doesLoop": true
             }
           ],
@@ -23704,7 +23704,7 @@
             "y": 0.25
           },
           "rotation": 0.0,
-          "zIndex": 2,
+          "zIndex": -3,
           "uid": 338772
         }
       },
@@ -23727,19 +23727,19 @@
             },
             "texCoords": [
               {
-                "x": 0.5625,
+                "x": 0.4375,
                 "y": 1.0
               },
               {
-                "x": 0.5625,
+                "x": 0.4375,
                 "y": 0.0
               },
               {
-                "x": 0.53125,
+                "x": 0.40625,
                 "y": 0.0
               },
               {
-                "x": 0.53125,
+                "x": 0.40625,
                 "y": 1.0
               }
             ]
@@ -24716,7 +24716,7 @@
                   "frameTime": 0.1
                 }
               ],
-              "time": 0.041669466,
+              "time": 0.07500086,
               "doesLoop": true
             }
           ],
@@ -24788,7 +24788,7 @@
             "y": 0.25
           },
           "rotation": 0.0,
-          "zIndex": 2,
+          "zIndex": -3,
           "uid": 338772
         }
       },
@@ -24811,19 +24811,19 @@
             },
             "texCoords": [
               {
-                "x": 0.5625,
+                "x": 0.4375,
                 "y": 1.0
               },
               {
-                "x": 0.5625,
+                "x": 0.4375,
                 "y": 0.0
               },
               {
-                "x": 0.53125,
+                "x": 0.40625,
                 "y": 0.0
               },
               {
-                "x": 0.53125,
+                "x": 0.40625,
                 "y": 1.0
               }
             ]
@@ -25800,7 +25800,7 @@
                   "frameTime": 0.1
                 }
               ],
-              "time": 0.041669466,
+              "time": 0.07500086,
               "doesLoop": true
             }
           ],
@@ -25872,7 +25872,7 @@
             "y": 0.25
           },
           "rotation": 0.0,
-          "zIndex": 8,
+          "zIndex": 0,
           "uid": 338772
         }
       },
@@ -25895,19 +25895,19 @@
             },
             "texCoords": [
               {
-                "x": 0.5625,
+                "x": 0.4375,
                 "y": 1.0
               },
               {
-                "x": 0.5625,
+                "x": 0.4375,
                 "y": 0.0
               },
               {
-                "x": 0.53125,
+                "x": 0.40625,
                 "y": 0.0
               },
               {
-                "x": 0.53125,
+                "x": 0.40625,
                 "y": 1.0
               }
             ]
@@ -26884,7 +26884,7 @@
                   "frameTime": 0.1
                 }
               ],
-              "time": 0.041669466,
+              "time": 0.07500086,
               "doesLoop": true
             }
           ],
@@ -28584,19 +28584,19 @@
             },
             "texCoords": [
               {
-                "x": 0.25,
+                "x": 0.75,
                 "y": 1.0
               },
               {
-                "x": 0.25,
+                "x": 0.75,
                 "y": 0.6666667
               },
               {
-                "x": 0.125,
+                "x": 0.625,
                 "y": 0.6666667
               },
               {
-                "x": 0.125,
+                "x": 0.625,
                 "y": 1.0
               }
             ]
@@ -28853,7 +28853,7 @@
                   "frameTime": 0.1
                 }
               ],
-              "time": 0.041669466,
+              "time": 0.07500086,
               "doesLoop": true
             }
           ],
@@ -29278,19 +29278,19 @@
             },
             "texCoords": [
               {
-                "x": 1.0,
+                "x": 0.125,
                 "y": 1.0
               },
               {
-                "x": 1.0,
+                "x": 0.125,
                 "y": 0.0
               },
               {
-                "x": 0.875,
+                "x": 0.0,
                 "y": 0.0
               },
               {
-                "x": 0.875,
+                "x": 0.0,
                 "y": 1.0
               }
             ]
@@ -29547,7 +29547,7 @@
                   "frameTime": 0.03
                 }
               ],
-              "time": 0.03,
+              "time": 0.0050008576,
               "doesLoop": true
             }
           ],
@@ -29989,7 +29989,7 @@
                   "frameTime": 0.23
                 }
               ],
-              "time": 0.09667443,
+              "time": 0.10500406,
               "doesLoop": true
             },
             {
@@ -30376,7 +30376,7 @@
                   "frameTime": 0.23
                 }
               ],
-              "time": 0.09667443,
+              "time": 0.10500406,
               "doesLoop": true
             },
             {
@@ -30763,7 +30763,7 @@
                   "frameTime": 0.23
                 }
               ],
-              "time": 0.09667443,
+              "time": 0.10500406,
               "doesLoop": true
             },
             {
@@ -31117,19 +31117,19 @@
             },
             "texCoords": [
               {
-                "x": 0.75,
+                "x": 1.0,
                 "y": 1.0
               },
               {
-                "x": 0.75,
+                "x": 1.0,
                 "y": 0.0
               },
               {
-                "x": 0.625,
+                "x": 0.875,
                 "y": 0.0
               },
               {
-                "x": 0.625,
+                "x": 0.875,
                 "y": 1.0
               }
             ]
@@ -31386,7 +31386,7 @@
                   "frameTime": 0.01
                 }
               ],
-              "time": 0.001668701,
+              "time": 0.001667032,
               "doesLoop": true
             }
           ],
@@ -31481,19 +31481,19 @@
             },
             "texCoords": [
               {
-                "x": 0.75,
+                "x": 1.0,
                 "y": 1.0
               },
               {
-                "x": 0.75,
+                "x": 1.0,
                 "y": 0.0
               },
               {
-                "x": 0.625,
+                "x": 0.875,
                 "y": 0.0
               },
               {
-                "x": 0.625,
+                "x": 0.875,
                 "y": 1.0
               }
             ]
@@ -31750,7 +31750,7 @@
                   "frameTime": 0.01
                 }
               ],
-              "time": 0.001668701,
+              "time": 0.001667032,
               "doesLoop": true
             }
           ],
@@ -31845,19 +31845,19 @@
             },
             "texCoords": [
               {
-                "x": 0.75,
+                "x": 1.0,
                 "y": 1.0
               },
               {
-                "x": 0.75,
+                "x": 1.0,
                 "y": 0.0
               },
               {
-                "x": 0.625,
+                "x": 0.875,
                 "y": 0.0
               },
               {
-                "x": 0.625,
+                "x": 0.875,
                 "y": 1.0
               }
             ]
@@ -32114,7 +32114,7 @@
                   "frameTime": 0.01
                 }
               ],
-              "time": 0.001668701,
+              "time": 0.001667032,
               "doesLoop": true
             }
           ],
@@ -32209,19 +32209,19 @@
             },
             "texCoords": [
               {
-                "x": 0.125,
+                "x": 0.25,
                 "y": 1.0
               },
               {
+                "x": 0.25,
+                "y": 0.8888889
+              },
+              {
                 "x": 0.125,
                 "y": 0.8888889
               },
               {
-                "x": 0.0,
-                "y": 0.8888889
-              },
-              {
-                "x": 0.0,
+                "x": 0.125,
                 "y": 1.0
               }
             ]
@@ -33036,7 +33036,7 @@
                   "frameTime": 0.4
                 }
               ],
-              "time": 0.20834199,
+              "time": 0.033348948,
               "doesLoop": true
             },
             {
@@ -35378,370 +35378,6 @@
         "type": "org.example.jade.Transform",
         "properties": {
           "position": {
-            "x": 4.375,
-            "y": 1.375
-          },
-          "scale": {
-            "x": 0.5,
-            "y": 0.25
-          },
-          "rotation": 0.0,
-          "zIndex": 0,
-          "uid": 1379376
-        }
-      },
-      {
-        "type": "org.example.components.SpriteRenderer",
-        "properties": {
-          "color": {
-            "x": 1.0,
-            "y": 1.0,
-            "z": 1.0,
-            "w": 1.0
-          },
-          "sprite": {
-            "width": 32.0,
-            "height": 16.0,
-            "texture": {
-              "filepath": "assets/images/platform.png",
-              "width": 256,
-              "height": 16
-            },
-            "texCoords": [
-              {
-                "x": 0.75,
-                "y": 1.0
-              },
-              {
-                "x": 0.75,
-                "y": 0.0
-              },
-              {
-                "x": 0.625,
-                "y": 0.0
-              },
-              {
-                "x": 0.625,
-                "y": 1.0
-              }
-            ]
-          },
-          "uid": 1379377
-        }
-      },
-      {
-        "type": "org.example.components.StateMachine",
-        "properties": {
-          "stateTransfers": {},
-          "states": [
-            {
-              "title": "Spinning",
-              "animationFrames": [
-                {
-                  "sprite": {
-                    "width": 32.0,
-                    "height": 16.0,
-                    "texture": {
-                      "filepath": "assets/images/platform.png",
-                      "width": 256,
-                      "height": 16
-                    },
-                    "texCoords": [
-                      {
-                        "x": 0.125,
-                        "y": 1.0
-                      },
-                      {
-                        "x": 0.125,
-                        "y": 0.0
-                      },
-                      {
-                        "x": 0.0,
-                        "y": 0.0
-                      },
-                      {
-                        "x": 0.0,
-                        "y": 1.0
-                      }
-                    ]
-                  },
-                  "frameTime": 0.01
-                },
-                {
-                  "sprite": {
-                    "width": 32.0,
-                    "height": 16.0,
-                    "texture": {
-                      "filepath": "assets/images/platform.png",
-                      "width": 256,
-                      "height": 16
-                    },
-                    "texCoords": [
-                      {
-                        "x": 0.25,
-                        "y": 1.0
-                      },
-                      {
-                        "x": 0.25,
-                        "y": 0.0
-                      },
-                      {
-                        "x": 0.125,
-                        "y": 0.0
-                      },
-                      {
-                        "x": 0.125,
-                        "y": 1.0
-                      }
-                    ]
-                  },
-                  "frameTime": 0.01
-                },
-                {
-                  "sprite": {
-                    "width": 32.0,
-                    "height": 16.0,
-                    "texture": {
-                      "filepath": "assets/images/platform.png",
-                      "width": 256,
-                      "height": 16
-                    },
-                    "texCoords": [
-                      {
-                        "x": 0.375,
-                        "y": 1.0
-                      },
-                      {
-                        "x": 0.375,
-                        "y": 0.0
-                      },
-                      {
-                        "x": 0.25,
-                        "y": 0.0
-                      },
-                      {
-                        "x": 0.25,
-                        "y": 1.0
-                      }
-                    ]
-                  },
-                  "frameTime": 0.01
-                },
-                {
-                  "sprite": {
-                    "width": 32.0,
-                    "height": 16.0,
-                    "texture": {
-                      "filepath": "assets/images/platform.png",
-                      "width": 256,
-                      "height": 16
-                    },
-                    "texCoords": [
-                      {
-                        "x": 0.5,
-                        "y": 1.0
-                      },
-                      {
-                        "x": 0.5,
-                        "y": 0.0
-                      },
-                      {
-                        "x": 0.375,
-                        "y": 0.0
-                      },
-                      {
-                        "x": 0.375,
-                        "y": 1.0
-                      }
-                    ]
-                  },
-                  "frameTime": 0.01
-                },
-                {
-                  "sprite": {
-                    "width": 32.0,
-                    "height": 16.0,
-                    "texture": {
-                      "filepath": "assets/images/platform.png",
-                      "width": 256,
-                      "height": 16
-                    },
-                    "texCoords": [
-                      {
-                        "x": 0.625,
-                        "y": 1.0
-                      },
-                      {
-                        "x": 0.625,
-                        "y": 0.0
-                      },
-                      {
-                        "x": 0.5,
-                        "y": 0.0
-                      },
-                      {
-                        "x": 0.5,
-                        "y": 1.0
-                      }
-                    ]
-                  },
-                  "frameTime": 0.01
-                },
-                {
-                  "sprite": {
-                    "width": 32.0,
-                    "height": 16.0,
-                    "texture": {
-                      "filepath": "assets/images/platform.png",
-                      "width": 256,
-                      "height": 16
-                    },
-                    "texCoords": [
-                      {
-                        "x": 0.75,
-                        "y": 1.0
-                      },
-                      {
-                        "x": 0.75,
-                        "y": 0.0
-                      },
-                      {
-                        "x": 0.625,
-                        "y": 0.0
-                      },
-                      {
-                        "x": 0.625,
-                        "y": 1.0
-                      }
-                    ]
-                  },
-                  "frameTime": 0.01
-                },
-                {
-                  "sprite": {
-                    "width": 32.0,
-                    "height": 16.0,
-                    "texture": {
-                      "filepath": "assets/images/platform.png",
-                      "width": 256,
-                      "height": 16
-                    },
-                    "texCoords": [
-                      {
-                        "x": 0.875,
-                        "y": 1.0
-                      },
-                      {
-                        "x": 0.875,
-                        "y": 0.0
-                      },
-                      {
-                        "x": 0.75,
-                        "y": 0.0
-                      },
-                      {
-                        "x": 0.75,
-                        "y": 1.0
-                      }
-                    ]
-                  },
-                  "frameTime": 0.01
-                },
-                {
-                  "sprite": {
-                    "width": 32.0,
-                    "height": 16.0,
-                    "texture": {
-                      "filepath": "assets/images/platform.png",
-                      "width": 256,
-                      "height": 16
-                    },
-                    "texCoords": [
-                      {
-                        "x": 1.0,
-                        "y": 1.0
-                      },
-                      {
-                        "x": 1.0,
-                        "y": 0.0
-                      },
-                      {
-                        "x": 0.875,
-                        "y": 0.0
-                      },
-                      {
-                        "x": 0.875,
-                        "y": 1.0
-                      }
-                    ]
-                  },
-                  "frameTime": 0.01
-                }
-              ],
-              "time": 0.001668701,
-              "doesLoop": true
-            }
-          ],
-          "defaultStateTitle": "Spinning",
-          "uid": 1379378
-        }
-      },
-      {
-        "type": "org.example.physics2d.components.Rigidbody2D",
-        "properties": {
-          "velocity": {
-            "x": 0.0,
-            "y": 0.0
-          },
-          "angularDamping": 0.8,
-          "linearDamping": 0.9,
-          "mass": 0.0,
-          "bodyType": "Static",
-          "friction": 0.1,
-          "angularVelocity": 0.0,
-          "gravityScale": 1.0,
-          "isSensor": false,
-          "fixedRotation": false,
-          "continuousCollision": false,
-          "uid": 1379379
-        }
-      },
-      {
-        "type": "org.example.physics2d.components.Box2DCollider",
-        "properties": {
-          "halfSize": {
-            "x": 0.5,
-            "y": 0.19
-          },
-          "origin": {
-            "x": 0.0,
-            "y": 0.0
-          },
-          "offset": {
-            "x": 0.0,
-            "y": 0.04
-          },
-          "uid": 1379380
-        }
-      },
-      {
-        "type": "org.example.components.Platform",
-        "properties": {
-          "uid": 1379381
-        }
-      }
-    ],
-    "doSerialization": true,
-    "isDead": false
-  },
-  {
-    "uid": 229,
-    "name": "Sprite_Object_Gen",
-    "components": [
-      {
-        "type": "org.example.jade.Transform",
-        "properties": {
-          "position": {
             "x": 7.125,
             "y": 0.375
           },
@@ -35842,7 +35478,7 @@
     "isDead": false
   },
   {
-    "uid": 230,
+    "uid": 229,
     "name": "Sprite_Object_Gen",
     "components": [
       {
@@ -35949,7 +35585,7 @@
     "isDead": false
   },
   {
-    "uid": 231,
+    "uid": 230,
     "name": "Sprite_Object_Gen",
     "components": [
       {
@@ -36056,7 +35692,7 @@
     "isDead": false
   },
   {
-    "uid": 232,
+    "uid": 231,
     "name": "Sprite_Object_Gen",
     "components": [
       {
@@ -36163,7 +35799,7 @@
     "isDead": false
   },
   {
-    "uid": 233,
+    "uid": 232,
     "name": "Sprite_Object_Gen",
     "components": [
       {
@@ -36270,7 +35906,7 @@
     "isDead": false
   },
   {
-    "uid": 234,
+    "uid": 233,
     "name": "Portal2",
     "components": [
       {
@@ -36308,19 +35944,19 @@
             },
             "texCoords": [
               {
-                "x": 0.25,
+                "x": 0.75,
                 "y": 1.0
               },
               {
-                "x": 0.25,
+                "x": 0.75,
                 "y": 0.6666667
               },
               {
-                "x": 0.125,
+                "x": 0.625,
                 "y": 0.6666667
               },
               {
-                "x": 0.125,
+                "x": 0.625,
                 "y": 1.0
               }
             ]
@@ -36585,7 +36221,7 @@
                   "frameTime": 0.1
                 }
               ],
-              "time": 0.041669466,
+              "time": 0.07500086,
               "doesLoop": true
             },
             {
@@ -36898,7 +36534,7 @@
     "isDead": false
   },
   {
-    "uid": 235,
+    "uid": 234,
     "name": "Sprite_Object_Gen",
     "components": [
       {
@@ -37005,7 +36641,7 @@
     "isDead": false
   },
   {
-    "uid": 236,
+    "uid": 235,
     "name": "Sprite_Object_Gen",
     "components": [
       {
@@ -37112,15 +36748,15 @@
     "isDead": false
   },
   {
-    "uid": 7324,
+    "uid": 236,
     "name": "Sprite_Object_Gen",
     "components": [
       {
         "type": "org.example.jade.Transform",
         "properties": {
           "position": {
-            "x": 2.625,
-            "y": 0.625
+            "x": 4.875,
+            "y": 0.125
           },
           "scale": {
             "x": 0.25,
@@ -37128,7 +36764,7 @@
           },
           "rotation": 0.0,
           "zIndex": 0,
-          "uid": 2353907
+          "uid": 2642950
         }
       },
       {
@@ -37144,22 +36780,22 @@
             "width": 16.0,
             "height": 16.0,
             "texture": {
-              "filepath": "assets/images/crate.png",
-              "width": 16,
-              "height": 16
+              "filepath": "assets/images/spritesheets/blocks_spritesheet.png",
+              "width": 320,
+              "height": 1424
             },
             "texCoords": [
               {
-                "x": 1.0,
+                "x": 0.05,
                 "y": 1.0
               },
               {
-                "x": 1.0,
-                "y": 0.0
+                "x": 0.05,
+                "y": 0.98876405
               },
               {
                 "x": 0.0,
-                "y": 0.0
+                "y": 0.98876405
               },
               {
                 "x": 0.0,
@@ -37167,7 +36803,7 @@
               }
             ]
           },
-          "uid": 2353908
+          "uid": 2642951
         }
       },
       {
@@ -37180,35 +36816,1523 @@
           "angularDamping": 0.8,
           "linearDamping": 0.9,
           "mass": 0.0,
-          "bodyType": "Dynamic",
+          "bodyType": "Static",
           "friction": 0.1,
           "angularVelocity": 0.0,
           "gravityScale": 1.0,
           "isSensor": false,
           "fixedRotation": false,
-          "continuousCollision": false,
-          "uid": 2353909
+          "continuousCollision": true,
+          "uid": 2642952
         }
       },
       {
-        "type": "org.example.physics2d.components.GlideBox2DCollider",
+        "type": "org.example.physics2d.components.Box2DCollider",
         "properties": {
-          "circleRadius": 0.02,
-          "boxSize": {
-            "x": 0.22,
-            "y": 0.22
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
           },
           "offset": {
             "x": 0.0,
             "y": 0.0
           },
-          "uid": 2353910
+          "uid": 2642953
         }
       },
       {
         "type": "org.example.components.Ground",
         "properties": {
-          "uid": 2353911
+          "uid": 2642954
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false
+  },
+  {
+    "uid": 237,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "org.example.jade.Transform",
+        "properties": {
+          "position": {
+            "x": 5.125,
+            "y": 0.125
+          },
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "rotation": 0.0,
+          "zIndex": 0,
+          "uid": 2642950
+        }
+      },
+      {
+        "type": "org.example.components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spritesheets/blocks_spritesheet.png",
+              "width": 320,
+              "height": 1424
+            },
+            "texCoords": [
+              {
+                "x": 0.05,
+                "y": 1.0
+              },
+              {
+                "x": 0.05,
+                "y": 0.98876405
+              },
+              {
+                "x": 0.0,
+                "y": 0.98876405
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 2642951
+        }
+      },
+      {
+        "type": "org.example.physics2d.components.Rigidbody2D",
+        "properties": {
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "angularVelocity": 0.0,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true,
+          "uid": 2642952
+        }
+      },
+      {
+        "type": "org.example.physics2d.components.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "uid": 2642953
+        }
+      },
+      {
+        "type": "org.example.components.Ground",
+        "properties": {
+          "uid": 2642954
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false
+  },
+  {
+    "uid": 238,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "org.example.jade.Transform",
+        "properties": {
+          "position": {
+            "x": 5.375,
+            "y": 0.125
+          },
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "rotation": 0.0,
+          "zIndex": 0,
+          "uid": 2642950
+        }
+      },
+      {
+        "type": "org.example.components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spritesheets/blocks_spritesheet.png",
+              "width": 320,
+              "height": 1424
+            },
+            "texCoords": [
+              {
+                "x": 0.05,
+                "y": 1.0
+              },
+              {
+                "x": 0.05,
+                "y": 0.98876405
+              },
+              {
+                "x": 0.0,
+                "y": 0.98876405
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 2642951
+        }
+      },
+      {
+        "type": "org.example.physics2d.components.Rigidbody2D",
+        "properties": {
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "angularVelocity": 0.0,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true,
+          "uid": 2642952
+        }
+      },
+      {
+        "type": "org.example.physics2d.components.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "uid": 2642953
+        }
+      },
+      {
+        "type": "org.example.components.Ground",
+        "properties": {
+          "uid": 2642954
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false
+  },
+  {
+    "uid": 239,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "org.example.jade.Transform",
+        "properties": {
+          "position": {
+            "x": 5.625,
+            "y": 0.125
+          },
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "rotation": 0.0,
+          "zIndex": 0,
+          "uid": 2642950
+        }
+      },
+      {
+        "type": "org.example.components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spritesheets/blocks_spritesheet.png",
+              "width": 320,
+              "height": 1424
+            },
+            "texCoords": [
+              {
+                "x": 0.05,
+                "y": 1.0
+              },
+              {
+                "x": 0.05,
+                "y": 0.98876405
+              },
+              {
+                "x": 0.0,
+                "y": 0.98876405
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 2642951
+        }
+      },
+      {
+        "type": "org.example.physics2d.components.Rigidbody2D",
+        "properties": {
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "angularVelocity": 0.0,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true,
+          "uid": 2642952
+        }
+      },
+      {
+        "type": "org.example.physics2d.components.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "uid": 2642953
+        }
+      },
+      {
+        "type": "org.example.components.Ground",
+        "properties": {
+          "uid": 2642954
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false
+  },
+  {
+    "uid": 240,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "org.example.jade.Transform",
+        "properties": {
+          "position": {
+            "x": 3.125,
+            "y": 1.875
+          },
+          "scale": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "rotation": 0.0,
+          "zIndex": 1,
+          "uid": 4274805
+        }
+      },
+      {
+        "type": "org.example.components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 51.0,
+            "height": 51.0,
+            "texture": {
+              "filepath": "assets/images/breaker.png",
+              "width": 408,
+              "height": 459
+            },
+            "texCoords": [
+              {
+                "x": 0.75,
+                "y": 0.5555556
+              },
+              {
+                "x": 0.75,
+                "y": 0.44444445
+              },
+              {
+                "x": 0.625,
+                "y": 0.44444445
+              },
+              {
+                "x": 0.625,
+                "y": 0.5555556
+              }
+            ]
+          },
+          "uid": 4274806
+        }
+      },
+      {
+        "type": "org.example.components.StateMachine",
+        "properties": {
+          "stateTransfers": [
+            [
+              {
+                "state": "idle",
+                "trigger": "startWalking"
+              },
+              "Fly"
+            ],
+            [
+              {
+                "state": "Fly",
+                "trigger": "stopWalking"
+              },
+              "idle"
+            ],
+            [
+              {
+                "state": "Fly",
+                "trigger": "switchDirection"
+              },
+              "Switch Direction"
+            ],
+            [
+              {
+                "state": "Switch Direction",
+                "trigger": "startWalking"
+              },
+              "Fly"
+            ],
+            [
+              {
+                "state": "Switch Direction",
+                "trigger": "stopWalking"
+              },
+              "idle"
+            ]
+          ],
+          "states": [
+            {
+              "title": "idle",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "width": 51.0,
+                    "height": 51.0,
+                    "texture": {
+                      "filepath": "assets/images/breaker.png",
+                      "width": 408,
+                      "height": 459
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.125,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.5555556
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 51.0,
+                    "height": 51.0,
+                    "texture": {
+                      "filepath": "assets/images/breaker.png",
+                      "width": 408,
+                      "height": 459
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.25,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.5555556
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 51.0,
+                    "height": 51.0,
+                    "texture": {
+                      "filepath": "assets/images/breaker.png",
+                      "width": 408,
+                      "height": 459
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.375,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.375,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.5555556
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 51.0,
+                    "height": 51.0,
+                    "texture": {
+                      "filepath": "assets/images/breaker.png",
+                      "width": 408,
+                      "height": 459
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.5,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.375,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.375,
+                        "y": 0.5555556
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 51.0,
+                    "height": 51.0,
+                    "texture": {
+                      "filepath": "assets/images/breaker.png",
+                      "width": 408,
+                      "height": 459
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.625,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.625,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.5555556
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 51.0,
+                    "height": 51.0,
+                    "texture": {
+                      "filepath": "assets/images/breaker.png",
+                      "width": 408,
+                      "height": 459
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.75,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.75,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.625,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.625,
+                        "y": 0.5555556
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 51.0,
+                    "height": 51.0,
+                    "texture": {
+                      "filepath": "assets/images/breaker.png",
+                      "width": 408,
+                      "height": 459
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.875,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.875,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.75,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.75,
+                        "y": 0.5555556
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 51.0,
+                    "height": 51.0,
+                    "texture": {
+                      "filepath": "assets/images/breaker.png",
+                      "width": 408,
+                      "height": 459
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.875,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.875,
+                        "y": 0.5555556
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                }
+              ],
+              "time": 0.07500086,
+              "doesLoop": true
+            },
+            {
+              "title": "Fly",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "width": 51.0,
+                    "height": 51.0,
+                    "texture": {
+                      "filepath": "assets/images/breaker.png",
+                      "width": 408,
+                      "height": 459
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.125,
+                        "y": 0.7777778
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.6666667
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.6666667
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.7777778
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 51.0,
+                    "height": 51.0,
+                    "texture": {
+                      "filepath": "assets/images/breaker.png",
+                      "width": 408,
+                      "height": 459
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.25,
+                        "y": 0.7777778
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.6666667
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.6666667
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.7777778
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 51.0,
+                    "height": 51.0,
+                    "texture": {
+                      "filepath": "assets/images/breaker.png",
+                      "width": 408,
+                      "height": 459
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.375,
+                        "y": 0.7777778
+                      },
+                      {
+                        "x": 0.375,
+                        "y": 0.6666667
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.6666667
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.7777778
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 51.0,
+                    "height": 51.0,
+                    "texture": {
+                      "filepath": "assets/images/breaker.png",
+                      "width": 408,
+                      "height": 459
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.5,
+                        "y": 0.7777778
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.6666667
+                      },
+                      {
+                        "x": 0.375,
+                        "y": 0.6666667
+                      },
+                      {
+                        "x": 0.375,
+                        "y": 0.7777778
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 51.0,
+                    "height": 51.0,
+                    "texture": {
+                      "filepath": "assets/images/breaker.png",
+                      "width": 408,
+                      "height": 459
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.5,
+                        "y": 0.7777778
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.6666667
+                      },
+                      {
+                        "x": 0.375,
+                        "y": 0.6666667
+                      },
+                      {
+                        "x": 0.375,
+                        "y": 0.7777778
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 51.0,
+                    "height": 51.0,
+                    "texture": {
+                      "filepath": "assets/images/breaker.png",
+                      "width": 408,
+                      "height": 459
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.375,
+                        "y": 0.7777778
+                      },
+                      {
+                        "x": 0.375,
+                        "y": 0.6666667
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.6666667
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.7777778
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 51.0,
+                    "height": 51.0,
+                    "texture": {
+                      "filepath": "assets/images/breaker.png",
+                      "width": 408,
+                      "height": 459
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.25,
+                        "y": 0.7777778
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.6666667
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.6666667
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.7777778
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 51.0,
+                    "height": 51.0,
+                    "texture": {
+                      "filepath": "assets/images/breaker.png",
+                      "width": 408,
+                      "height": 459
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.125,
+                        "y": 0.7777778
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.6666667
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.6666667
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.7777778
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 51.0,
+                    "height": 51.0,
+                    "texture": {
+                      "filepath": "assets/images/breaker.png",
+                      "width": 408,
+                      "height": 459
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.125,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.5555556
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 51.0,
+                    "height": 51.0,
+                    "texture": {
+                      "filepath": "assets/images/breaker.png",
+                      "width": 408,
+                      "height": 459
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.25,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.5555556
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 51.0,
+                    "height": 51.0,
+                    "texture": {
+                      "filepath": "assets/images/breaker.png",
+                      "width": 408,
+                      "height": 459
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.375,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.375,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.5555556
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 51.0,
+                    "height": 51.0,
+                    "texture": {
+                      "filepath": "assets/images/breaker.png",
+                      "width": 408,
+                      "height": 459
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.5,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.375,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.375,
+                        "y": 0.5555556
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 51.0,
+                    "height": 51.0,
+                    "texture": {
+                      "filepath": "assets/images/breaker.png",
+                      "width": 408,
+                      "height": 459
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.625,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.625,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.5555556
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 51.0,
+                    "height": 51.0,
+                    "texture": {
+                      "filepath": "assets/images/breaker.png",
+                      "width": 408,
+                      "height": 459
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.75,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.75,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.625,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.625,
+                        "y": 0.5555556
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 51.0,
+                    "height": 51.0,
+                    "texture": {
+                      "filepath": "assets/images/breaker.png",
+                      "width": 408,
+                      "height": 459
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.875,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.875,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.75,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.75,
+                        "y": 0.5555556
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 51.0,
+                    "height": 51.0,
+                    "texture": {
+                      "filepath": "assets/images/breaker.png",
+                      "width": 408,
+                      "height": 459
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.875,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.875,
+                        "y": 0.5555556
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 51.0,
+                    "height": 51.0,
+                    "texture": {
+                      "filepath": "assets/images/breaker.png",
+                      "width": 408,
+                      "height": 459
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.125,
+                        "y": 0.8888889
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.7777778
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.7777778
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.8888889
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 51.0,
+                    "height": 51.0,
+                    "texture": {
+                      "filepath": "assets/images/breaker.png",
+                      "width": 408,
+                      "height": 459
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.25,
+                        "y": 0.8888889
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.7777778
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.7777778
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.8888889
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 51.0,
+                    "height": 51.0,
+                    "texture": {
+                      "filepath": "assets/images/breaker.png",
+                      "width": 408,
+                      "height": 459
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.375,
+                        "y": 0.8888889
+                      },
+                      {
+                        "x": 0.375,
+                        "y": 0.7777778
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.7777778
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.8888889
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 51.0,
+                    "height": 51.0,
+                    "texture": {
+                      "filepath": "assets/images/breaker.png",
+                      "width": 408,
+                      "height": 459
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.5,
+                        "y": 0.8888889
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.7777778
+                      },
+                      {
+                        "x": 0.375,
+                        "y": 0.7777778
+                      },
+                      {
+                        "x": 0.375,
+                        "y": 0.8888889
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 51.0,
+                    "height": 51.0,
+                    "texture": {
+                      "filepath": "assets/images/breaker.png",
+                      "width": 408,
+                      "height": 459
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.5,
+                        "y": 0.8888889
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.7777778
+                      },
+                      {
+                        "x": 0.375,
+                        "y": 0.7777778
+                      },
+                      {
+                        "x": 0.375,
+                        "y": 0.8888889
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 51.0,
+                    "height": 51.0,
+                    "texture": {
+                      "filepath": "assets/images/breaker.png",
+                      "width": 408,
+                      "height": 459
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.375,
+                        "y": 0.8888889
+                      },
+                      {
+                        "x": 0.375,
+                        "y": 0.7777778
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.7777778
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.8888889
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 51.0,
+                    "height": 51.0,
+                    "texture": {
+                      "filepath": "assets/images/breaker.png",
+                      "width": 408,
+                      "height": 459
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.25,
+                        "y": 0.8888889
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.7777778
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.7777778
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.8888889
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 51.0,
+                    "height": 51.0,
+                    "texture": {
+                      "filepath": "assets/images/breaker.png",
+                      "width": 408,
+                      "height": 459
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.125,
+                        "y": 0.8888889
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.7777778
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.7777778
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.8888889
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                }
+              ],
+              "time": 0.0,
+              "doesLoop": true
+            },
+            {
+              "title": "Switch Direction",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "width": 51.0,
+                    "height": 51.0,
+                    "texture": {
+                      "filepath": "assets/images/breaker.png",
+                      "width": 408,
+                      "height": 459
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.125,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.8888889
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.8888889
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                }
+              ],
+              "time": 0.0,
+              "doesLoop": false
+            }
+          ],
+          "defaultStateTitle": "idle",
+          "uid": 4274807
+        }
+      },
+      {
+        "type": "org.example.physics2d.components.Rigidbody2D",
+        "properties": {
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Kinematic",
+          "friction": 0.1,
+          "angularVelocity": 0.0,
+          "gravityScale": 1.0,
+          "isSensor": true,
+          "fixedRotation": true,
+          "continuousCollision": false,
+          "uid": 4274808
+        }
+      },
+      {
+        "type": "org.example.physics2d.components.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "uid": 4274809
+        }
+      },
+      {
+        "type": "org.example.components.BreakerAI",
+        "properties": {
+          "uid": 4274810
         }
       }
     ],
