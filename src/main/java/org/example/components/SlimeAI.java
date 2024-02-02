@@ -15,8 +15,8 @@ public class SlimeAI extends Component {
     private transient Rigidbody2D rb;
     private transient float walkSpeed = 0.6f;
     private transient Vector2f velocity = new Vector2f();
+    private transient Vector2f terminalVelocity = new Vector2f(2.1f, 3.1f);
     private transient Vector2f acceleration = new Vector2f();
-    private transient Vector2f terminalVelocity = new Vector2f();
     private transient boolean onGround = false;
     private final transient float enemyWidth = 0.25f;
     private transient boolean isDead = false;
@@ -25,6 +25,7 @@ public class SlimeAI extends Component {
     private transient StateMachine stateMachine;
 
     private transient int slimeHP = 2;
+    private transient float regenSlimeHPTime = 10.0f;
 
     @Override
     public void start() {
@@ -71,6 +72,7 @@ public class SlimeAI extends Component {
         } else if (goingRight) {
             this.gameObject.transform.scale.x = -enemyWidth;
             velocity.x = walkSpeed;
+            regenSlimeHPTime -= dt;
 
             if (this.velocity.x < 0) {
                 this.stateMachine.trigger("switchDirection");
@@ -80,6 +82,7 @@ public class SlimeAI extends Component {
         } else {
             this.gameObject.transform.scale.x = enemyWidth;
             velocity.x = -walkSpeed;
+            regenSlimeHPTime -= dt;
 
             if (this.velocity.x > 0) {
                 this.stateMachine.trigger("switchDirection");
@@ -88,18 +91,28 @@ public class SlimeAI extends Component {
             }
         }
 
+        if(regenSlimeHPTime <= 0) {
+            setToDefaultState();
+        }
+
         checkOnGround();
         if (onGround) {
             this.acceleration.y = 0;
             this.velocity.y = 0;
         } else {
-            this.velocity.y = -2;
-            this.acceleration.y = Window.getPhysics().getGravity().y;
+            this.acceleration.y = Window.getPhysics().getGravity().y * 0.7f;
         }
 
-        //this.velocity.y += this.acceleration.y * dt;
-        //this.velocity.y = Math.max(Math.min(this.velocity.y, this.terminalVelocity.y), -terminalVelocity.y);
+        this.velocity.y += this.acceleration.y * dt;
+        this.velocity.y = Math.max(Math.min(this.velocity.y, this.terminalVelocity.y), -terminalVelocity.y);
         this.rb.setVelocity(velocity);
+    }
+
+    public void setToDefaultState() {
+        regenSlimeHPTime = 10.0f;
+        attacked = false;
+        slimeHP = 2;
+        walkSpeed = 0.6f;
     }
 
     public void checkOnGround() {
@@ -150,7 +163,5 @@ public class SlimeAI extends Component {
             this.attacked = true;
             this.walkSpeed = 1.2f;
         }
-
-
     }
 }

@@ -767,14 +767,10 @@ public class Prefabs {
         rb.setFixedRotation(true);
         slimeEnemy.addComponent(rb);
 
-        CircleCollider circle1 = new CircleCollider();
-        circle1.setRadius(0.05f);
-        circle1.setOffset(new Vector2f(-0.05f, -0.065f));
-        CircleCollider circle2 = new CircleCollider();
-        circle2.setRadius(0.05f);
-        circle2.setOffset(new Vector2f(0.05f, -0.065f));
-        slimeEnemy.addComponent(circle1);
-        slimeEnemy.addComponent(circle2);
+        BarrelBoatCollider barrelBoatCollider = new BarrelBoatCollider();
+        barrelBoatCollider.setBoxSize(new Vector2f(0.2f, 0.05f));
+        barrelBoatCollider.setCircleRadius(0.05f);
+        slimeEnemy.addComponent(barrelBoatCollider);
 
         slimeEnemy.addComponent(new SlimeAI());
 

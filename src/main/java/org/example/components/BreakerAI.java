@@ -19,7 +19,7 @@ public class BreakerAI extends Component {
     private transient Vector2f acceleration = new Vector2f();
     private transient Vector2f terminalVelocity = new Vector2f(0.5f, 0.5f);
     private transient StateMachine stateMachine;
-    private boolean shouldMoveUpDown = false;
+    private transient boolean shouldMoveUpDown = false;
 
     @Override
     public void start() {
