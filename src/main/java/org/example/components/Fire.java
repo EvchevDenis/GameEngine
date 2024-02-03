@@ -2,6 +2,7 @@ package org.example.components;
 
 import org.example.jade.GameObject;
 import org.example.jade.Window;
+import org.example.physics2d.Physics2D;
 import org.example.physics2d.components.Rigidbody2D;
 import org.jbox2d.dynamics.contacts.Contact;
 import org.joml.Vector2f;
@@ -28,6 +29,7 @@ public class Fire extends Component {
     public void update(float dt) {
         if (isFiring) {
             firingTime += dt;
+            gameObject.transform.position.y += dt / 2;
             if (firingTime >= 0.9f) {
                 disappear();
             }

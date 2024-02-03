@@ -323,4 +323,26 @@ public class Physics2D {
         return (info.hit && info.hitObject != null && info.hitObject.getComponent(Ground.class) != null) ||
                 (info2.hit && info2.hitObject != null && info2.hitObject.getComponent(Ground.class) != null);
     }
+
+    public static boolean checkUnderGround(
+            GameObject gameObject,
+            float innerPlayerWidth,
+            float height) {
+        Vector2f raycastBeginTop = new Vector2f(gameObject.transform.position);
+        raycastBeginTop.sub(innerPlayerWidth / 2.0f, height);
+        Vector2f raycastEndTop = new Vector2f(raycastBeginTop).add(innerPlayerWidth, 0.0f);
+
+        Vector2f raycastBeginBottom = new Vector2f(gameObject.transform.position);
+        raycastBeginBottom.sub(innerPlayerWidth / 2.0f, 0.0f);
+        Vector2f raycastEndBottom = new Vector2f(raycastBeginBottom).add(innerPlayerWidth, height);
+
+        RaycastInfo infoTop = Window.getPhysics().raycast(gameObject, raycastBeginTop, raycastEndTop);
+        RaycastInfo infoBottom = Window.getPhysics().raycast(gameObject, raycastBeginBottom, raycastEndBottom);
+
+        // DebugDraw.addLine2D(raycastBeginTop, raycastEndTop, new Vector3f(1, 0, 0));
+        // DebugDraw.addLine2D(raycastBeginBottom, raycastEndBottom, new Vector3f(1, 0, 0));
+
+        return (infoTop.hit && infoTop.hitObject != null && infoTop.hitObject.getComponent(Ground.class) != null) ||
+                (infoBottom.hit && infoBottom.hitObject != null && infoBottom.hitObject.getComponent(Ground.class) != null);
+    }
 }

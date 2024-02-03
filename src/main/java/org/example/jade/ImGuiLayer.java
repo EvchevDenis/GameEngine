@@ -8,14 +8,11 @@ import imgui.gl3.ImGuiImplGl3;
 import imgui.glfw.ImGuiImplGlfw;
 import imgui.type.ImBoolean;
 import org.example.editor.GameViewWindow;
-import org.example.editor.MenuBar;
 import org.example.editor.PropertiesWindow;
 import org.example.editor.SceneHierarchyWindow;
 import org.example.renderer.PickingTexture;
 import org.example.scenes.Scene;
-
 import java.io.File;
-
 import static org.lwjgl.glfw.GLFW.*;
 import static org.lwjgl.opengl.GL11.*;
 import static org.lwjgl.opengl.GL30.GL_FRAMEBUFFER;
@@ -31,14 +28,12 @@ public class ImGuiLayer {
 
     private GameViewWindow gameViewWindow;
     private PropertiesWindow propertiesWindow;
-    //private MenuBar menuBar;
     private SceneHierarchyWindow sceneHeirarchyWindow;
 
     public ImGuiLayer(long glfwWindow, PickingTexture pickingTexture) {
         this.glfwWindow = glfwWindow;
         this.gameViewWindow = new GameViewWindow();
         this.propertiesWindow = new PropertiesWindow(pickingTexture);
-        //this.menuBar = new MenuBar();
         this.sceneHeirarchyWindow = new SceneHierarchyWindow();
     }
 
@@ -223,8 +218,6 @@ public class ImGuiLayer {
 
         // Dockspace
         ImGui.dockSpace(ImGui.getID("Dockspace"));
-
-        //menuBar.imgui();
 
         ImGui.end();
     }

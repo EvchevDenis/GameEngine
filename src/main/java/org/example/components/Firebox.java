@@ -26,7 +26,7 @@ public class Firebox extends Component {
                 this.isFiring = false;
             }
         } else {
-            if (animationTime >= 1.3f) {
+            if (animationTime >= 1.5f) {
                 animationTime = 0.0f;
                 this.isFiring = true;
                 if (Fire.canSpawn()) {

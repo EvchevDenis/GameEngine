@@ -1029,7 +1029,7 @@ public class Prefabs {
 
         Rigidbody2D rb = new Rigidbody2D();
         rb.setBodyType(BodyType.Static);
-        rb.setFixedRotation(true);
+        rb.setFixedRotation(false);
         rb.setContinuousCollision(false);
         fan.addComponent(rb);
 
@@ -1212,15 +1212,10 @@ public class Prefabs {
         AnimationState fireboxDefault = new AnimationState();
         fireboxDefault.title = "Firebox Default";
         float defaultFrameTime = 0.1f;
-        fireboxDefault.addFrame(fireboxSprites.getSprite(0), defaultFrameTime);
-        fireboxDefault.addFrame(fireboxSprites.getSprite(1), defaultFrameTime);
-        fireboxDefault.addFrame(fireboxSprites.getSprite(2), defaultFrameTime);
-        fireboxDefault.addFrame(fireboxSprites.getSprite(3), defaultFrameTime);
         fireboxDefault.addFrame(fireboxSprites.getSprite(4), defaultFrameTime);
         fireboxDefault.addFrame(fireboxSprites.getSprite(5), defaultFrameTime);
         fireboxDefault.addFrame(fireboxSprites.getSprite(6), defaultFrameTime);
         fireboxDefault.addFrame(fireboxSprites.getSprite(7), defaultFrameTime);
-        fireboxDefault.addFrame(fireboxSprites.getSprite(8), defaultFrameTime);
         fireboxDefault.addFrame(fireboxSprites.getSprite(9), defaultFrameTime);
         fireboxDefault.addFrame(fireboxSprites.getSprite(10), defaultFrameTime);
         fireboxDefault.addFrame(fireboxSprites.getSprite(11), defaultFrameTime);
