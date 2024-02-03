@@ -324,25 +324,24 @@ public class Physics2D {
                 (info2.hit && info2.hitObject != null && info2.hitObject.getComponent(Ground.class) != null);
     }
 
-    public static boolean checkUnderGround(
+    public static boolean checkOnCeiling(
             GameObject gameObject,
             float innerPlayerWidth,
             float height) {
-        Vector2f raycastBeginTop = new Vector2f(gameObject.transform.position);
-        raycastBeginTop.sub(innerPlayerWidth / 2.0f, height);
-        Vector2f raycastEndTop = new Vector2f(raycastBeginTop).add(innerPlayerWidth, 0.0f);
+        Vector2f raycastBegin = new Vector2f(gameObject.transform.position);
+        raycastBegin.sub(0.0f, height / 2.0f);
+        Vector2f raycastEnd = new Vector2f(raycastBegin).add(innerPlayerWidth, 0.0f);
 
-        Vector2f raycastBeginBottom = new Vector2f(gameObject.transform.position);
-        raycastBeginBottom.sub(innerPlayerWidth / 2.0f, 0.0f);
-        Vector2f raycastEndBottom = new Vector2f(raycastBeginBottom).add(innerPlayerWidth, height);
+        RaycastInfo info = Window.getPhysics().raycast(gameObject, raycastBegin, raycastEnd);
 
-        RaycastInfo infoTop = Window.getPhysics().raycast(gameObject, raycastBeginTop, raycastEndTop);
-        RaycastInfo infoBottom = Window.getPhysics().raycast(gameObject, raycastBeginBottom, raycastEndBottom);
+        Vector2f raycast2Begin = new Vector2f(raycastBegin).add(0.0f, height);
+        Vector2f raycast2End = new Vector2f(raycastEnd).add(0.0f, height);
+        RaycastInfo info2 = Window.getPhysics().raycast(gameObject, raycast2Begin, raycast2End);
 
-        // DebugDraw.addLine2D(raycastBeginTop, raycastEndTop, new Vector3f(1, 0, 0));
-        // DebugDraw.addLine2D(raycastBeginBottom, raycastEndBottom, new Vector3f(1, 0, 0));
+        // DebugDraw.addLine2D(raycastBegin, raycastEnd, new Vector3f(1, 0, 0));
+        // DebugDraw.addLine2D(raycast2Begin, raycast2End, new Vector3f(1, 0, 0));
 
-        return (infoTop.hit && infoTop.hitObject != null && infoTop.hitObject.getComponent(Ground.class) != null) ||
-                (infoBottom.hit && infoBottom.hitObject != null && infoBottom.hitObject.getComponent(Ground.class) != null);
+        return (info.hit && info.hitObject != null && info.hitObject.getComponent(Ground.class) != null) ||
+                (info2.hit && info2.hitObject != null && info2.hitObject.getComponent(Ground.class) != null);
     }
 }

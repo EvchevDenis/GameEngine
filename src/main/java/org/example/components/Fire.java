@@ -14,6 +14,8 @@ public class Fire extends Component {
     private transient Rigidbody2D rb;
     private boolean isFiring = false;
 
+    private transient boolean isGround;
+
     public static boolean canSpawn() {
         return fireCount < 1;
     }
@@ -29,11 +31,20 @@ public class Fire extends Component {
     public void update(float dt) {
         if (isFiring) {
             firingTime += dt;
+            checkGround();
             gameObject.transform.position.y += dt / 2;
-            if (firingTime >= 0.9f) {
+            gameObject.transform.scale.y -= dt / 10;
+            gameObject.transform.scale.x -= dt / 10;
+            if (isGround || firingTime > 1.5f) {
                 disappear();
             }
         }
+    }
+
+    public void checkGround() {
+        float innerPlayerWidth = 0.25f * 0.7f;
+        float yVal = -0.14f;
+        isGround = Physics2D.checkOnCeiling(this.gameObject, innerPlayerWidth, yVal);
     }
 
     @Override
