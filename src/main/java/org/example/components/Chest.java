@@ -3,8 +3,10 @@ package org.example.components;
 import org.example.jade.GameObject;
 import org.example.jade.Prefabs;
 import org.example.jade.Window;
+import org.jbox2d.dynamics.contacts.Contact;
+import org.joml.Vector2f;
 
-public class QuestionBlock extends Block {
+public class Chest extends Component {
     private enum BlockType {
         Diamond,
         Powerup,
@@ -12,29 +14,35 @@ public class QuestionBlock extends Block {
         Enemy
     }
 
-    private BlockType blockType = BlockType.Diamond;
+    private transient boolean opened = false;
+
+    private Chest.BlockType blockType = Chest.BlockType.Diamond;
 
     @Override
-    void playerHit(PlayerController playerController) {
-        switch(blockType) {
-            case Diamond:
-                doDiamond();
-                break;
-            case Powerup:
-                doPowerup(playerController);
-                break;
-            case Invisibility:
-                spawnRing();
-                break;
-            case Enemy:
-                spawnCuteEnemy();
-                break;
+    public void beginCollision(GameObject obj, Contact contact, Vector2f contactNormal) {
+        PlayerController playerController = obj.getComponent(PlayerController.class);
+        StateMachine stateMachine = gameObject.getComponent(StateMachine.class);
+        if (playerController != null && !opened) {
+            switch (blockType) {
+                case Diamond:
+                    doDiamond();
+                    break;
+                case Powerup:
+                    doPowerup(playerController);
+                    break;
+                case Invisibility:
+                    spawnRing();
+                    break;
+                case Enemy:
+                    spawnCuteEnemy();
+                    break;
+            }
+            stateMachine.trigger("opening");
+            opened = true;
         }
 
-        StateMachine stateMachine = gameObject.getComponent(StateMachine.class);
         if (stateMachine != null) {
             stateMachine.trigger("setInactive");
-            this.setInactive();
         }
     }
 
@@ -86,3 +94,4 @@ public class QuestionBlock extends Block {
         Window.getScene().addGameObjectToScene(ring);
     }
 }
+

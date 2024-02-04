@@ -34,7 +34,6 @@ public class Platform extends Component {
         } else {
             this.gameObject.transform.position.y -= 0.003f;
         }
-
     }
 
     public void checkOnGround() {

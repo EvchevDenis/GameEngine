@@ -407,7 +407,7 @@ public class Prefabs {
         GameObject necklace = generateSpriteObject(weapons.getSprite(55), 0.15f, 0.15f);
 
         Rigidbody2D rb = new Rigidbody2D();
-        rb.setBodyType(BodyType.Static);
+        rb.setBodyType(BodyType.Dynamic);
         rb.setFixedRotation(true);
         rb.setContinuousCollision(false);
         necklace.addComponent(rb);
@@ -425,7 +425,7 @@ public class Prefabs {
         GameObject ring = generateSpriteObject(weapons.getSprite(29), 0.15f, 0.15f);
 
         Rigidbody2D rb = new Rigidbody2D();
-        rb.setBodyType(BodyType.Static);
+        rb.setBodyType(BodyType.Dynamic);
         rb.setFixedRotation(true);
         rb.setContinuousCollision(false);
         ring.addComponent(rb);
@@ -1240,5 +1240,56 @@ public class Prefabs {
         firebox.addComponent(new Ground());
 
         return firebox;
+    }
+
+    public static GameObject generateChest() {
+        Spritesheet chestSprites = AssetPool.getSpritesheet("assets/images/chest.png");
+        GameObject chestBlock = generateSpriteObject(chestSprites.getSprite(0), 0.25f, 0.25f);
+
+        AnimationState closed = new AnimationState();
+        closed.title = "Closed chest";
+        closed.addFrame(chestSprites.getSprite(0), 0.1f);
+        closed.setLoop(false);
+
+        AnimationState open = new AnimationState();
+        open.title = "Open";
+        float defaultFrameTime = 0.23f;
+        open.addFrame(chestSprites.getSprite(0), 0.57f);
+        open.addFrame(chestSprites.getSprite(1), defaultFrameTime);
+        open.addFrame(chestSprites.getSprite(2), defaultFrameTime);
+        open.addFrame(chestSprites.getSprite(3), defaultFrameTime);
+        open.addFrame(chestSprites.getSprite(4), defaultFrameTime);
+        open.addFrame(chestSprites.getSprite(5), defaultFrameTime);
+        open.addFrame(chestSprites.getSprite(6), defaultFrameTime);
+        open.setLoop(false);
+
+        AnimationState opened = new AnimationState();
+        opened.title = "Opened chest";
+        opened.addFrame(chestSprites.getSprite(6), 0.1f);
+        opened.setLoop(false);
+
+        StateMachine stateMachine = new StateMachine();
+        stateMachine.addState(closed);
+        stateMachine.addState(open);
+        stateMachine.addState(opened);
+        stateMachine.setDefaultState(closed.title);
+        stateMachine.addState(closed.title, open.title, "opening");
+        stateMachine.addState(open.title, opened.title, "setInactive");
+        chestBlock.addComponent(stateMachine);
+
+        Rigidbody2D rb = new Rigidbody2D();
+        rb.setBodyType(BodyType.Dynamic);
+        rb.setFixedRotation(false);
+        rb.setContinuousCollision(false);
+        chestBlock.addComponent(rb);
+
+        GlideBox2DCollider glideBox2DCollider = new GlideBox2DCollider();
+        glideBox2DCollider.setCircleRadius(0.02f);
+        glideBox2DCollider.setBoxSize(0.20f, 0.20f);
+        chestBlock.addComponent(glideBox2DCollider);
+        chestBlock.addComponent(new Ground());
+        chestBlock.addComponent(new Chest());
+
+        return chestBlock;
     }
 }

@@ -127,6 +127,9 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
         AssetPool.addSpritesheet("assets/images/arrow.png",
                 new Spritesheet(AssetPool.getTexture("assets/images/arrow.png"),
                         16, 16, 4, 0));
+        AssetPool.addSpritesheet("assets/images/chest.png",
+                new Spritesheet(AssetPool.getTexture("assets/images/chest.png"),
+                        16, 16, 7, 0));
 
 
         AssetPool.addSpritesheet("assets/images/Hoodie.png",
@@ -310,6 +313,8 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
                         "assets/images/shooter_arrow.png", Prefabs.generateArrowShooter(), false);
                 handleSpriteButtonClick(spriteWidth, spriteHeight, uid,
                         "assets/images/firebox.png", Prefabs.generateFirebox(), false);
+                handleSpriteButtonClick(spriteWidth, spriteHeight, uid,
+                        "assets/images/chest.png", Prefabs.generateChest(), false);
 
                 ImGui.endTabItem();
             }
