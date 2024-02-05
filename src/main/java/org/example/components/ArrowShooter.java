@@ -6,36 +6,37 @@ import org.example.jade.Window;
 import org.joml.Vector2f;
 
 public class ArrowShooter extends Component {
-    private float animationTime = 0.0f;
+
+    private StateMachine stateMachine;
+    private float shootingTime = 0.2f;
+    private float preparingTime = 0.8f;
     private boolean isShooting = false;
+    private float animationTimer = 0.0f;
 
     @Override
     public void start() {
-
+        this.stateMachine = gameObject.getComponent(StateMachine.class);
     }
 
     @Override
     public void update(float dt) {
-        animationTime += dt;
+        animationTimer += dt;
 
-        if (isShooting) {
-            if (animationTime >= 0.2f) {
-                isShooting = false;
-                animationTime = 0.0f;
-            }
-        } else {
-            if (animationTime >= 0.8f) {
-                isShooting = true;
-                animationTime = 0.0f;
-                spawnArrow();
-            }
+        if (!isShooting && animationTimer >= preparingTime) {
+            this.stateMachine.trigger("shooting");
+            isShooting = true;
+            animationTimer = 0.0f;
+        } else if (isShooting && animationTimer >= shootingTime) {
+            this.stateMachine.trigger("preparing");
+            isShooting = false;
+            animationTimer = 0.0f;
+            spawnArrow();
         }
     }
 
     private void spawnArrow() {
         Vector2f position = new Vector2f(this.gameObject.transform.position)
                 .add(new Vector2f(-0.01f, -0.11f));
-        //this.stateMachine.trigger("attack");
         GameObject arrow = Prefabs.generateDeadlyArrow(position);
         arrow.getComponent(Projectile.class).isArrow = true;
         Window.getScene().addGameObjectToScene(arrow);

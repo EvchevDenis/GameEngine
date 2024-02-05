@@ -1115,18 +1115,25 @@ public class Prefabs {
         Spritesheet arrowShooterSprites = AssetPool.getSpritesheet("assets/images/shooter_arrow.png");
         GameObject arrowShooter = generateSpriteObject(arrowShooterSprites.getSprite(0), 0.25f, 0.25f);
 
-        AnimationState throwArrow = new AnimationState();
-        throwArrow.title = "Spinning";
+        AnimationState prepareArrow = new AnimationState();
+        prepareArrow.title = "Prepare Arrow";
         float defaultFrameTime = 0.1f;
-        throwArrow.addFrame(arrowShooterSprites.getSprite(0), 0.4f);
-        throwArrow.addFrame(arrowShooterSprites.getSprite(1), 0.4f);
-        throwArrow.addFrame(arrowShooterSprites.getSprite(4), defaultFrameTime);
-        throwArrow.addFrame(arrowShooterSprites.getSprite(5), defaultFrameTime);
-        throwArrow.setLoop(true);
+        prepareArrow.addFrame(arrowShooterSprites.getSprite(0), 0.4f);
+        prepareArrow.addFrame(arrowShooterSprites.getSprite(1), 0.4f);
+        prepareArrow.setLoop(true);
+
+        AnimationState shootArrow = new AnimationState();
+        shootArrow.title = "Shoot Arrow";
+        shootArrow.addFrame(arrowShooterSprites.getSprite(4), defaultFrameTime);
+        shootArrow.addFrame(arrowShooterSprites.getSprite(5), defaultFrameTime);
+        shootArrow.setLoop(true);
 
         StateMachine stateMachine = new StateMachine();
-        stateMachine.addState(throwArrow);
-        stateMachine.setDefaultState(throwArrow.title);
+        stateMachine.addState(prepareArrow);
+        stateMachine.addState(shootArrow);
+        stateMachine.setDefaultState(prepareArrow.title);
+        stateMachine.addState(prepareArrow.title, shootArrow.title, "shooting");
+        stateMachine.addState(shootArrow.title, prepareArrow.title, "preparing");
         arrowShooter.addComponent(stateMachine);
 
         Rigidbody2D rb = new Rigidbody2D();

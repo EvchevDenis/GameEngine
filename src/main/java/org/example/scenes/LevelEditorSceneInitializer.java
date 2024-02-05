@@ -261,22 +261,10 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
 
                 handleSpriteButtonClick(spriteWidth, spriteHeight, uid,
                         "assets/images/Hoodie.png", Prefabs.generateMainCharacter(), false);
-                /*Spritesheet playerSprites = AssetPool.getSpritesheet("assets/images/Hoodie.png");
-                Sprite sprite = playerSprites.getSprite(0);
-                float spriteWidth = sprite.getWidth() * 4;
-                float spriteHeight = sprite.getHeight() * 4;
-                int id = sprite.getTexId();
-                Vector2f[] texCoords = sprite.getTexCoords();
-                ImGui.pushID(uid++);
-                if (ImGui.imageButton(id, spriteWidth, spriteHeight, texCoords[2].x, texCoords[0].y, texCoords[0].x, texCoords[2].y)) {
-                    GameObject object = Prefabs.generateMainCharacter();
-                    levelEditorStuff.getComponent(MouseControls.class).pickupObject(object);
-                }
-                ImGui.popID();
-                ImGui.sameLine();*/
-
                 handleSpriteButtonClick(spriteWidth, spriteHeight, uid,
                         "assets/images/items.png", Prefabs.generateQuestionBlock(), false);
+                handleSpriteButtonClick(spriteWidth, spriteHeight, uid,
+                        "assets/images/chest.png", Prefabs.generateChest(), false);
                 handleSpriteButtonClick(spriteWidth, spriteHeight, uid,
                         "assets/images/crate.png", Prefabs.generateCrate(), false);
                 handleSpriteButtonClick(spriteWidth, spriteHeight, uid,
@@ -288,9 +276,9 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
                 handleSpriteButtonClick(spriteWidth, spriteHeight, uid,
                         "assets/images/Owlet.png", Prefabs.generateCuteEnemy("assets/images/Owlet.png"), false);
                 handleSpriteButtonClick(spriteWidth, spriteHeight, uid,
-                        "assets/images/Pink.png", Prefabs.generateCuteEnemy("assets/images/Pink.png"), false);
+                        "assets/images/Pink.png", Prefabs.generateCuteEnemy("assets/images/Pink.png"), true);
                 handleSpriteButtonClick(spriteWidth, spriteHeight, uid,
-                        "assets/images/Dude.png", Prefabs.generateCuteEnemy("assets/images/Dude.png"), true);
+                        "assets/images/Dude.png", Prefabs.generateCuteEnemy("assets/images/Dude.png"), false);
                 handleSpriteButtonClick(spriteWidth, spriteHeight, uid,
                         "assets/images/purplePortal.png", Prefabs.generatePortal(Direction.Left), false);
                 handleSpriteButtonClick(spriteWidth, spriteHeight, uid,
@@ -306,15 +294,14 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
                 handleSpriteButtonClick(spriteWidth, spriteHeight, uid,
                         "assets/images/fan.png", Prefabs.generateFan(), false);
                 handleSpriteButtonClick(spriteWidth, spriteHeight, uid,
-                        "assets/images/platform.png", Prefabs.generatePlatform(), false);
+                        "assets/images/platform.png", Prefabs.generatePlatform(), true);
                 handleSpriteButtonClick(spriteWidth, spriteHeight, uid,
-                        "assets/images/arrow.png", Prefabs.generateJumpingArrow(), true);
+                        "assets/images/arrow.png", Prefabs.generateJumpingArrow(), false);
                 handleSpriteButtonClick(spriteWidth, spriteHeight, uid,
                         "assets/images/shooter_arrow.png", Prefabs.generateArrowShooter(), false);
                 handleSpriteButtonClick(spriteWidth, spriteHeight, uid,
                         "assets/images/firebox.png", Prefabs.generateFirebox(), false);
-                handleSpriteButtonClick(spriteWidth, spriteHeight, uid,
-                        "assets/images/chest.png", Prefabs.generateChest(), false);
+
 
                 ImGui.endTabItem();
             }
