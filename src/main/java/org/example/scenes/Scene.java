@@ -5,10 +5,11 @@ import com.google.gson.GsonBuilder;
 import org.example.components.Component;
 import org.example.components.ComponentDeserializer;
 import org.example.jade.*;
-import org.example.jade.Window;
 import org.example.physics2d.Physics2D;
 import org.example.renderer.Renderer;
 import org.joml.Vector2f;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.swing.*;
 import javax.swing.filechooser.FileFilter;
@@ -23,6 +24,7 @@ import java.util.Optional;
 import java.util.Properties;
 
 public class Scene {
+    private transient Logger logger = LoggerFactory.getLogger(Scene.class);
 
     private Renderer renderer;
     private Camera camera;
@@ -192,7 +194,7 @@ public class Scene {
             writer.write(gson.toJson(objsToSerialize));
             writer.close();
         } catch(IOException e) {
-            e.printStackTrace();
+            logger.error("Error: Writing information to file.", e);
         }
     }
 
@@ -226,7 +228,7 @@ public class Scene {
                 writer.write(gson.toJson(objsToSerialize));
                 writer.close();
             } catch (IOException e) {
-                e.printStackTrace();
+                logger.error("Error: Writing information to file.", e);
             }
         }
     }
@@ -234,14 +236,30 @@ public class Scene {
     public void load() {
         Properties properties = new Properties();
         String loadPath = null;
-        try (FileInputStream input = new FileInputStream("config.cfg")) {
-            properties.load(input);
-            loadPath = properties.getProperty("PreviousLevel");
-            currentLevel = loadPath;
-        } catch (IOException e) {
-            e.printStackTrace();
+        String configFileName = "config.cfg";
+        File configFile = new File(configFileName);
+
+        if (!configFile.exists()) {
+            try {
+                if (configFile.createNewFile()) {
+                    System.out.println("File " + configFileName + " successfully created.");
+                } else {
+                    System.out.println("Failed to create file " + configFileName + ".");
+                }
+            } catch (IOException e) {
+                logger.error("Error: Creating file " + configFileName + ".", e);
+            }
+            loadFrom();
+        } else {
+            try (FileInputStream input = new FileInputStream(configFileName)) {
+                properties.load(input);
+                loadPath = properties.getProperty("PreviousLevel");
+                currentLevel = loadPath;
+            } catch (IOException e) {
+                logger.error("Error: Reading property from configuration file.", e);
+            }
+            loadDataFromFile(loadPath);
         }
-        loadDataFromFile(loadPath);
     }
 
     public void loadFrom() {
@@ -249,6 +267,7 @@ public class Scene {
 
         String loadPath = null;
         boolean fileChooserClosed = false;
+        String configFileName = "config.cfg";
 
         JFileChooser loadChooser = windowsJFileChooser();
         loadChooser.setCurrentDirectory(new File("."));
@@ -265,21 +284,21 @@ public class Scene {
             loadPath = file.getAbsolutePath();
             System.out.println("Path to file : " + loadPath);
         } else {
-            try (FileInputStream input = new FileInputStream("config.cfg")) {
+            try (FileInputStream input = new FileInputStream(configFileName)) {
                 properties.load(input);
                 loadPath = properties.getProperty("PreviousLevel");
             } catch (IOException e) {
-                e.printStackTrace();
+                logger.error("Error: Reading property from configuration file.", e);
             }
             fileChooserClosed = true;
         }
 
         if(!fileChooserClosed) {
             properties.setProperty("PreviousLevel", loadPath);
-            try (FileOutputStream output = new FileOutputStream("config.cfg")) {
+            try (FileOutputStream output = new FileOutputStream(configFileName)) {
                 properties.store(output, null);
             } catch (IOException e) {
-                e.printStackTrace();
+                logger.error("Error: Writing property to configuration file.", e);
             }
         }
 
@@ -298,7 +317,7 @@ public class Scene {
         try {
             inFile = new String(Files.readAllBytes(Paths.get(loadPath)));
         } catch (IOException e) {
-            e.printStackTrace();
+            logger.error("Error: Reading file contents.", e);
         }
 
         if (!inFile.isEmpty()) {

@@ -6,12 +6,17 @@ import imgui.ImGui;
 import org.example.components.Component;
 import org.example.components.ComponentDeserializer;
 import org.example.components.SpriteRenderer;
+import org.example.renderer.Shader;
 import org.example.utils.AssetPool;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class GameObject {
+    private transient Logger logger = LoggerFactory.getLogger(GameObject.class);
+
     private static int ID_COUNTER = 0;
     private int uid = -1;
 
@@ -34,7 +39,7 @@ public class GameObject {
                 try {
                     return componentClass.cast(c);
                 } catch (ClassCastException e) {
-                    e.printStackTrace();
+                    logger.error("Error: Casting component.", e);
                     assert false : "Error: Casting component.";
                 }
             }
@@ -52,7 +57,7 @@ public class GameObject {
                     try {
                         return componentClass.cast(c);
                     } catch (ClassCastException e) {
-                        e.printStackTrace();
+                        logger.error("Error: Casting component.", e);
                         assert false : "Error: Casting component.";
                     }
                 }

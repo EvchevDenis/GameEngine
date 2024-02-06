@@ -1,7 +1,10 @@
 package org.example.renderer;
 
+import org.example.scenes.Scene;
 import org.joml.*;
 import org.lwjgl.BufferUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.nio.FloatBuffer;
@@ -12,6 +15,7 @@ import static org.lwjgl.opengl.GL11.GL_FALSE;
 import static org.lwjgl.opengl.GL20.*;
 
 public class Shader {
+    private transient Logger logger = LoggerFactory.getLogger(Shader.class);
 
     private int shaderProgramID;
     private boolean beingUsed = false;
@@ -52,7 +56,7 @@ public class Shader {
                 throw new IOException("Unexpected token '" + secondPattern + "'");
             }
         } catch(IOException e) {
-            e.printStackTrace();
+            logger.error("Error: Could not open file for shader: '" + filepath + "'", e);
             assert false : "Error: Could not open file for shader: '" + filepath + "'";
         }
     }

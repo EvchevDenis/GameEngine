@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Objects;
 
 public class StateMachine extends Component {
-    private class StateTrigger {
+    private static class StateTrigger {
         public String state;
         public String trigger;
 

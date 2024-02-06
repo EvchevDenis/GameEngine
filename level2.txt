@@ -20475,19 +20475,19 @@
             },
             "texCoords": [
               {
-                "x": 0.21875,
+                "x": 0.3125,
                 "y": 1.0
               },
               {
-                "x": 0.21875,
+                "x": 0.3125,
                 "y": 0.0
               },
               {
-                "x": 0.1875,
+                "x": 0.28125,
                 "y": 0.0
               },
               {
-                "x": 0.1875,
+                "x": 0.28125,
                 "y": 1.0
               }
             ]
@@ -21464,7 +21464,7 @@
                   "frameTime": 0.1
                 }
               ],
-              "time": 0.09166775,
+              "time": 0.07499895,
               "doesLoop": true
             }
           ],
@@ -21559,19 +21559,19 @@
             },
             "texCoords": [
               {
-                "x": 0.21875,
+                "x": 0.3125,
                 "y": 1.0
               },
               {
-                "x": 0.21875,
+                "x": 0.3125,
                 "y": 0.0
               },
               {
-                "x": 0.1875,
+                "x": 0.28125,
                 "y": 0.0
               },
               {
-                "x": 0.1875,
+                "x": 0.28125,
                 "y": 1.0
               }
             ]
@@ -22548,7 +22548,7 @@
                   "frameTime": 0.1
                 }
               ],
-              "time": 0.09166775,
+              "time": 0.07499895,
               "doesLoop": true
             }
           ],
@@ -22643,19 +22643,19 @@
             },
             "texCoords": [
               {
-                "x": 0.21875,
+                "x": 0.3125,
                 "y": 1.0
               },
               {
-                "x": 0.21875,
+                "x": 0.3125,
                 "y": 0.0
               },
               {
-                "x": 0.1875,
+                "x": 0.28125,
                 "y": 0.0
               },
               {
-                "x": 0.1875,
+                "x": 0.28125,
                 "y": 1.0
               }
             ]
@@ -23632,7 +23632,7 @@
                   "frameTime": 0.1
                 }
               ],
-              "time": 0.09166775,
+              "time": 0.07499895,
               "doesLoop": true
             }
           ],
@@ -23727,19 +23727,19 @@
             },
             "texCoords": [
               {
-                "x": 0.21875,
+                "x": 0.3125,
                 "y": 1.0
               },
               {
-                "x": 0.21875,
+                "x": 0.3125,
                 "y": 0.0
               },
               {
-                "x": 0.1875,
+                "x": 0.28125,
                 "y": 0.0
               },
               {
-                "x": 0.1875,
+                "x": 0.28125,
                 "y": 1.0
               }
             ]
@@ -24716,7 +24716,7 @@
                   "frameTime": 0.1
                 }
               ],
-              "time": 0.09166775,
+              "time": 0.07499895,
               "doesLoop": true
             }
           ],
@@ -24811,19 +24811,19 @@
             },
             "texCoords": [
               {
-                "x": 0.21875,
+                "x": 0.3125,
                 "y": 1.0
               },
               {
-                "x": 0.21875,
+                "x": 0.3125,
                 "y": 0.0
               },
               {
-                "x": 0.1875,
+                "x": 0.28125,
                 "y": 0.0
               },
               {
-                "x": 0.1875,
+                "x": 0.28125,
                 "y": 1.0
               }
             ]
@@ -25800,7 +25800,7 @@
                   "frameTime": 0.1
                 }
               ],
-              "time": 0.09166775,
+              "time": 0.07499895,
               "doesLoop": true
             }
           ],
@@ -25895,19 +25895,19 @@
             },
             "texCoords": [
               {
-                "x": 0.21875,
+                "x": 0.3125,
                 "y": 1.0
               },
               {
-                "x": 0.21875,
+                "x": 0.3125,
                 "y": 0.0
               },
               {
-                "x": 0.1875,
+                "x": 0.28125,
                 "y": 0.0
               },
               {
-                "x": 0.1875,
+                "x": 0.28125,
                 "y": 1.0
               }
             ]
@@ -26884,7 +26884,7 @@
                   "frameTime": 0.1
                 }
               ],
-              "time": 0.09166775,
+              "time": 0.07499895,
               "doesLoop": true
             }
           ],
@@ -28477,19 +28477,19 @@
             },
             "texCoords": [
               {
-                "x": 0.875,
+                "x": 0.25,
                 "y": 1.0
               },
               {
-                "x": 0.875,
+                "x": 0.25,
                 "y": 0.6666667
               },
               {
-                "x": 0.75,
+                "x": 0.125,
                 "y": 0.6666667
               },
               {
-                "x": 0.75,
+                "x": 0.125,
                 "y": 1.0
               }
             ]
@@ -28746,7 +28746,7 @@
                   "frameTime": 0.1
                 }
               ],
-              "time": 0.09166775,
+              "time": 0.07499895,
               "doesLoop": true
             }
           ],
@@ -29171,19 +29171,19 @@
             },
             "texCoords": [
               {
-                "x": 0.125,
+                "x": 0.5,
                 "y": 1.0
               },
               {
-                "x": 0.125,
+                "x": 0.5,
                 "y": 0.0
               },
               {
-                "x": 0.0,
+                "x": 0.375,
                 "y": 0.0
               },
               {
-                "x": 0.0,
+                "x": 0.375,
                 "y": 1.0
               }
             ]
@@ -29440,7 +29440,7 @@
                   "frameTime": 0.03
                 }
               ],
-              "time": 0.021667747,
+              "time": 0.02166584,
               "doesLoop": true
             }
           ],
@@ -29635,19 +29635,19 @@
             },
             "texCoords": [
               {
-                "x": 0.14285715,
+                "x": 0.42857143,
                 "y": 1.0
               },
               {
-                "x": 0.14285715,
+                "x": 0.42857143,
                 "y": 0.8
               },
               {
-                "x": 0.0,
+                "x": 0.2857143,
                 "y": 0.8
               },
               {
-                "x": 0.0,
+                "x": 0.2857143,
                 "y": 1.0
               }
             ]
@@ -29882,7 +29882,7 @@
                   "frameTime": 0.23
                 }
               ],
-              "time": 0.1116851,
+              "time": 0.08833788,
               "doesLoop": true
             },
             {
@@ -30022,19 +30022,19 @@
             },
             "texCoords": [
               {
-                "x": 0.14285715,
+                "x": 0.42857143,
                 "y": 1.0
               },
               {
-                "x": 0.14285715,
+                "x": 0.42857143,
                 "y": 0.8
               },
               {
-                "x": 0.0,
+                "x": 0.2857143,
                 "y": 0.8
               },
               {
-                "x": 0.0,
+                "x": 0.2857143,
                 "y": 1.0
               }
             ]
@@ -30269,7 +30269,7 @@
                   "frameTime": 0.23
                 }
               ],
-              "time": 0.1116851,
+              "time": 0.08833788,
               "doesLoop": true
             },
             {
@@ -30409,19 +30409,19 @@
             },
             "texCoords": [
               {
-                "x": 0.14285715,
+                "x": 0.42857143,
                 "y": 1.0
               },
               {
-                "x": 0.14285715,
+                "x": 0.42857143,
                 "y": 0.8
               },
               {
-                "x": 0.0,
+                "x": 0.2857143,
                 "y": 0.8
               },
               {
-                "x": 0.0,
+                "x": 0.2857143,
                 "y": 1.0
               }
             ]
@@ -30656,7 +30656,7 @@
                   "frameTime": 0.23
                 }
               ],
-              "time": 0.1116851,
+              "time": 0.08833788,
               "doesLoop": true
             },
             {
@@ -31010,19 +31010,19 @@
             },
             "texCoords": [
               {
-                "x": 0.125,
+                "x": 0.625,
                 "y": 1.0
               },
               {
-                "x": 0.125,
+                "x": 0.625,
                 "y": 0.0
               },
               {
-                "x": 0.0,
+                "x": 0.5,
                 "y": 0.0
               },
               {
-                "x": 0.0,
+                "x": 0.5,
                 "y": 1.0
               }
             ]
@@ -31279,7 +31279,7 @@
                   "frameTime": 0.01
                 }
               ],
-              "time": 0.01,
+              "time": 0.0016658399,
               "doesLoop": true
             }
           ],
@@ -31374,19 +31374,19 @@
             },
             "texCoords": [
               {
-                "x": 0.125,
+                "x": 0.625,
                 "y": 1.0
               },
               {
-                "x": 0.125,
+                "x": 0.625,
                 "y": 0.0
               },
               {
-                "x": 0.0,
+                "x": 0.5,
                 "y": 0.0
               },
               {
-                "x": 0.0,
+                "x": 0.5,
                 "y": 1.0
               }
             ]
@@ -31643,7 +31643,7 @@
                   "frameTime": 0.01
                 }
               ],
-              "time": 0.01,
+              "time": 0.0016658399,
               "doesLoop": true
             }
           ],
@@ -31738,19 +31738,19 @@
             },
             "texCoords": [
               {
-                "x": 0.125,
+                "x": 0.625,
                 "y": 1.0
               },
               {
-                "x": 0.125,
+                "x": 0.625,
                 "y": 0.0
               },
               {
-                "x": 0.0,
+                "x": 0.5,
                 "y": 0.0
               },
               {
-                "x": 0.0,
+                "x": 0.5,
                 "y": 1.0
               }
             ]
@@ -32007,7 +32007,7 @@
                   "frameTime": 0.01
                 }
               ],
-              "time": 0.01,
+              "time": 0.0016658399,
               "doesLoop": true
             }
           ],
@@ -32102,19 +32102,19 @@
             },
             "texCoords": [
               {
-                "x": 0.125,
+                "x": 0.25,
                 "y": 1.0
               },
               {
+                "x": 0.25,
+                "y": 0.8888889
+              },
+              {
                 "x": 0.125,
                 "y": 0.8888889
               },
               {
-                "x": 0.0,
-                "y": 0.8888889
-              },
-              {
-                "x": 0.0,
+                "x": 0.125,
                 "y": 1.0
               }
             ]
@@ -32929,7 +32929,7 @@
                   "frameTime": 0.4
                 }
               ],
-              "time": 0.17500964,
+              "time": 0.4,
               "doesLoop": true
             },
             {
@@ -35837,19 +35837,19 @@
             },
             "texCoords": [
               {
-                "x": 0.875,
+                "x": 0.25,
                 "y": 1.0
               },
               {
-                "x": 0.875,
+                "x": 0.25,
                 "y": 0.6666667
               },
               {
-                "x": 0.75,
+                "x": 0.125,
                 "y": 0.6666667
               },
               {
-                "x": 0.75,
+                "x": 0.125,
                 "y": 1.0
               }
             ]
@@ -36114,7 +36114,7 @@
                   "frameTime": 0.1
                 }
               ],
-              "time": 0.09166775,
+              "time": 0.07499895,
               "doesLoop": true
             },
             {
@@ -37718,8 +37718,8 @@
         "type": "org.example.jade.Transform",
         "properties": {
           "position": {
-            "x": 2.625,
-            "y": 1.375
+            "x": 4.375,
+            "y": 0.625
           },
           "scale": {
             "x": 0.25,
@@ -37727,7 +37727,7 @@
           },
           "rotation": 0.0,
           "zIndex": 0,
-          "uid": 5748807
+          "uid": 5627161
         }
       },
       {
@@ -37740,33 +37740,33 @@
             "w": 1.0
           },
           "sprite": {
-            "width": 16.0,
-            "height": 16.0,
+            "width": 32.0,
+            "height": 32.0,
             "texture": {
-              "filepath": "assets/images/shooter_arrow.png",
-              "width": 112,
-              "height": 16
+              "filepath": "assets/images/Owlet.png",
+              "width": 480,
+              "height": 256
             },
             "texCoords": [
               {
-                "x": 0.14285715,
-                "y": 1.0
+                "x": 0.13333334,
+                "y": 0.375
               },
               {
-                "x": 0.14285715,
-                "y": 0.0
+                "x": 0.13333334,
+                "y": 0.25
               },
               {
-                "x": 0.0,
-                "y": 0.0
+                "x": 0.06666667,
+                "y": 0.25
               },
               {
-                "x": 0.0,
-                "y": 1.0
+                "x": 0.06666667,
+                "y": 0.375
               }
             ]
           },
-          "uid": 5748808
+          "uid": 5627162
         }
       },
       {
@@ -37775,115 +37775,90 @@
           "stateTransfers": [
             [
               {
-                "state": "Prepare Arrow",
-                "trigger": "shooting"
+                "state": "Idle",
+                "trigger": "dead"
               },
-              "Shoot Arrow"
+              "Dead"
             ],
             [
               {
-                "state": "Shoot Arrow",
-                "trigger": "preparing"
+                "state": "Walk",
+                "trigger": "switchDirection"
               },
-              "Prepare Arrow"
+              "Switch Direction"
+            ],
+            [
+              {
+                "state": "Idle",
+                "trigger": "startWalking"
+              },
+              "Walk"
+            ],
+            [
+              {
+                "state": "Walk",
+                "trigger": "dead"
+              },
+              "Dead"
+            ],
+            [
+              {
+                "state": "Walk",
+                "trigger": "stopWalking"
+              },
+              "Idle"
+            ],
+            [
+              {
+                "state": "Switch Direction",
+                "trigger": "startWalking"
+              },
+              "Walk"
+            ],
+            [
+              {
+                "state": "Switch Direction",
+                "trigger": "stopWalking"
+              },
+              "Idle"
+            ],
+            [
+              {
+                "state": "Switch Direction",
+                "trigger": "dead"
+              },
+              "Dead"
             ]
           ],
           "states": [
             {
-              "title": "Prepare Arrow",
+              "title": "Walk",
               "animationFrames": [
                 {
                   "sprite": {
-                    "width": 16.0,
-                    "height": 16.0,
+                    "width": 32.0,
+                    "height": 32.0,
                     "texture": {
-                      "filepath": "assets/images/shooter_arrow.png",
-                      "width": 112,
-                      "height": 16
+                      "filepath": "assets/images/Owlet.png",
+                      "width": 480,
+                      "height": 256
                     },
                     "texCoords": [
                       {
-                        "x": 0.14285715,
-                        "y": 1.0
+                        "x": 0.06666667,
+                        "y": 0.875
                       },
                       {
-                        "x": 0.14285715,
-                        "y": 0.0
+                        "x": 0.06666667,
+                        "y": 0.75
                       },
                       {
                         "x": 0.0,
-                        "y": 0.0
+                        "y": 0.75
                       },
                       {
                         "x": 0.0,
-                        "y": 1.0
-                      }
-                    ]
-                  },
-                  "frameTime": 0.4
-                },
-                {
-                  "sprite": {
-                    "width": 16.0,
-                    "height": 16.0,
-                    "texture": {
-                      "filepath": "assets/images/shooter_arrow.png",
-                      "width": 112,
-                      "height": 16
-                    },
-                    "texCoords": [
-                      {
-                        "x": 0.2857143,
-                        "y": 1.0
-                      },
-                      {
-                        "x": 0.2857143,
-                        "y": 0.0
-                      },
-                      {
-                        "x": 0.14285715,
-                        "y": 0.0
-                      },
-                      {
-                        "x": 0.14285715,
-                        "y": 1.0
-                      }
-                    ]
-                  },
-                  "frameTime": 0.4
-                }
-              ],
-              "time": 0.30000344,
-              "doesLoop": true
-            },
-            {
-              "title": "Shoot Arrow",
-              "animationFrames": [
-                {
-                  "sprite": {
-                    "width": 16.0,
-                    "height": 16.0,
-                    "texture": {
-                      "filepath": "assets/images/shooter_arrow.png",
-                      "width": 112,
-                      "height": 16
-                    },
-                    "texCoords": [
-                      {
-                        "x": 0.71428573,
-                        "y": 1.0
-                      },
-                      {
-                        "x": 0.71428573,
-                        "y": 0.0
-                      },
-                      {
-                        "x": 0.5714286,
-                        "y": 0.0
-                      },
-                      {
-                        "x": 0.5714286,
-                        "y": 1.0
+                        "y": 0.875
                       }
                     ]
                   },
@@ -37891,29 +37866,149 @@
                 },
                 {
                   "sprite": {
-                    "width": 16.0,
-                    "height": 16.0,
+                    "width": 32.0,
+                    "height": 32.0,
                     "texture": {
-                      "filepath": "assets/images/shooter_arrow.png",
-                      "width": 112,
-                      "height": 16
+                      "filepath": "assets/images/Owlet.png",
+                      "width": 480,
+                      "height": 256
                     },
                     "texCoords": [
                       {
-                        "x": 0.85714287,
-                        "y": 1.0
+                        "x": 0.13333334,
+                        "y": 0.875
                       },
                       {
-                        "x": 0.85714287,
-                        "y": 0.0
+                        "x": 0.13333334,
+                        "y": 0.75
                       },
                       {
-                        "x": 0.71428573,
-                        "y": 0.0
+                        "x": 0.06666667,
+                        "y": 0.75
                       },
                       {
-                        "x": 0.71428573,
-                        "y": 1.0
+                        "x": 0.06666667,
+                        "y": 0.875
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/Owlet.png",
+                      "width": 480,
+                      "height": 256
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.2,
+                        "y": 0.875
+                      },
+                      {
+                        "x": 0.2,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.13333334,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.13333334,
+                        "y": 0.875
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/Owlet.png",
+                      "width": 480,
+                      "height": 256
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.26666668,
+                        "y": 0.875
+                      },
+                      {
+                        "x": 0.26666668,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.2,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.2,
+                        "y": 0.875
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/Owlet.png",
+                      "width": 480,
+                      "height": 256
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.33333334,
+                        "y": 0.875
+                      },
+                      {
+                        "x": 0.33333334,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.26666668,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.26666668,
+                        "y": 0.875
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/Owlet.png",
+                      "width": 480,
+                      "height": 256
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.4,
+                        "y": 0.875
+                      },
+                      {
+                        "x": 0.4,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.33333334,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.33333334,
+                        "y": 0.875
                       }
                     ]
                   },
@@ -37922,10 +38017,779 @@
               ],
               "time": 0.0,
               "doesLoop": true
+            },
+            {
+              "title": "Dead",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/Owlet.png",
+                      "width": 480,
+                      "height": 256
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.53333336,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.53333336,
+                        "y": 0.375
+                      },
+                      {
+                        "x": 0.46666667,
+                        "y": 0.375
+                      },
+                      {
+                        "x": 0.46666667,
+                        "y": 0.5
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/Owlet.png",
+                      "width": 480,
+                      "height": 256
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.6,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.6,
+                        "y": 0.375
+                      },
+                      {
+                        "x": 0.53333336,
+                        "y": 0.375
+                      },
+                      {
+                        "x": 0.53333336,
+                        "y": 0.5
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/Owlet.png",
+                      "width": 480,
+                      "height": 256
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.6666667,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.6666667,
+                        "y": 0.375
+                      },
+                      {
+                        "x": 0.6,
+                        "y": 0.375
+                      },
+                      {
+                        "x": 0.6,
+                        "y": 0.5
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/Owlet.png",
+                      "width": 480,
+                      "height": 256
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.73333335,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.73333335,
+                        "y": 0.375
+                      },
+                      {
+                        "x": 0.6666667,
+                        "y": 0.375
+                      },
+                      {
+                        "x": 0.6666667,
+                        "y": 0.5
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/Owlet.png",
+                      "width": 480,
+                      "height": 256
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.8,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.8,
+                        "y": 0.375
+                      },
+                      {
+                        "x": 0.73333335,
+                        "y": 0.375
+                      },
+                      {
+                        "x": 0.73333335,
+                        "y": 0.5
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/Owlet.png",
+                      "width": 480,
+                      "height": 256
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.8666667,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.8666667,
+                        "y": 0.375
+                      },
+                      {
+                        "x": 0.8,
+                        "y": 0.375
+                      },
+                      {
+                        "x": 0.8,
+                        "y": 0.5
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/Owlet.png",
+                      "width": 480,
+                      "height": 256
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.93333334,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 0.93333334,
+                        "y": 0.375
+                      },
+                      {
+                        "x": 0.8666667,
+                        "y": 0.375
+                      },
+                      {
+                        "x": 0.8666667,
+                        "y": 0.5
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/Owlet.png",
+                      "width": 480,
+                      "height": 256
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 0.5
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.375
+                      },
+                      {
+                        "x": 0.93333334,
+                        "y": 0.375
+                      },
+                      {
+                        "x": 0.93333334,
+                        "y": 0.5
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                }
+              ],
+              "time": 0.0,
+              "doesLoop": false
+            },
+            {
+              "title": "Idle",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/Owlet.png",
+                      "width": 480,
+                      "height": 256
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.06666667,
+                        "y": 0.375
+                      },
+                      {
+                        "x": 0.06666667,
+                        "y": 0.25
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.25
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.375
+                      }
+                    ]
+                  },
+                  "frameTime": 0.2
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/Owlet.png",
+                      "width": 480,
+                      "height": 256
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.13333334,
+                        "y": 0.375
+                      },
+                      {
+                        "x": 0.13333334,
+                        "y": 0.25
+                      },
+                      {
+                        "x": 0.06666667,
+                        "y": 0.25
+                      },
+                      {
+                        "x": 0.06666667,
+                        "y": 0.375
+                      }
+                    ]
+                  },
+                  "frameTime": 0.2
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/Owlet.png",
+                      "width": 480,
+                      "height": 256
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.2,
+                        "y": 0.375
+                      },
+                      {
+                        "x": 0.2,
+                        "y": 0.25
+                      },
+                      {
+                        "x": 0.13333334,
+                        "y": 0.25
+                      },
+                      {
+                        "x": 0.13333334,
+                        "y": 0.375
+                      }
+                    ]
+                  },
+                  "frameTime": 0.2
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/Owlet.png",
+                      "width": 480,
+                      "height": 256
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.26666668,
+                        "y": 0.375
+                      },
+                      {
+                        "x": 0.26666668,
+                        "y": 0.25
+                      },
+                      {
+                        "x": 0.2,
+                        "y": 0.25
+                      },
+                      {
+                        "x": 0.2,
+                        "y": 0.375
+                      }
+                    ]
+                  },
+                  "frameTime": 0.2
+                }
+              ],
+              "time": 0.15833469,
+              "doesLoop": true
+            },
+            {
+              "title": "Switch Direction",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/Owlet.png",
+                      "width": 480,
+                      "height": 256
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.06666667,
+                        "y": 0.875
+                      },
+                      {
+                        "x": 0.06666667,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.75
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.875
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                }
+              ],
+              "time": 0.0,
+              "doesLoop": false
             }
           ],
-          "defaultStateTitle": "Prepare Arrow",
-          "uid": 5748809
+          "defaultStateTitle": "Idle",
+          "uid": 5627163
+        }
+      },
+      {
+        "type": "org.example.physics2d.components.Rigidbody2D",
+        "properties": {
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.1,
+          "bodyType": "Dynamic",
+          "friction": 0.1,
+          "angularVelocity": 0.0,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": true,
+          "continuousCollision": false,
+          "uid": 5627164
+        }
+      },
+      {
+        "type": "org.example.physics2d.components.PillboxCollider",
+        "properties": {
+          "width": 0.16,
+          "height": 0.2,
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "uid": 5627165
+        }
+      },
+      {
+        "type": "org.example.components.CuteEnemyAI",
+        "properties": {
+          "uid": 5627166
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false
+  },
+  {
+    "uid": 246,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "org.example.jade.Transform",
+        "properties": {
+          "position": {
+            "x": 4.375,
+            "y": 1.375
+          },
+          "scale": {
+            "x": 0.5,
+            "y": 0.25
+          },
+          "rotation": 0.0,
+          "zIndex": 0,
+          "uid": 7111492
+        }
+      },
+      {
+        "type": "org.example.components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 32.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/platform.png",
+              "width": 256,
+              "height": 16
+            },
+            "texCoords": [
+              {
+                "x": 0.625,
+                "y": 1.0
+              },
+              {
+                "x": 0.625,
+                "y": 0.0
+              },
+              {
+                "x": 0.5,
+                "y": 0.0
+              },
+              {
+                "x": 0.5,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 7111493
+        }
+      },
+      {
+        "type": "org.example.components.StateMachine",
+        "properties": {
+          "stateTransfers": {},
+          "states": [
+            {
+              "title": "Spinning",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/platform.png",
+                      "width": 256,
+                      "height": 16
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.125,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.01
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/platform.png",
+                      "width": 256,
+                      "height": 16
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.25,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.01
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/platform.png",
+                      "width": 256,
+                      "height": 16
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.375,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.375,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.01
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/platform.png",
+                      "width": 256,
+                      "height": 16
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.5,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.375,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.375,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.01
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/platform.png",
+                      "width": 256,
+                      "height": 16
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.625,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.625,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.01
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/platform.png",
+                      "width": 256,
+                      "height": 16
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.75,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.75,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.625,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.625,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.01
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/platform.png",
+                      "width": 256,
+                      "height": 16
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.875,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.875,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.75,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.75,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.01
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 16.0,
+                    "texture": {
+                      "filepath": "assets/images/platform.png",
+                      "width": 256,
+                      "height": 16
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.875,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.875,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.01
+                }
+              ],
+              "time": 0.0016658399,
+              "doesLoop": true
+            }
+          ],
+          "defaultStateTitle": "Spinning",
+          "uid": 7111494
         }
       },
       {
@@ -37945,15 +38809,15 @@
           "isSensor": false,
           "fixedRotation": false,
           "continuousCollision": false,
-          "uid": 5748810
+          "uid": 7111495
         }
       },
       {
         "type": "org.example.physics2d.components.Box2DCollider",
         "properties": {
           "halfSize": {
-            "x": 0.25,
-            "y": 0.25
+            "x": 0.5,
+            "y": 0.19
           },
           "origin": {
             "x": 0.0,
@@ -37961,175 +38825,15 @@
           },
           "offset": {
             "x": 0.0,
-            "y": 0.0
+            "y": 0.04
           },
-          "uid": 5748811
+          "uid": 7111496
         }
       },
       {
-        "type": "org.example.components.ArrowShooter",
+        "type": "org.example.components.Platform",
         "properties": {
-          "stateMachine": {
-            "stateTransfers": [
-              [
-                {
-                  "state": "Prepare Arrow",
-                  "trigger": "shooting"
-                },
-                "Shoot Arrow"
-              ],
-              [
-                {
-                  "state": "Shoot Arrow",
-                  "trigger": "preparing"
-                },
-                "Prepare Arrow"
-              ]
-            ],
-            "states": [
-              {
-                "title": "Prepare Arrow",
-                "animationFrames": [
-                  {
-                    "sprite": {
-                      "width": 16.0,
-                      "height": 16.0,
-                      "texture": {
-                        "filepath": "assets/images/shooter_arrow.png",
-                        "width": 112,
-                        "height": 16
-                      },
-                      "texCoords": [
-                        {
-                          "x": 0.14285715,
-                          "y": 1.0
-                        },
-                        {
-                          "x": 0.14285715,
-                          "y": 0.0
-                        },
-                        {
-                          "x": 0.0,
-                          "y": 0.0
-                        },
-                        {
-                          "x": 0.0,
-                          "y": 1.0
-                        }
-                      ]
-                    },
-                    "frameTime": 0.4
-                  },
-                  {
-                    "sprite": {
-                      "width": 16.0,
-                      "height": 16.0,
-                      "texture": {
-                        "filepath": "assets/images/shooter_arrow.png",
-                        "width": 112,
-                        "height": 16
-                      },
-                      "texCoords": [
-                        {
-                          "x": 0.2857143,
-                          "y": 1.0
-                        },
-                        {
-                          "x": 0.2857143,
-                          "y": 0.0
-                        },
-                        {
-                          "x": 0.14285715,
-                          "y": 0.0
-                        },
-                        {
-                          "x": 0.14285715,
-                          "y": 1.0
-                        }
-                      ]
-                    },
-                    "frameTime": 0.4
-                  }
-                ],
-                "time": 0.30000344,
-                "doesLoop": true
-              },
-              {
-                "title": "Shoot Arrow",
-                "animationFrames": [
-                  {
-                    "sprite": {
-                      "width": 16.0,
-                      "height": 16.0,
-                      "texture": {
-                        "filepath": "assets/images/shooter_arrow.png",
-                        "width": 112,
-                        "height": 16
-                      },
-                      "texCoords": [
-                        {
-                          "x": 0.71428573,
-                          "y": 1.0
-                        },
-                        {
-                          "x": 0.71428573,
-                          "y": 0.0
-                        },
-                        {
-                          "x": 0.5714286,
-                          "y": 0.0
-                        },
-                        {
-                          "x": 0.5714286,
-                          "y": 1.0
-                        }
-                      ]
-                    },
-                    "frameTime": 0.1
-                  },
-                  {
-                    "sprite": {
-                      "width": 16.0,
-                      "height": 16.0,
-                      "texture": {
-                        "filepath": "assets/images/shooter_arrow.png",
-                        "width": 112,
-                        "height": 16
-                      },
-                      "texCoords": [
-                        {
-                          "x": 0.85714287,
-                          "y": 1.0
-                        },
-                        {
-                          "x": 0.85714287,
-                          "y": 0.0
-                        },
-                        {
-                          "x": 0.71428573,
-                          "y": 0.0
-                        },
-                        {
-                          "x": 0.71428573,
-                          "y": 1.0
-                        }
-                      ]
-                    },
-                    "frameTime": 0.1
-                  }
-                ],
-                "time": 0.0,
-                "doesLoop": true
-              }
-            ],
-            "defaultStateTitle": "Prepare Arrow",
-            "uid": 5748809
-          },
-          "shootingTime": 0.2,
-          "preparingTime": 0.8,
-          "isShooting": false,
-          "animationTimer": 0.0,
-          "uid": 5748812
+          "uid": 7111497
         }
       }
     ],

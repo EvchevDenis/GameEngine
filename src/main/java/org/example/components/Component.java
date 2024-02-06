@@ -4,15 +4,20 @@ import imgui.ImGui;
 import imgui.type.ImInt;
 import org.example.editor.JImGui;
 import org.example.jade.GameObject;
+import org.example.renderer.Shader;
 import org.jbox2d.dynamics.contacts.Contact;
 import org.joml.Vector2f;
 import org.joml.Vector3f;
 import org.joml.Vector4f;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 
 public abstract class Component {
+    private transient Logger logger = LoggerFactory.getLogger(Component.class);
+
     private static int ID_COUNTER = 0;
     private int uid = -1;
 
@@ -105,7 +110,7 @@ public abstract class Component {
                 }
             }
         } catch (IllegalAccessException e) {
-            e.printStackTrace();
+            logger.error("Error: File type cast.", e);
         }
     }
 
