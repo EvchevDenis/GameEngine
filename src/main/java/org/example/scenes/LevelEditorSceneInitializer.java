@@ -9,11 +9,23 @@ import org.example.physics2d.components.Rigidbody2D;
 import org.example.physics2d.enums.BodyType;
 import org.example.utils.AssetPool;
 import org.joml.Vector2f;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
+import javax.swing.*;
+import javax.swing.filechooser.FileSystemView;
 import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Collection;
 
+import static org.example.scenes.Scene.disableToolTips;
+import static org.example.scenes.Scene.windowsJFileChooser;
+
 public class LevelEditorSceneInitializer extends SceneInitializer {
+    private transient Logger logger = LoggerFactory.getLogger(LevelEditorSceneInitializer.class);
 
     private Spritesheet solidSprites;
     private Spritesheet decorationSprites;
@@ -306,6 +318,14 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
                 ImGui.endTabItem();
             }
 
+            if(ImGui.beginTabItem("Imported")) {
+                if(ImGui.button("Import")) {
+                    copyFile();
+                }
+
+                ImGui.endTabItem();
+            }
+
             if (ImGui.beginTabItem("Sounds")) {
                 Collection<Sound> sounds = AssetPool.getAllSounds();
                 for (Sound sound : sounds) {
@@ -346,6 +366,22 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
             ImGui.newLine();
         } else {
             ImGui.sameLine();
+        }
+    }
+
+    public void copyFile() {
+        JFileChooser fileChooser = windowsJFileChooser(true);
+        disableToolTips(fileChooser);
+        int returnValue = fileChooser.showOpenDialog(null);
+        if (returnValue == JFileChooser.APPROVE_OPTION) {
+            File selectedFile = fileChooser.getSelectedFile();
+            try {
+                Path destinationPath = Paths.get("assets/imported/" + selectedFile.getName());
+
+                Files.copy(selectedFile.toPath(), destinationPath);
+            } catch (IOException e) {
+                logger.error("Error: Copying file.", e);
+            }
         }
     }
 }

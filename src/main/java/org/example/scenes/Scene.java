@@ -7,6 +7,7 @@ import org.example.components.ComponentDeserializer;
 import org.example.jade.*;
 import org.example.physics2d.Physics2D;
 import org.example.renderer.Renderer;
+import org.example.utils.CustomFileChooser;
 import org.joml.Vector2f;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -206,7 +207,7 @@ public class Scene {
                 .enableComplexMapKeySerialization()
                 .create();
 
-        JFileChooser saveChooser = windowsJFileChooser();
+        JFileChooser saveChooser = windowsJFileChooser(false);
         saveChooser.setCurrentDirectory(new File("."));
         FileFilter filter = new FileNameExtensionFilter("TXT file", "txt");
         saveChooser.setFileFilter(filter);
@@ -269,7 +270,7 @@ public class Scene {
         boolean fileChooserClosed = false;
         String configFileName = "config.cfg";
 
-        JFileChooser loadChooser = windowsJFileChooser();
+        JFileChooser loadChooser = windowsJFileChooser(false);
         loadChooser.setCurrentDirectory(new File("."));
         FileFilter filter = new FileNameExtensionFilter("TXT file", "txt");
         loadChooser.setFileFilter(filter);
@@ -346,12 +347,12 @@ public class Scene {
         currentLevel = loadPath;
     }
 
-    public static JFileChooser windowsJFileChooser(){
+    public static JFileChooser windowsJFileChooser(boolean isCustom){
         LookAndFeel previousLF = UIManager.getLookAndFeel();
-        JFileChooser chooser;
+        CustomFileChooser chooser;
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-            chooser = new JFileChooser();
+            chooser = new CustomFileChooser(isCustom);
             UIManager.setLookAndFeel(previousLF);
         } catch (IllegalAccessException | UnsupportedLookAndFeelException | InstantiationException | ClassNotFoundException e) {
             throw new RuntimeException(e);
@@ -359,7 +360,7 @@ public class Scene {
         return chooser;
     }
 
-    private static void disableToolTips(Container container) {
+    public static void disableToolTips(Container container) {
         for (java.awt.Component component : container.getComponents()) {
             if (component instanceof JComponent) {
                 ((JComponent) component).setToolTipText(null);
