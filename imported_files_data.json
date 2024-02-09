@@ -1,0 +1,14 @@
+[
+  {
+    "fileName": "Buildings.png",
+    "widthValue": 16,
+    "heightValue": 16,
+    "spriteCountValue": 100
+  },
+  {
+    "fileName": "Hive.png",
+    "widthValue": 32,
+    "heightValue": 32,
+    "spriteCountValue": 50
+  }
+]

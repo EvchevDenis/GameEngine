@@ -1,5 +1,10 @@
 package org.example.scenes;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+import com.google.gson.reflect.TypeToken;
 import imgui.ImGui;
 import imgui.ImVec2;
 import org.example.components.*;
@@ -8,28 +13,65 @@ import org.example.physics2d.components.Box2DCollider;
 import org.example.physics2d.components.Rigidbody2D;
 import org.example.physics2d.enums.BodyType;
 import org.example.utils.AssetPool;
+import org.example.utils.CustomFileChooser;
 import org.joml.Vector2f;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.swing.*;
-import javax.swing.filechooser.FileSystemView;
 import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.lang.reflect.Type;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
+import java.util.function.ToDoubleBiFunction;
 
-import static org.example.scenes.Scene.disableToolTips;
-import static org.example.scenes.Scene.windowsJFileChooser;
+import static org.example.utils.CustomFileChooser.windowsJFileChooser;
 
 public class LevelEditorSceneInitializer extends SceneInitializer {
     private transient Logger logger = LoggerFactory.getLogger(LevelEditorSceneInitializer.class);
 
+    public class FileData {
+        private String fileName;
+        private int widthValue;
+        private int heightValue;
+        private int spriteCountValue;
+
+        public FileData(String fileName, int widthValue, int heightValue, int spriteCountValue) {
+            this.fileName = fileName;
+            this.widthValue = widthValue;
+            this.heightValue = heightValue;
+            this.spriteCountValue = spriteCountValue;
+        }
+
+        // Getters
+        public String getFileName() {
+            return fileName;
+        }
+
+        public int getWidthValue() {
+            return widthValue;
+        }
+
+        public int getHeightValue() {
+            return heightValue;
+        }
+
+        public int getSpriteCountValue() {
+            return spriteCountValue;
+        }
+    }
+
     private Spritesheet solidSprites;
     private Spritesheet decorationSprites;
     private GameObject levelEditorStuff;
+    private List<FileData> importedFilesData = new ArrayList<>();
 
     public LevelEditorSceneInitializer() {
 
@@ -318,10 +360,18 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
                 ImGui.endTabItem();
             }
 
-            if(ImGui.beginTabItem("Imported")) {
-                if(ImGui.button("Import")) {
+            if (ImGui.beginTabItem("Imported")) {
+                float buttonWidth = 64f;
+                float buttonHeight = 64f;
+
+                ImGui.setNextItemWidth(buttonWidth);
+                if (ImGui.button("Import", buttonWidth, buttonHeight)) {
                     copyFile();
                 }
+
+                /*if (ImGui.button("Show info", buttonWidth, buttonHeight)) {
+                    readDataFromFile();
+                }*/
 
                 ImGui.endTabItem();
             }
@@ -370,18 +420,62 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
     }
 
     public void copyFile() {
-        JFileChooser fileChooser = windowsJFileChooser(true);
-        disableToolTips(fileChooser);
+        CustomFileChooser fileChooser = windowsJFileChooser(true);
         int returnValue = fileChooser.showOpenDialog(null);
         if (returnValue == JFileChooser.APPROVE_OPTION) {
             File selectedFile = fileChooser.getSelectedFile();
             try {
                 Path destinationPath = Paths.get("assets/imported/" + selectedFile.getName());
+                String fileName = selectedFile.getName();
+                int widthValue = Integer.parseInt(fileChooser.getWidthValue());
+                int heightValue = Integer.parseInt(fileChooser.getHeightValue());
+                int spriteCountValue = Integer.parseInt(fileChooser.getSpriteCountValue());
 
                 Files.copy(selectedFile.toPath(), destinationPath);
+
+                importedFilesData.add(new FileData(fileName, widthValue, heightValue, spriteCountValue));
+
+                writeDataToJsonFile();
             } catch (IOException e) {
                 logger.error("Error: Copying file.", e);
             }
         }
     }
+
+    private void writeDataToJsonFile() {
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        try (FileWriter writer = new FileWriter("imported_files_data.json")) {
+            JsonArray jsonArray = new JsonArray();
+            for (FileData fileData : importedFilesData) {
+                JsonObject jsonObject = new JsonObject();
+                jsonObject.addProperty("fileName", fileData.getFileName());
+                jsonObject.addProperty("widthValue", fileData.getWidthValue());
+                jsonObject.addProperty("heightValue", fileData.getHeightValue());
+                jsonObject.addProperty("spriteCountValue", fileData.getSpriteCountValue());
+                jsonArray.add(jsonObject);
+            }
+            gson.toJson(jsonArray, writer);
+        } catch (IOException e) {
+            logger.error("Error: Writing to JSON file.", e);
+        }
+    }
+
+    public void readDataFromFile() {
+        Gson gson = new Gson();
+        try (FileReader reader = new FileReader("imported_files_data.json")) {
+            Type listType = new TypeToken<List<FileData>>(){}.getType();
+            List<FileData> dataList = gson.fromJson(reader, listType);
+            for (FileData fileData : dataList) {
+                System.out.println("File Name: " + fileData.getFileName());
+                System.out.println("Width Value: " + fileData.getWidthValue());
+                System.out.println("Height Value: " + fileData.getHeightValue());
+                System.out.println("Sprite Count Value: " + fileData.getSpriteCountValue());
+                System.out.println("------------------------------------");
+            }
+        } catch (IOException e) {
+            logger.error("Error: Reading from JSON file.", e);
+        }
+    }
 }
+
+

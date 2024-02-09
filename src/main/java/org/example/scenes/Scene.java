@@ -24,6 +24,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Properties;
 
+import static org.example.utils.CustomFileChooser.windowsJFileChooser;
+
 public class Scene {
     private transient Logger logger = LoggerFactory.getLogger(Scene.class);
 
@@ -215,7 +217,6 @@ public class Scene {
         saveChooser.setDialogTitle("Save File");
         saveChooser.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
         saveChooser.setAcceptAllFileFilterUsed(false);
-        disableToolTips(saveChooser);
 
         if (saveChooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
             try {
@@ -278,12 +279,10 @@ public class Scene {
         loadChooser.setDialogTitle("Load File");
         loadChooser.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
         loadChooser.setAcceptAllFileFilterUsed(false);
-        disableToolTips(loadChooser);
 
         if (loadChooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
             File file = loadChooser.getSelectedFile();
             loadPath = file.getAbsolutePath();
-            System.out.println("Path to file : " + loadPath);
         } else {
             try (FileInputStream input = new FileInputStream(configFileName)) {
                 properties.load(input);
@@ -345,30 +344,6 @@ public class Scene {
         }
 
         currentLevel = loadPath;
-    }
-
-    public static JFileChooser windowsJFileChooser(boolean isCustom){
-        LookAndFeel previousLF = UIManager.getLookAndFeel();
-        CustomFileChooser chooser;
-        try {
-            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-            chooser = new CustomFileChooser(isCustom);
-            UIManager.setLookAndFeel(previousLF);
-        } catch (IllegalAccessException | UnsupportedLookAndFeelException | InstantiationException | ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        }
-        return chooser;
-    }
-
-    public static void disableToolTips(Container container) {
-        for (java.awt.Component component : container.getComponents()) {
-            if (component instanceof JComponent) {
-                ((JComponent) component).setToolTipText(null);
-            }
-            if (component instanceof Container) {
-                disableToolTips((Container) component);
-            }
-        }
     }
 }
 

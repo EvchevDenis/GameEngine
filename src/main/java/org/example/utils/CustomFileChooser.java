@@ -1,20 +1,25 @@
 package org.example.utils;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import javax.swing.*;
 import java.awt.*;
-import java.beans.PropertyChangeEvent;
-import java.beans.PropertyChangeListener;
 import java.io.File;
 
 public class CustomFileChooser extends JFileChooser {
+    private transient Logger logger = LoggerFactory.getLogger(CustomFileChooser.class);
+
     private JTextField widthField;
     private JTextField heightField;
     private JTextField spriteCountField;
     private JLabel previewLabel;
+    private boolean isUsingApprove;
 
     public CustomFileChooser(boolean isCustom) {
         super();
-        if(isCustom) {
+        isUsingApprove = isCustom;
+        if (isCustom) {
             JPanel panel = new JPanel(new BorderLayout());
             JPanel fieldsPanel = new JPanel();
 
@@ -35,23 +40,65 @@ public class CustomFileChooser extends JFileChooser {
 
             panel.add(fieldsPanel, BorderLayout.NORTH);
 
-            // Добавление компонента для предварительного просмотра
             previewLabel = new JLabel();
             previewLabel.setPreferredSize(new Dimension(150, 100));
             panel.add(previewLabel, BorderLayout.CENTER);
 
             setAccessory(panel);
 
-            // Добавление слушателя для события выбора файла
             this.addPropertyChangeListener(JFileChooser.SELECTED_FILE_CHANGED_PROPERTY, evt -> {
                 File selectedFile = (File) evt.getNewValue();
                 if (selectedFile != null && selectedFile.isFile()) {
                     ImageIcon imageIcon = new ImageIcon(selectedFile.getPath());
                     previewLabel.setIcon(imageIcon);
+                    disableToolTips(this);
                 }
             });
         }
     }
+
+    @Override
+    public void approveSelection() {
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        } catch (Exception e) {
+            logger.error("Error: Setting look and feel for UI.", e);
+        }
+
+        if(isUsingApprove) {
+            if (widthField.getText().isEmpty() || heightField.getText().isEmpty() || spriteCountField.getText().isEmpty()) {
+                JOptionPane.showMessageDialog(this, "Please fill in all fields (Width, Height, Sprite Count) before saving.");
+                return;
+            }
+        }
+        super.approveSelection();
+    }
+
+    public static CustomFileChooser windowsJFileChooser(boolean isCustom){
+        LookAndFeel previousLF = UIManager.getLookAndFeel();
+        CustomFileChooser chooser;
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+            chooser = new CustomFileChooser(isCustom);
+            UIManager.setLookAndFeel(previousLF);
+            disableToolTips(chooser);
+        } catch (IllegalAccessException | UnsupportedLookAndFeelException | InstantiationException | ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+        return chooser;
+    }
+
+    public static void disableToolTips(Container container) {
+        for (java.awt.Component component : container.getComponents()) {
+            if (component instanceof JComponent) {
+                ((JComponent) component).setToolTipText(null);
+            }
+            if (component instanceof Container) {
+                disableToolTips((Container) component);
+            }
+        }
+    }
+
     public String getWidthValue() {
         return widthField.getText();
     }
