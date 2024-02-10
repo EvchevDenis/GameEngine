@@ -9,6 +9,9 @@ import imgui.ImGui;
 import imgui.ImVec2;
 import org.example.components.*;
 import org.example.jade.*;
+import org.example.observers.EventSystem;
+import org.example.observers.events.Event;
+import org.example.observers.events.EventType;
 import org.example.physics2d.components.Box2DCollider;
 import org.example.physics2d.components.Rigidbody2D;
 import org.example.physics2d.enums.BodyType;
@@ -23,6 +26,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.lang.reflect.Field;
 import java.lang.reflect.Type;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -37,7 +41,8 @@ import static org.example.utils.CustomFileChooser.windowsJFileChooser;
 public class LevelEditorSceneInitializer extends SceneInitializer {
     private transient Logger logger = LoggerFactory.getLogger(LevelEditorSceneInitializer.class);
 
-    public class FileData {
+
+    public static class FileData {
         private String fileName;
         private int widthValue;
         private int heightValue;
@@ -70,8 +75,11 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
 
     private Spritesheet solidSprites;
     private Spritesheet decorationSprites;
+    private List<Spritesheet> importedSprites = new ArrayList<>();
     private GameObject levelEditorStuff;
-    private List<FileData> importedFilesData = new ArrayList<>();
+
+    private List<FileData> userFileData = new ArrayList<>();
+    private List<FileData> importedFileData = readDataFromFile();
 
     public LevelEditorSceneInitializer() {
 
@@ -81,6 +89,21 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
     public void init(Scene scene) {
         solidSprites = AssetPool.getSpritesheet("assets/images/spritesheets/blocks_spritesheet.png");
         decorationSprites = AssetPool.getSpritesheet("assets/images/spritesheets/decoration_spritesheet.png");
+        if(importedFileData != null) {
+            for (FileData fileData : importedFileData) {
+                importedSprites.add(AssetPool.getSpritesheet("assets/imported/" + fileData.getFileName()));
+            }
+        }
+
+        /*for (FileData fileData : importedFileData) {
+            System.out.println(importedFileData.size());
+            System.out.println("File Name: " + fileData.getFileName());
+            System.out.println("Width Value: " + fileData.getWidthValue());
+            System.out.println("Height Value: " + fileData.getHeightValue());
+            System.out.println("Sprite Count Value: " + fileData.getSpriteCountValue());
+            System.out.println("------------------------------------");
+        }*/
+
         Spritesheet gizmos = AssetPool.getSpritesheet("assets/images/gizmos.png");
 
         levelEditorStuff = scene.createGameObject("LevelEditor");
@@ -97,6 +120,14 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
     public void loadResources(Scene scene) {
         // Shaders assets
         AssetPool.getShader("assets/shaders/default.glsl");
+
+        if(importedFileData != null && !importedFileData.isEmpty()) {
+            for (FileData fileData : importedFileData) {
+                AssetPool.addSpritesheet("assets/imported/" + fileData.getFileName(),
+                        new Spritesheet(AssetPool.getTexture("assets/imported/" + fileData.getFileName()),
+                                fileData.getWidthValue(), fileData.getHeightValue(), fileData.getSpriteCountValue(), 0));
+            }
+        }
 
         // Sprites assets
         AssetPool.addSpritesheet("assets/images/spritesheets/blocks_spritesheet.png",
@@ -373,6 +404,41 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
                     readDataFromFile();
                 }*/
 
+                if (!importedSprites.isEmpty()) {
+                    ImVec2 windowPos = new ImVec2();
+                    ImGui.getWindowPos(windowPos);
+                    ImVec2 windowSize = new ImVec2();
+                    ImGui.getWindowSize(windowSize);
+                    ImVec2 itemSpacing = new ImVec2();
+                    ImGui.getStyle().getItemSpacing(itemSpacing);
+
+                    float windowX2 = windowPos.x + windowSize.x;
+                    for (Spritesheet importedSprite : importedSprites) {
+                        for (int i = 0; i < importedSprite.size(); i++) {
+                            Sprite sprite = importedSprite.getSprite(i);
+                            float spriteWidth = sprite.getWidth() * 4;
+                            float spriteHeight = sprite.getHeight() * 4;
+                            int id = sprite.getTexId();
+                            Vector2f[] texCoords = sprite.getTexCoords();
+
+                            ImGui.pushID(i);
+                            if (ImGui.imageButton(id, spriteWidth, spriteHeight, texCoords[2].x, texCoords[0].y, texCoords[0].x, texCoords[2].y)) {
+                                GameObject object = Prefabs.generateSpriteObject(sprite, 0.25f, 0.25f);
+                                levelEditorStuff.getComponent(MouseControls.class).pickupObject(object);
+                            }
+                            ImGui.popID();
+
+                            ImVec2 lastButtonPos = new ImVec2();
+                            ImGui.getItemRectMax(lastButtonPos);
+                            float lastButtonX2 = lastButtonPos.x;
+                            float nextButtonX2 = lastButtonX2 + itemSpacing.x + spriteWidth;
+                            if (i + 1 < importedSprite.size() && nextButtonX2 < windowX2) {
+                                ImGui.sameLine();
+                            }
+                        }
+                    }
+                }
+
                 ImGui.endTabItem();
             }
 
@@ -422,6 +488,12 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
     public void copyFile() {
         CustomFileChooser fileChooser = windowsJFileChooser(true);
         int returnValue = fileChooser.showOpenDialog(null);
+        File jsonImport = new File("imported_files_data.json");
+
+        if(jsonImport.exists() && jsonImport.length() > 0) {
+            userFileData = readDataFromFile();
+        }
+
         if (returnValue == JFileChooser.APPROVE_OPTION) {
             File selectedFile = fileChooser.getSelectedFile();
             try {
@@ -433,9 +505,11 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
 
                 Files.copy(selectedFile.toPath(), destinationPath);
 
-                importedFilesData.add(new FileData(fileName, widthValue, heightValue, spriteCountValue));
+                userFileData.add(new FileData(fileName, widthValue, heightValue, spriteCountValue));
 
                 writeDataToJsonFile();
+
+                EventSystem.notify(null, new Event(EventType.ImportedAssetFile));
             } catch (IOException e) {
                 logger.error("Error: Copying file.", e);
             }
@@ -444,9 +518,11 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
 
     private void writeDataToJsonFile() {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
-        try (FileWriter writer = new FileWriter("imported_files_data.json")) {
+        File jsonImport = new File("imported_files_data.json");
+
+        try (FileWriter writer = new FileWriter(jsonImport)) {
             JsonArray jsonArray = new JsonArray();
-            for (FileData fileData : importedFilesData) {
+            for (FileData fileData : userFileData) {
                 JsonObject jsonObject = new JsonObject();
                 jsonObject.addProperty("fileName", fileData.getFileName());
                 jsonObject.addProperty("widthValue", fileData.getWidthValue());
@@ -460,21 +536,15 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
         }
     }
 
-    public void readDataFromFile() {
+    public List<FileData> readDataFromFile() {
         Gson gson = new Gson();
         try (FileReader reader = new FileReader("imported_files_data.json")) {
             Type listType = new TypeToken<List<FileData>>(){}.getType();
-            List<FileData> dataList = gson.fromJson(reader, listType);
-            for (FileData fileData : dataList) {
-                System.out.println("File Name: " + fileData.getFileName());
-                System.out.println("Width Value: " + fileData.getWidthValue());
-                System.out.println("Height Value: " + fileData.getHeightValue());
-                System.out.println("Sprite Count Value: " + fileData.getSpriteCountValue());
-                System.out.println("------------------------------------");
-            }
+            return gson.fromJson(reader, listType);
         } catch (IOException e) {
             logger.error("Error: Reading from JSON file.", e);
         }
+        return new ArrayList<>();
     }
 }
 

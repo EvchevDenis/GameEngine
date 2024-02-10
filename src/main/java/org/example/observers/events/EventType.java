@@ -7,5 +7,6 @@ public enum EventType {
     SaveLevelAs,
     LoadLevel,
     LoadLevelFrom,
-    UserEvent
+    UserEvent,
+    ImportedAssetFile
 }
