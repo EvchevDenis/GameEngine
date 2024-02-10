@@ -278,6 +278,7 @@ public class Window implements Observer{
                 break;
             case LoadLevel:
             case ImportedAssetFile:
+            case DeleteImportedAsset:
                 Window.changeScene(new LevelEditorSceneInitializer(), false);
                 break;
             case LoadLevelFrom:

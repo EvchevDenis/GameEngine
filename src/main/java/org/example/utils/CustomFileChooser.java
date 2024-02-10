@@ -8,13 +8,13 @@ import java.awt.*;
 import java.io.File;
 
 public class CustomFileChooser extends JFileChooser {
-    private transient Logger logger = LoggerFactory.getLogger(CustomFileChooser.class);
+    private final transient Logger logger = LoggerFactory.getLogger(CustomFileChooser.class);
 
     private JTextField widthField;
     private JTextField heightField;
     private JTextField spriteCountField;
     private JLabel previewLabel;
-    private boolean isUsingApprove;
+    private final boolean isUsingApprove;
 
     public CustomFileChooser(boolean isCustom) {
         super();
@@ -51,7 +51,6 @@ public class CustomFileChooser extends JFileChooser {
                 if (selectedFile != null && selectedFile.isFile()) {
                     ImageIcon imageIcon = new ImageIcon(selectedFile.getPath());
                     previewLabel.setIcon(imageIcon);
-                    disableToolTips(this);
                 }
             });
         }
@@ -81,22 +80,10 @@ public class CustomFileChooser extends JFileChooser {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
             chooser = new CustomFileChooser(isCustom);
             UIManager.setLookAndFeel(previousLF);
-            disableToolTips(chooser);
         } catch (IllegalAccessException | UnsupportedLookAndFeelException | InstantiationException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
         return chooser;
-    }
-
-    public static void disableToolTips(Container container) {
-        for (java.awt.Component component : container.getComponents()) {
-            if (component instanceof JComponent) {
-                ((JComponent) component).setToolTipText(null);
-            }
-            if (component instanceof Container) {
-                disableToolTips((Container) component);
-            }
-        }
     }
 
     public String getWidthValue() {

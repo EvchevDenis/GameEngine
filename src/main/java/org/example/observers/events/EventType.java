@@ -8,5 +8,6 @@ public enum EventType {
     LoadLevel,
     LoadLevelFrom,
     UserEvent,
-    ImportedAssetFile
+    ImportedAssetFile,
+    DeleteImportedAsset
 }

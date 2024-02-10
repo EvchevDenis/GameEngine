@@ -18,14 +18,14 @@ import org.example.physics2d.enums.BodyType;
 import org.example.utils.AssetPool;
 import org.example.utils.CustomFileChooser;
 import org.joml.Vector2f;
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.json.JSONTokener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.swing.*;
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.lang.reflect.Field;
 import java.lang.reflect.Type;
 import java.nio.file.Files;
@@ -40,6 +40,7 @@ import static org.example.utils.CustomFileChooser.windowsJFileChooser;
 
 public class LevelEditorSceneInitializer extends SceneInitializer {
     private transient Logger logger = LoggerFactory.getLogger(LevelEditorSceneInitializer.class);
+    private transient Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
 
     public static class FileData {
@@ -94,15 +95,6 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
                 importedSprites.add(AssetPool.getSpritesheet("assets/imported/" + fileData.getFileName()));
             }
         }
-
-        /*for (FileData fileData : importedFileData) {
-            System.out.println(importedFileData.size());
-            System.out.println("File Name: " + fileData.getFileName());
-            System.out.println("Width Value: " + fileData.getWidthValue());
-            System.out.println("Height Value: " + fileData.getHeightValue());
-            System.out.println("Sprite Count Value: " + fileData.getSpriteCountValue());
-            System.out.println("------------------------------------");
-        }*/
 
         Spritesheet gizmos = AssetPool.getSpritesheet("assets/images/gizmos.png");
 
@@ -392,17 +384,19 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
             }
 
             if (ImGui.beginTabItem("Imported")) {
-                float buttonWidth = 64f;
+                float buttonWidth = 128f;
                 float buttonHeight = 64f;
 
                 ImGui.setNextItemWidth(buttonWidth);
                 if (ImGui.button("Import", buttonWidth, buttonHeight)) {
-                    copyFile();
+                    copyFileAndData();
                 }
+                ImGui.sameLine();
 
-                /*if (ImGui.button("Show info", buttonWidth, buttonHeight)) {
-                    readDataFromFile();
-                }*/
+                ImGui.setNextItemWidth(buttonWidth);
+                if (ImGui.button("Delete", buttonWidth, buttonHeight)) {
+                    deleteFileAndData();
+                }
 
                 if (!importedSprites.isEmpty()) {
                     ImVec2 windowPos = new ImVec2();
@@ -485,7 +479,7 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
         }
     }
 
-    public void copyFile() {
+    public void copyFileAndData() {
         CustomFileChooser fileChooser = windowsJFileChooser(true);
         int returnValue = fileChooser.showOpenDialog(null);
         File jsonImport = new File("imported_files_data.json");
@@ -516,10 +510,47 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
         }
     }
 
-    private void writeDataToJsonFile() {
-        Gson gson = new GsonBuilder().setPrettyPrinting().create();
-        File jsonImport = new File("imported_files_data.json");
+    public void deleteFileAndData() {
+        CustomFileChooser fileChooser = windowsJFileChooser(false);
+        fileChooser.setCurrentDirectory(new File("assets/imported/"));
+        int returnValue = fileChooser.showOpenDialog(null);
+        File jsonFile = new File("imported_files_data.json");
 
+        if (returnValue == JFileChooser.APPROVE_OPTION) {
+            File selectedFile = fileChooser.getSelectedFile();
+            try {
+                Path destinationPath = Paths.get("assets/imported/" + selectedFile.getName());
+                String fileName = selectedFile.getName();
+
+                removeEntryFromJson(jsonFile, fileName);
+                Files.delete(destinationPath);
+                EventSystem.notify(null, new Event(EventType.DeleteImportedAsset));
+            } catch (IOException e) {
+                logger.error("Error: Deleting file.", e);
+            }
+        }
+    }
+
+    private void removeEntryFromJson(File jsonFile, String fileNameToDelete) throws IOException {
+        try (FileReader reader = new FileReader(jsonFile)) {
+            JsonArray jsonArray = gson.fromJson(reader, JsonArray.class);
+            for (int i = 0; i < jsonArray.size(); i++) {
+                JsonObject entry = jsonArray.get(i).getAsJsonObject();
+                String fileName = entry.get("fileName").getAsString();
+                if (fileName.equals(fileNameToDelete)) {
+                    jsonArray.remove(i);
+                    break;
+                }
+            }
+
+            try (FileWriter writer = new FileWriter(jsonFile)) {
+                gson.toJson(jsonArray, writer);
+            }
+        }
+    }
+
+    private void writeDataToJsonFile() {
+        File jsonImport = new File("imported_files_data.json");
         try (FileWriter writer = new FileWriter(jsonImport)) {
             JsonArray jsonArray = new JsonArray();
             for (FileData fileData : userFileData) {
@@ -537,7 +568,6 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
     }
 
     public List<FileData> readDataFromFile() {
-        Gson gson = new Gson();
         try (FileReader reader = new FileReader("imported_files_data.json")) {
             Type listType = new TypeToken<List<FileData>>(){}.getType();
             return gson.fromJson(reader, listType);
