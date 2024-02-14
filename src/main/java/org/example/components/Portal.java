@@ -4,8 +4,7 @@ import org.example.jade.Direction;
 import org.example.jade.GameObject;
 import org.example.jade.KeyListener;
 import org.example.jade.Window;
-import org.example.physics2d.components.Rigidbody2D;
-import org.example.utils.AssetPool;
+import org.example.physics2d.colliders.Rigidbody2D;
 import org.jbox2d.dynamics.contacts.Contact;
 import org.joml.Vector2f;
 

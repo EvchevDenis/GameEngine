@@ -3,7 +3,6 @@ package org.example.components;
 import org.example.jade.GameObject;
 import org.example.jade.Prefabs;
 import org.example.jade.Window;
-import org.example.physics2d.components.Rigidbody2D;
 import org.joml.Vector2f;
 
 public class Firebox extends Component {

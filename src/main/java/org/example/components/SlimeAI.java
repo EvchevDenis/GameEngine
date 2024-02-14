@@ -4,7 +4,7 @@ import org.example.jade.Camera;
 import org.example.jade.GameObject;
 import org.example.jade.Window;
 import org.example.physics2d.Physics2D;
-import org.example.physics2d.components.Rigidbody2D;
+import org.example.physics2d.colliders.Rigidbody2D;
 import org.jbox2d.dynamics.contacts.Contact;
 import org.joml.Vector2f;
 

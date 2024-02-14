@@ -1,7 +1,7 @@
 package org.example.jade;
 
 import org.example.components.*;
-import org.example.physics2d.components.*;
+import org.example.physics2d.colliders.*;
 import org.example.physics2d.enums.BodyType;
 import org.example.utils.AssetPool;
 import org.joml.Vector2f;

@@ -37,7 +37,16 @@ public class MenuBar {
             EventSystem.notify(null, new Event(EventType.LoadLevelFrom));
         }
 
+        if(KeyListener.isKeyPressed(GLFW_KEY_LEFT_CONTROL) &&
+                KeyListener.keyBeginPress(GLFW_KEY_N)) {
+            EventSystem.notify(null, new Event(EventType.CreateNewLevel));
+        }
+
         if (ImGui.beginMenu("File")) {
+            if (ImGui.menuItem("New Level", "Ctrl+N")) {
+                EventSystem.notify(null, new Event(EventType.CreateNewLevel));
+            }
+
             if (ImGui.menuItem("Save", "Ctrl+S")) {
                 EventSystem.notify(null, new Event(EventType.SaveLevel));
             }

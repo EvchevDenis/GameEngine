@@ -1,12 +1,10 @@
-package org.example.physics2d.components;
+package org.example.physics2d.colliders;
 
 import org.example.components.Component;
 import org.example.jade.Window;
 import org.joml.Vector2f;
 
-public class GlideBox2DCollider extends Component {
-    private transient CircleCollider leftUpperCircle = new CircleCollider();
-    private transient CircleCollider rightUpperCircle = new CircleCollider();
+public class BarrelBoatCollider extends Component {
     private transient CircleCollider leftBottomCircle = new CircleCollider();
     private transient CircleCollider rightBottomCircle = new CircleCollider();
     private transient Box2DCollider box2DCollider = new Box2DCollider();
@@ -18,8 +16,6 @@ public class GlideBox2DCollider extends Component {
 
     @Override
     public void start() {
-        this.leftUpperCircle.gameObject = this.gameObject;
-        this.rightUpperCircle.gameObject = this.gameObject;
         this.leftBottomCircle.gameObject = this.gameObject;
         this.rightBottomCircle.gameObject = this.gameObject;
         this.box2DCollider.gameObject = this.gameObject;
@@ -28,8 +24,6 @@ public class GlideBox2DCollider extends Component {
 
     @Override
     public void editorUpdate(float dt) {
-        leftUpperCircle.editorUpdate(dt);
-        rightUpperCircle.editorUpdate(dt);
         leftBottomCircle.editorUpdate(dt);
         rightBottomCircle.editorUpdate(dt);
         box2DCollider.editorUpdate(dt);
@@ -53,8 +47,8 @@ public class GlideBox2DCollider extends Component {
         resetFixture();
     }
 
-    public void setBoxSize(float x, float y) {
-        this.boxSize = new Vector2f(x, y);
+    public void setBoxSize(Vector2f newBoxSize) {
+        this.boxSize = newBoxSize;
         recalculateColliders();
         resetFixture();
     }
@@ -69,34 +63,20 @@ public class GlideBox2DCollider extends Component {
         if (gameObject != null) {
             Rigidbody2D rb = gameObject.getComponent(Rigidbody2D.class);
             if (rb != null) {
-                Window.getPhysics().resetGlideBoxCollider(rb, this);
+                Window.getPhysics().resetBarrelBoatCollider(rb, this);
             }
         }
     }
 
     public void recalculateColliders() {
         box2DCollider.setHalfSize(boxSize);
-
-        leftUpperCircle.setRadius(circleRadius);
-        leftUpperCircle.setOffset(new Vector2f(offset).add(-0.1f, 0.1f));
-
-        rightUpperCircle.setRadius(circleRadius);
-        rightUpperCircle.setOffset(new Vector2f(offset).add(0.1f, 0.1f));
+        box2DCollider.setOffset(new Vector2f(0, -0.03f));
 
         leftBottomCircle.setRadius(circleRadius);
-        leftBottomCircle.setOffset(new Vector2f(offset).add(-0.1f, -0.1f));
+        leftBottomCircle.setOffset(new Vector2f(offset).add(-0.07f, -0.07f));
 
         rightBottomCircle.setRadius(circleRadius);
-        rightBottomCircle.setOffset(new Vector2f(offset).add(0.1f, -0.1f));
-
-    }
-
-    public CircleCollider getLeftUpperCircle() {
-        return leftUpperCircle;
-    }
-
-    public CircleCollider getRightUpperCircle() {
-        return rightUpperCircle;
+        rightBottomCircle.setOffset(new Vector2f(offset).add(0.07f, -0.07f));
     }
 
     public CircleCollider getLeftBottomCircle() {
@@ -110,5 +90,4 @@ public class GlideBox2DCollider extends Component {
     public Box2DCollider getBox2DCollider() {
         return box2DCollider;
     }
-
 }

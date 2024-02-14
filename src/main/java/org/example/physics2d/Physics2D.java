@@ -4,14 +4,12 @@ import org.example.components.Ground;
 import org.example.jade.GameObject;
 import org.example.jade.Transform;
 import org.example.jade.Window;
-import org.example.physics2d.components.*;
-import org.example.renderer.DebugDraw;
+import org.example.physics2d.colliders.*;
 import org.jbox2d.collision.shapes.CircleShape;
 import org.jbox2d.collision.shapes.PolygonShape;
 import org.jbox2d.common.Vec2;
 import org.jbox2d.dynamics.*;
 import org.joml.Vector2f;
-import org.joml.Vector3f;
 
 public class Physics2D {
     private Vec2 gravity = new Vec2(0, -10.0f);

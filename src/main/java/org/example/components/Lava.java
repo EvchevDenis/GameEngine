@@ -1,7 +1,7 @@
 package org.example.components;
 
 import org.example.jade.GameObject;
-import org.example.physics2d.components.Rigidbody2D;
+import org.example.physics2d.colliders.Rigidbody2D;
 import org.jbox2d.dynamics.contacts.Contact;
 import org.joml.Vector2f;
 

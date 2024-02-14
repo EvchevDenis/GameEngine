@@ -1,4 +1,4 @@
-package org.example.physics2d.components;
+package org.example.physics2d.colliders;
 
 import org.example.components.Component;
 import org.example.jade.Window;

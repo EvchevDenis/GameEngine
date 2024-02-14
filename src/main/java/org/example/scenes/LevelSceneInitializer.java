@@ -1,20 +1,8 @@
 package org.example.scenes;
 
-import imgui.ImGui;
-import imgui.ImVec2;
 import org.example.components.*;
-import org.example.jade.Direction;
 import org.example.jade.GameObject;
-import org.example.jade.Prefabs;
-import org.example.jade.Sound;
-import org.example.physics2d.components.Box2DCollider;
-import org.example.physics2d.components.Rigidbody2D;
-import org.example.physics2d.enums.BodyType;
 import org.example.utils.AssetPool;
-import org.joml.Vector2f;
-
-import java.io.File;
-import java.util.Collection;
 
 public class LevelSceneInitializer extends SceneInitializer {
     public LevelSceneInitializer() {

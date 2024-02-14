@@ -178,7 +178,48 @@ public class Scene {
         return go;
     }
 
-    public void save() {
+    public void createNewLevel() {
+        Properties properties = new Properties();
+        String loadPath = null;
+        String configFileName = "config.cfg";
+        File configFile = new File(configFileName);
+
+        JFileChooser createLevelChooser = windowsJFileChooser(false);
+        createLevelChooser.setCurrentDirectory(new File("."));
+        FileFilter filter = new FileNameExtensionFilter("TXT file", "txt");
+        createLevelChooser.setFileFilter(filter);
+        createLevelChooser.addChoosableFileFilter(filter);
+        createLevelChooser.setDialogTitle("Create Level");
+        createLevelChooser.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
+        createLevelChooser.setAcceptAllFileFilterUsed(false);
+
+        if (createLevelChooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
+            try {
+                FileWriter writer = new FileWriter(createLevelChooser.getSelectedFile());
+                loadPath = createLevelChooser.getSelectedFile().getAbsolutePath();
+                writer.write("");
+                writer.close();
+            } catch (IOException e) {
+                logger.error("Error: Creating new level file.", e);
+            }
+        } else {
+            try (FileInputStream input = new FileInputStream(configFile)) {
+                properties.load(input);
+                loadPath = properties.getProperty("PreviousLevel");
+            } catch (IOException e) {
+                logger.error("Error: Reading property from configuration file.", e);
+            }
+        }
+
+        properties.setProperty("PreviousLevel", loadPath);
+        try (FileOutputStream output = new FileOutputStream(configFile)) {
+            properties.store(output, null);
+        } catch (IOException e) {
+            logger.error("Error: Writing property to configuration file.", e);
+        }
+    }
+
+    public void saveLevel() {
         Gson gson = new GsonBuilder()
                 .setPrettyPrinting()
                 .registerTypeAdapter(Component.class, new ComponentDeserializer())
@@ -201,7 +242,7 @@ public class Scene {
         }
     }
 
-    public void saveAs() {
+    public void saveAsLevel() {
         Gson gson = new GsonBuilder()
                 .setPrettyPrinting()
                 .registerTypeAdapter(Component.class, new ComponentDeserializer())
@@ -235,7 +276,7 @@ public class Scene {
         }
     }
 
-    public void load() {
+    public void loadLevel() {
         Properties properties = new Properties();
         String loadPath = null;
         String configFileName = "config.cfg";
@@ -251,7 +292,7 @@ public class Scene {
             } catch (IOException e) {
                 logger.error("Error: Creating file " + configFileName + ".", e);
             }
-            loadFrom();
+            loadLevelFrom();
         } else {
             try (FileInputStream input = new FileInputStream(configFileName)) {
                 properties.load(input);
@@ -264,12 +305,13 @@ public class Scene {
         }
     }
 
-    public void loadFrom() {
+    public void loadLevelFrom() {
         Properties properties = new Properties();
-
         String loadPath = null;
-        boolean fileChooserClosed = false;
         String configFileName = "config.cfg";
+        File configFile = new File(configFileName);
+
+        boolean fileChooserClosed = false;
 
         JFileChooser loadChooser = windowsJFileChooser(false);
         loadChooser.setCurrentDirectory(new File("."));
@@ -284,7 +326,7 @@ public class Scene {
             File file = loadChooser.getSelectedFile();
             loadPath = file.getAbsolutePath();
         } else {
-            try (FileInputStream input = new FileInputStream(configFileName)) {
+            try (FileInputStream input = new FileInputStream(configFile)) {
                 properties.load(input);
                 loadPath = properties.getProperty("PreviousLevel");
             } catch (IOException e) {
@@ -295,7 +337,7 @@ public class Scene {
 
         if(!fileChooserClosed) {
             properties.setProperty("PreviousLevel", loadPath);
-            try (FileOutputStream output = new FileOutputStream(configFileName)) {
+            try (FileOutputStream output = new FileOutputStream(configFile)) {
                 properties.store(output, null);
             } catch (IOException e) {
                 logger.error("Error: Writing property to configuration file.", e);

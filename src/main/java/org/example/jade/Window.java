@@ -30,7 +30,7 @@ import static org.lwjgl.opengl.GL11.*;
 import static org.lwjgl.opengl.GL14.glBlendFuncSeparate;
 import static org.lwjgl.system.MemoryUtil.NULL;
 
-public class Window implements Observer{
+public class Window implements Observer {
     private int width, height;
     private String title;
     private long glfwWindow;
@@ -63,9 +63,9 @@ public class Window implements Observer{
         getImguiLayer().getPropertiesWindow().setActiveGameObject(null);
         currentScene = new Scene(sceneInitializer);
         if(!loadFromFile) {
-            currentScene.load();
+            currentScene.loadLevel();
         } else {
-            currentScene.loadFrom();
+            currentScene.loadLevelFrom();
         }
         currentScene.init();
         currentScene.start();
@@ -123,6 +123,7 @@ public class Window implements Observer{
             throw new IllegalStateException("Failed to create the GLFW window.");
         }
 
+        // Installation of all peripheral and window callbacks
         glfwSetCursorPosCallback(glfwWindow, MouseListener::mousePosCallback);
         glfwSetMouseButtonCallback(glfwWindow, MouseListener::mouseButtonCallback);
         glfwSetScrollCallback(glfwWindow, MouseListener::mouseScrollCallback);
@@ -269,7 +270,7 @@ public class Window implements Observer{
         switch (event.type) {
             case GameEngineStartPlay:
                 this.runtimePlaying = true;
-                currentScene.save();
+                currentScene.saveLevel();
                 Window.changeScene(new LevelSceneInitializer(), false);
                 break;
             case GameEngineStopPlay:
@@ -285,10 +286,14 @@ public class Window implements Observer{
                 Window.changeScene(new LevelEditorSceneInitializer(), true);
                 break;
             case SaveLevel:
-                currentScene.save();
+                currentScene.saveLevel();
                 break;
             case SaveLevelAs:
-                currentScene.saveAs();
+                currentScene.saveAsLevel();
+                break;
+            case CreateNewLevel:
+                currentScene.createNewLevel();
+                Window.changeScene(new LevelEditorSceneInitializer(), false);
                 break;
         }
     }

@@ -1,22 +1,16 @@
 package org.example.editor;
 
 import imgui.ImGui;
-import org.example.components.NonPickable;
 import org.example.components.SpriteRenderer;
 import org.example.jade.GameObject;
-import org.example.jade.MouseListener;
-import org.example.physics2d.components.Box2DCollider;
-import org.example.physics2d.components.CircleCollider;
-import org.example.physics2d.components.Rigidbody2D;
+import org.example.physics2d.colliders.Box2DCollider;
+import org.example.physics2d.colliders.CircleCollider;
+import org.example.physics2d.colliders.Rigidbody2D;
 import org.example.renderer.PickingTexture;
-import org.example.scenes.Scene;
-import org.joml.Vector2f;
 import org.joml.Vector4f;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.lwjgl.glfw.GLFW.GLFW_MOUSE_BUTTON_LEFT;
 
 public class PropertiesWindow {
     private List<GameObject> activeGameObjects;

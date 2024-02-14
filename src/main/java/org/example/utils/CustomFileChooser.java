@@ -70,10 +70,16 @@ public class CustomFileChooser extends JFileChooser {
                 return;
             }
         }
+
+        if (getSelectedFile() == null) {
+            JOptionPane.showMessageDialog(this, "Please select a file before opening.");
+            return;
+        }
+
         super.approveSelection();
     }
 
-    public static CustomFileChooser windowsJFileChooser(boolean isCustom){
+    public static CustomFileChooser windowsJFileChooser(boolean isCustom) {
         LookAndFeel previousLF = UIManager.getLookAndFeel();
         CustomFileChooser chooser;
         try {

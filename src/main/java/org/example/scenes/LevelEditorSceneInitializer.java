@@ -12,21 +12,17 @@ import org.example.jade.*;
 import org.example.observers.EventSystem;
 import org.example.observers.events.Event;
 import org.example.observers.events.EventType;
-import org.example.physics2d.components.Box2DCollider;
-import org.example.physics2d.components.Rigidbody2D;
+import org.example.physics2d.colliders.Box2DCollider;
+import org.example.physics2d.colliders.Rigidbody2D;
 import org.example.physics2d.enums.BodyType;
 import org.example.utils.AssetPool;
 import org.example.utils.CustomFileChooser;
 import org.joml.Vector2f;
-import org.json.JSONArray;
-import org.json.JSONObject;
-import org.json.JSONTokener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.swing.*;
 import java.io.*;
-import java.lang.reflect.Field;
 import java.lang.reflect.Type;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -34,7 +30,6 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import java.util.function.ToDoubleBiFunction;
 
 import static org.example.utils.CustomFileChooser.windowsJFileChooser;
 
@@ -384,17 +379,14 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
             }
 
             if (ImGui.beginTabItem("Imported")) {
-                float buttonWidth = 128f;
-                float buttonHeight = 64f;
 
-                ImGui.setNextItemWidth(buttonWidth);
-                if (ImGui.button("Import", buttonWidth, buttonHeight)) {
+                if (ImGui.button("Import Asset")) {
                     copyFileAndData();
                 }
+
                 ImGui.sameLine();
 
-                ImGui.setNextItemWidth(buttonWidth);
-                if (ImGui.button("Delete", buttonWidth, buttonHeight)) {
+                if (ImGui.button("Delete Asset")) {
                     deleteFileAndData();
                 }
 

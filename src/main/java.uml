@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>C:/Users/den71/Desktop/GameEngine/src/main/java</OriginalElement>
+  <nodes>
+    <node x="-87.0" y="795.0">org.example.observers.Observer</node>
+    <node x="202.0" y="1155.0">org.example.utils.Settings</node>
+    <node x="238.0" y="160.0">org.example.components.NonPickable</node>
+    <node x="182.0" y="586.0">org.example.components.TranslateGizmo</node>
+    <node x="505.0" y="402.0">org.example.components.MouseControls</node>
+    <node x="559.0" y="654.0">org.example.components.PlayerController</node>
+    <node x="264.0" y="1009.0">org.example.utils.ImageParser</node>
+    <node x="182.0" y="528.0">org.example.components.ScaleGizmo</node>
+    <node x="-126.0" y="722.0">org.example.components.Component</node>
+    <node x="-46.0" y="586.0">org.example.components.QuestionBlock</node>
+    <node x="-127.0" y="1228.0">org.example.jade.Sound</node>
+    <node x="776.0" y="1082.0">org.example.physics2d.enums.BodyType</node>
+    <node x="320.0" y="102.0">org.example.components.Projectile</node>
+    <node x="-127.0" y="1155.0">org.example.jade.Direction</node>
+    <node x="599.0" y="586.0">org.example.components.PlayerController.PlayerState</node>
+    <node x="456.0" y="1009.0">org.example.jade.GameObject</node>
+    <node x="600.0" y="1082.0">org.example.physics2d.Physics2D</node>
+    <node x="414.0" y="218.0">org.example.components.GameCamera</node>
+    <node x="186.0" y="102.0">org.example.components.GridLines</node>
+    <node x="-46.0" y="460.0">org.example.components.BreakableObject</node>
+    <node x="589.0" y="1228.0">org.example.observers.events.Event</node>
+    <node x="909.0" y="180.0">org.example.scenes.SceneInitializer</node>
+    <node x="94.0" y="402.0">org.example.physics2d.colliders.GlideBox2DCollider</node>
+    <node x="430.0" y="276.0">org.example.components.BlockDiamond</node>
+    <node x="-46.0" y="334.0">org.example.components.Chest.BlockType</node>
+    <node x="-86.0" y="218.0">org.example.components.GizmoSystem</node>
+    <node x="601.0" y="276.0">org.example.components.ArrowShooter</node>
+    <node x="87.0" y="276.0">org.example.physics2d.colliders.PillboxCollider</node>
+    <node x="671.0" y="1155.0">org.example.jade.Camera</node>
+    <node x="142.0" y="654.0">org.example.components.Gizmo</node>
+    <node x="259.0" y="276.0">org.example.physics2d.colliders.Box2DCollider</node>
+    <node x="69.0" y="1009.0">org.example.renderer.RenderBatch</node>
+    <node x="269.0" y="44.0">org.example.components.Spikes</node>
+    <node x="-86.0" y="-14.0">org.example.components.Fire</node>
+    <node x="452.0" y="102.0">org.example.components.Necklace</node>
+    <node x="782.0" y="44.0">org.example.components.Flag</node>
+    <node x="-86.0" y="402.0">org.example.components.Chest</node>
+    <node x="-86.0" y="654.0">org.example.components.Block</node>
+    <node x="647.0" y="1009.0">org.example.renderer.Framebuffer</node>
+    <node x="18.0" y="1228.0">org.example.components.Frame</node>
+    <node x="-6.0" y="518.0">org.example.components.QuestionBlock.BlockType</node>
+    <node x="-86.0" y="160.0">org.example.components.CuteEnemyAI</node>
+    <node x="703.0" y="160.0">org.example.jade.Transform</node>
+    <node x="579.0" y="218.0">org.example.physics2d.colliders.CircleCollider</node>
+    <node x="362.0" y="936.0">org.example.editor.PropertiesWindow</node>
+    <node x="241.0" y="1082.0">org.example.jade.ImGuiLayer</node>
+    <node x="121.0" y="936.0">org.example.editor.GameViewWindow</node>
+    <node x="949.0" y="-14.0">org.example.scenes.LevelSceneInitializer</node>
+    <node x="600.0" y="936.0">org.example.components.AnimationState</node>
+    <node x="-127.0" y="1082.0">org.example.components.Spritesheet</node>
+    <node x="50.0" y="102.0">org.example.components.SurikenNf</node>
+    <node x="364.0" y="795.0">org.example.editor.SceneHierarchyWindow</node>
+    <node x="361.0" y="1155.0">org.example.renderer.Texture</node>
+    <node x="-86.0" y="44.0">org.example.components.Firebox</node>
+    <node x="423.0" y="1082.0">org.example.observers.events.EventType</node>
+    <node x="683.0" y="402.0">org.example.components.SpriteRenderer</node>
+    <node x="688.0" y="44.0">org.example.components.Ring</node>
+    <node x="448.0" y="1228.0">org.example.components.Sprite</node>
+    <node x="592.0" y="44.0">org.example.components.Lava</node>
+    <node x="516.0" y="1155.0">org.example.jade.Prefabs</node>
+    <node x="248.0" y="218.0">org.example.components.EditorCamera</node>
+    <node x="949.0" y="112.0">org.example.scenes.LevelEditorSceneInitializer</node>
+    <node x="838.0" y="1009.0">org.example.jade.KeyListener</node>
+    <node x="78.0" y="160.0">org.example.physics2d.colliders.Rigidbody2D</node>
+    <node x="644.0" y="795.0">org.example.components.ComponentDeserializer</node>
+    <node x="394.0" y="160.0">org.example.components.KeyControls</node>
+    <node x="-127.0" y="1009.0">org.example.observers.EventSystem</node>
+    <node x="812.0" y="936.0">org.example.renderer.PickingTexture</node>
+    <node x="38.0" y="1155.0">org.example.editor.MenuBar</node>
+    <node x="81.0" y="218.0">org.example.components.FontRenderer</node>
+    <node x="4.0" y="-14.0">org.example.components.Fan</node>
+    <node x="989.0" y="44.0">org.example.scenes.LevelEditorSceneInitializer.FileData</node>
+    <node x="305.0" y="402.0">org.example.physics2d.colliders.BarrelBoatCollider</node>
+    <node x="728.0" y="1228.0">org.example.Main</node>
+    <node x="57.0" y="1082.0">org.example.physics2d.RaycastInfo</node>
+    <node x="-127.0" y="863.0">org.example.jade.Window</node>
+    <node x="826.0" y="1155.0">org.example.renderer.Shader</node>
+    <node x="921.0" y="795.0">org.example.physics2d.JadeContactListener</node>
+    <node x="363.0" y="654.0">org.example.components.StateMachine</node>
+    <node x="162.0" y="1228.0">org.example.utils.JMath</node>
+    <node x="487.0" y="44.0">org.example.components.Portal</node>
+    <node x="-86.0" y="276.0">org.example.components.JumpingArrow</node>
+    <node x="1023.0" y="936.0">org.example.jade.MouseListener</node>
+    <node x="1025.0" y="1009.0">org.example.renderer.DebugDraw</node>
+    <node x="583.0" y="102.0">org.example.components.Platform</node>
+    <node x="33.0" y="44.0">org.example.components.SlimeAI</node>
+    <node x="549.0" y="160.0">org.example.physics2d.colliders.OvalCollider</node>
+    <node x="1126.0" y="1155.0">org.example.editor.JImGui</node>
+    <node x="977.0" y="1155.0">org.example.renderer.Line2D</node>
+    <node x="403.0" y="586.0">org.example.components.StateMachine.StateTrigger</node>
+    <node x="708.0" y="102.0">org.example.components.BottleAI</node>
+    <node x="1122.0" y="1082.0">org.example.renderer.Renderer</node>
+    <node x="81.0" y="795.0">org.example.jade.GameObjectDeserializer</node>
+    <node x="305.0" y="1228.0">org.example.scenes.Scene</node>
+    <node x="-127.0" y="936.0">org.example.utils.CustomFileChooser</node>
+    <node x="381.0" y="44.0">org.example.components.Water</node>
+    <node x="151.0" y="44.0">org.example.components.Ground</node>
+    <node x="949.0" y="1082.0">org.example.utils.AssetPool</node>
+    <node x="-86.0" y="102.0">org.example.components.BreakerAI</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.example.components.Ring" target="org.example.components.Component" relationship="GENERALIZATION">
+      <point x="0.0" y="-0.0" />
+      <point x="730.0" y="92.0" />
+      <point x="-121.0" y="92.0" />
+      <point x="-121.0" y="702.0" />
+      <point x="-65.0" y="-0.0" />
+    </edge>
+    <edge source="org.example.components.QuestionBlock" target="org.example.components.Block" relationship="GENERALIZATION">
+      <point x="0.0" y="-0.0" />
+      <point x="34.5" y="634.0" />
+      <point x="-81.0" y="634.0" />
+      <point x="-41.0" y="-0.0" />
+    </edge>
+    <edge source="org.example.components.BlockDiamond" target="org.example.components.Component" relationship="GENERALIZATION">
+      <point x="0.0" y="-0.0" />
+      <point x="510.5" y="324.0" />
+      <point x="-121.0" y="324.0" />
+      <point x="-121.0" y="702.0" />
+      <point x="-65.0" y="-0.0" />
+    </edge>
+    <edge source="org.example.components.BreakerAI" target="org.example.components.Component" relationship="GENERALIZATION">
+      <point x="0.0" y="-0.0" />
+      <point x="-23.0" y="150.0" />
+      <point x="-121.0" y="150.0" />
+      <point x="-121.0" y="702.0" />
+      <point x="-65.0" y="-0.0" />
+    </edge>
+    <edge source="org.example.components.MouseControls" target="org.example.components.Component" relationship="GENERALIZATION">
+      <point x="0.0" y="-0.0" />
+      <point x="589.0" y="450.0" />
+      <point x="-121.0" y="450.0" />
+      <point x="-121.0" y="702.0" />
+      <point x="-65.0" y="-0.0" />
+    </edge>
+    <edge source="org.example.components.Chest" target="org.example.components.Component" relationship="GENERALIZATION">
+      <point x="0.0" y="-0.0" />
+      <point x="-38.0" y="450.0" />
+      <point x="-121.0" y="450.0" />
+      <point x="-121.0" y="702.0" />
+      <point x="-65.0" y="-0.0" />
+    </edge>
+    <edge source="org.example.components.Fire" target="org.example.components.Component" relationship="GENERALIZATION">
+      <point x="0.0" y="-0.0" />
+      <point x="-46.0" y="34.0" />
+      <point x="-121.0" y="34.0" />
+      <point x="-121.0" y="702.0" />
+      <point x="-65.0" y="-0.0" />
+    </edge>
+    <edge source="org.example.components.NonPickable" target="org.example.components.Component" relationship="GENERALIZATION">
+      <point x="0.0" y="-0.0" />
+      <point x="311.0" y="208.0" />
+      <point x="-121.0" y="208.0" />
+      <point x="-121.0" y="702.0" />
+      <point x="-65.0" y="-0.0" />
+    </edge>
+    <edge source="org.example.components.GameCamera" target="org.example.components.Component" relationship="GENERALIZATION">
+      <point x="0.0" y="-0.0" />
+      <point x="491.5" y="266.0" />
+      <point x="-121.0" y="266.0" />
+      <point x="-121.0" y="702.0" />
+      <point x="-65.0" y="-0.0" />
+    </edge>
+    <edge source="org.example.components.Block" target="org.example.components.Component" relationship="GENERALIZATION">
+      <point x="0.0" y="-0.0" />
+      <point x="-40.0" y="702.0" />
+      <point x="-121.0" y="702.0" />
+      <point x="-65.0" y="-0.0" />
+    </edge>
+    <edge source="org.example.components.Spikes" target="org.example.components.Component" relationship="GENERALIZATION">
+      <point x="0.0" y="-0.0" />
+      <point x="320.0" y="92.0" />
+      <point x="-121.0" y="92.0" />
+      <point x="-121.0" y="702.0" />
+      <point x="-65.0" y="-0.0" />
+    </edge>
+    <edge source="org.example.components.SurikenNf" target="org.example.components.Component" relationship="GENERALIZATION">
+      <point x="0.0" y="-0.0" />
+      <point x="113.0" y="150.0" />
+      <point x="-121.0" y="150.0" />
+      <point x="-121.0" y="702.0" />
+      <point x="-65.0" y="-0.0" />
+    </edge>
+    <edge source="org.example.components.Projectile" target="org.example.components.Component" relationship="GENERALIZATION">
+      <point x="0.0" y="-0.0" />
+      <point x="381.0" y="150.0" />
+      <point x="-121.0" y="150.0" />
+      <point x="-121.0" y="702.0" />
+      <point x="-65.0" y="-0.0" />
+    </edge>
+    <edge source="org.example.components.BreakableObject" target="org.example.components.Block" relationship="GENERALIZATION">
+      <point x="0.0" y="-0.0" />
+      <point x="43.0" y="508.0" />
+      <point x="-81.0" y="508.0" />
+      <point x="-81.0" y="634.0" />
+      <point x="-41.0" y="-0.0" />
+    </edge>
+    <edge source="org.example.components.Firebox" target="org.example.components.Component" relationship="GENERALIZATION">
+      <point x="0.0" y="-0.0" />
+      <point x="-31.5" y="92.0" />
+      <point x="-121.0" y="92.0" />
+      <point x="-121.0" y="702.0" />
+      <point x="-65.0" y="-0.0" />
+    </edge>
+    <edge source="org.example.components.EditorCamera" target="org.example.components.Component" relationship="GENERALIZATION">
+      <point x="0.0" y="-0.0" />
+      <point x="326.0" y="266.0" />
+      <point x="-121.0" y="266.0" />
+      <point x="-121.0" y="702.0" />
+      <point x="-65.0" y="-0.0" />
+    </edge>
+    <edge source="org.example.components.PlayerController.PlayerState" target="org.example.components.PlayerController" relationship="INNER_CLASS">
+      <point x="0.0" y="-0.0" />
+      <point x="668.0" y="634.0" />
+      <point x="564.0" y="634.0" />
+      <point x="-82.5" y="-0.0" />
+    </edge>
+    <edge source="org.example.components.SlimeAI" target="org.example.components.Component" relationship="GENERALIZATION">
+      <point x="0.0" y="-0.0" />
+      <point x="87.0" y="92.0" />
+      <point x="-121.0" y="92.0" />
+      <point x="-121.0" y="702.0" />
+      <point x="-65.0" y="-0.0" />
+    </edge>
+    <edge source="org.example.physics2d.colliders.BarrelBoatCollider" target="org.example.components.Component" relationship="GENERALIZATION">
+      <point x="0.0" y="-0.0" />
+      <point x="400.0" y="450.0" />
+      <point x="-121.0" y="450.0" />
+      <point x="-121.0" y="702.0" />
+      <point x="-65.0" y="-0.0" />
+    </edge>
+    <edge source="org.example.components.Necklace" target="org.example.components.Component" relationship="GENERALIZATION">
+      <point x="0.0" y="-0.0" />
+      <point x="512.5" y="150.0" />
+      <point x="-121.0" y="150.0" />
+      <point x="-121.0" y="702.0" />
+      <point x="-65.0" y="-0.0" />
+    </edge>
+    <edge source="org.example.components.FontRenderer" target="org.example.components.Component" relationship="GENERALIZATION">
+      <point x="0.0" y="-0.0" />
+      <point x="159.5" y="266.0" />
+      <point x="-121.0" y="266.0" />
+      <point x="-121.0" y="702.0" />
+      <point x="-65.0" y="-0.0" />
+    </edge>
+    <edge source="org.example.physics2d.colliders.OvalCollider" target="org.example.components.Component" relationship="GENERALIZATION">
+      <point x="0.0" y="-0.0" />
+      <point x="621.0" y="208.0" />
+      <point x="-121.0" y="208.0" />
+      <point x="-121.0" y="702.0" />
+      <point x="-65.0" y="-0.0" />
+    </edge>
+    <edge source="org.example.components.BottleAI" target="org.example.components.Component" relationship="GENERALIZATION">
+      <point x="0.0" y="-0.0" />
+      <point x="763.0" y="150.0" />
+      <point x="-121.0" y="150.0" />
+      <point x="-121.0" y="702.0" />
+      <point x="-65.0" y="-0.0" />
+    </edge>
+    <edge source="org.example.components.JumpingArrow" target="org.example.components.Component" relationship="GENERALIZATION">
+      <point x="0.0" y="-0.0" />
+      <point x="-4.5" y="324.0" />
+      <point x="-121.0" y="324.0" />
+      <point x="-121.0" y="702.0" />
+      <point x="-65.0" y="-0.0" />
+    </edge>
+    <edge source="org.example.physics2d.colliders.Box2DCollider" target="org.example.components.Component" relationship="GENERALIZATION">
+      <point x="0.0" y="-0.0" />
+      <point x="339.5" y="324.0" />
+      <point x="-121.0" y="324.0" />
+      <point x="-121.0" y="702.0" />
+      <point x="-65.0" y="-0.0" />
+    </edge>
+    <edge source="org.example.components.StateMachine.StateTrigger" target="org.example.components.StateMachine" relationship="INNER_CLASS">
+      <point x="0.0" y="-0.0" />
+      <point x="476.0" y="634.0" />
+      <point x="368.0" y="634.0" />
+      <point x="-72.5" y="-0.0" />
+    </edge>
+    <edge source="org.example.components.Flag" target="org.example.components.Component" relationship="GENERALIZATION">
+      <point x="0.0" y="-0.0" />
+      <point x="823.0" y="92.0" />
+      <point x="-121.0" y="92.0" />
+      <point x="-121.0" y="702.0" />
+      <point x="-65.0" y="-0.0" />
+    </edge>
+    <edge source="org.example.components.GizmoSystem" target="org.example.components.Component" relationship="GENERALIZATION">
+      <point x="0.0" y="-0.0" />
+      <point x="-7.5" y="266.0" />
+      <point x="-121.0" y="266.0" />
+      <point x="-121.0" y="702.0" />
+      <point x="-65.0" y="-0.0" />
+    </edge>
+    <edge source="org.example.components.QuestionBlock.BlockType" target="org.example.components.QuestionBlock" relationship="INNER_CLASS">
+      <point x="0.0" y="-0.0" />
+      <point x="59.0" y="566.0" />
+      <point x="-41.0" y="566.0" />
+      <point x="-75.5" y="-0.0" />
+    </edge>
+    <edge source="org.example.components.ScaleGizmo" target="org.example.components.Gizmo" relationship="GENERALIZATION">
+      <point x="0.0" y="-0.0" />
+      <point x="252.5" y="576.0" />
+      <point x="147.0" y="576.0" />
+      <point x="147.0" y="634.0" />
+      <point x="-44.5" y="-0.0" />
+    </edge>
+    <edge source="org.example.scenes.LevelEditorSceneInitializer" target="org.example.scenes.SceneInitializer" relationship="GENERALIZATION">
+      <point x="0.0" y="-0.0" />
+      <point x="1076.0" y="160.0" />
+      <point x="914.0" y="160.0" />
+      <point x="-78.5" y="-0.0" />
+    </edge>
+    <edge source="org.example.physics2d.colliders.Rigidbody2D" target="org.example.components.Component" relationship="GENERALIZATION">
+      <point x="0.0" y="-0.0" />
+      <point x="153.0" y="208.0" />
+      <point x="-121.0" y="208.0" />
+      <point x="-121.0" y="702.0" />
+      <point x="-65.0" y="-0.0" />
+    </edge>
+    <edge source="org.example.components.StateMachine" target="org.example.components.Component" relationship="GENERALIZATION">
+      <point x="0.0" y="-0.0" />
+      <point x="440.5" y="702.0" />
+      <point x="-121.0" y="702.0" />
+      <point x="-65.0" y="-0.0" />
+    </edge>
+    <edge source="org.example.physics2d.colliders.CircleCollider" target="org.example.components.Component" relationship="GENERALIZATION">
+      <point x="0.0" y="-0.0" />
+      <point x="656.5" y="266.0" />
+      <point x="-121.0" y="266.0" />
+      <point x="-121.0" y="702.0" />
+      <point x="-65.0" y="-0.0" />
+    </edge>
+    <edge source="org.example.jade.Transform" target="org.example.components.Component" relationship="GENERALIZATION">
+      <point x="0.0" y="-0.0" />
+      <point x="768.0" y="208.0" />
+      <point x="-121.0" y="208.0" />
+      <point x="-121.0" y="702.0" />
+      <point x="-65.0" y="-0.0" />
+    </edge>
+    <edge source="org.example.physics2d.colliders.PillboxCollider" target="org.example.components.Component" relationship="GENERALIZATION">
+      <point x="0.0" y="-0.0" />
+      <point x="168.0" y="324.0" />
+      <point x="-121.0" y="324.0" />
+      <point x="-121.0" y="702.0" />
+      <point x="-65.0" y="-0.0" />
+    </edge>
+    <edge source="org.example.components.SpriteRenderer" target="org.example.components.Component" relationship="GENERALIZATION">
+      <point x="0.0" y="-0.0" />
+      <point x="767.0" y="450.0" />
+      <point x="-121.0" y="450.0" />
+      <point x="-121.0" y="702.0" />
+      <point x="-65.0" y="-0.0" />
+    </edge>
+    <edge source="org.example.components.Chest.BlockType" target="org.example.components.Chest" relationship="INNER_CLASS">
+      <point x="0.0" y="-0.0" />
+      <point x="19.0" y="382.0" />
+      <point x="-81.0" y="382.0" />
+      <point x="-43.0" y="-0.0" />
+    </edge>
+    <edge source="org.example.components.Ground" target="org.example.components.Component" relationship="GENERALIZATION">
+      <point x="0.0" y="-0.0" />
+      <point x="205.0" y="92.0" />
+      <point x="-121.0" y="92.0" />
+      <point x="-121.0" y="702.0" />
+      <point x="-65.0" y="-0.0" />
+    </edge>
+    <edge source="org.example.components.CuteEnemyAI" target="org.example.components.Component" relationship="GENERALIZATION">
+      <point x="0.0" y="-0.0" />
+      <point x="-9.0" y="208.0" />
+      <point x="-121.0" y="208.0" />
+      <point x="-121.0" y="702.0" />
+      <point x="-65.0" y="-0.0" />
+    </edge>
+    <edge source="org.example.components.TranslateGizmo" target="org.example.components.Gizmo" relationship="GENERALIZATION">
+      <point x="0.0" y="-0.0" />
+      <point x="267.5" y="634.0" />
+      <point x="147.0" y="634.0" />
+      <point x="-44.5" y="-0.0" />
+    </edge>
+    <edge source="org.example.components.PlayerController" target="org.example.components.Component" relationship="GENERALIZATION">
+      <point x="0.0" y="-0.0" />
+      <point x="646.5" y="702.0" />
+      <point x="-121.0" y="702.0" />
+      <point x="-65.0" y="-0.0" />
+    </edge>
+    <edge source="org.example.components.GridLines" target="org.example.components.Component" relationship="GENERALIZATION">
+      <point x="0.0" y="-0.0" />
+      <point x="248.0" y="150.0" />
+      <point x="-121.0" y="150.0" />
+      <point x="-121.0" y="702.0" />
+      <point x="-65.0" y="-0.0" />
+    </edge>
+    <edge source="org.example.components.ArrowShooter" target="org.example.components.Component" relationship="GENERALIZATION">
+      <point x="0.0" y="-0.0" />
+      <point x="680.0" y="324.0" />
+      <point x="-121.0" y="324.0" />
+      <point x="-121.0" y="702.0" />
+      <point x="-65.0" y="-0.0" />
+    </edge>
+    <edge source="org.example.components.Fan" target="org.example.components.Component" relationship="GENERALIZATION">
+      <point x="0.0" y="-0.0" />
+      <point x="43.0" y="34.0" />
+      <point x="-121.0" y="34.0" />
+      <point x="-121.0" y="702.0" />
+      <point x="-65.0" y="-0.0" />
+    </edge>
+    <edge source="org.example.components.Platform" target="org.example.components.Component" relationship="GENERALIZATION">
+      <point x="0.0" y="-0.0" />
+      <point x="640.5" y="150.0" />
+      <point x="-121.0" y="150.0" />
+      <point x="-121.0" y="702.0" />
+      <point x="-65.0" y="-0.0" />
+    </edge>
+    <edge source="org.example.components.Lava" target="org.example.components.Component" relationship="GENERALIZATION">
+      <point x="0.0" y="-0.0" />
+      <point x="635.0" y="92.0" />
+      <point x="-121.0" y="92.0" />
+      <point x="-121.0" y="702.0" />
+      <point x="-65.0" y="-0.0" />
+    </edge>
+    <edge source="org.example.scenes.LevelEditorSceneInitializer.FileData" target="org.example.scenes.LevelEditorSceneInitializer" relationship="INNER_CLASS">
+      <point x="0.0" y="-0.0" />
+      <point x="1045.5" y="92.0" />
+      <point x="954.0" y="92.0" />
+      <point x="-122.0" y="-0.0" />
+    </edge>
+    <edge source="org.example.components.KeyControls" target="org.example.components.Component" relationship="GENERALIZATION">
+      <point x="0.0" y="-0.0" />
+      <point x="466.5" y="208.0" />
+      <point x="-121.0" y="208.0" />
+      <point x="-121.0" y="702.0" />
+      <point x="-65.0" y="-0.0" />
+    </edge>
+    <edge source="org.example.components.Portal" target="org.example.components.Component" relationship="GENERALIZATION">
+      <point x="0.0" y="-0.0" />
+      <point x="534.5" y="92.0" />
+      <point x="-121.0" y="92.0" />
+      <point x="-121.0" y="702.0" />
+      <point x="-65.0" y="-0.0" />
+    </edge>
+    <edge source="org.example.components.Gizmo" target="org.example.components.Component" relationship="GENERALIZATION">
+      <point x="0.0" y="-0.0" />
+      <point x="191.5" y="702.0" />
+      <point x="-121.0" y="702.0" />
+      <point x="-65.0" y="-0.0" />
+    </edge>
+    <edge source="org.example.components.Water" target="org.example.components.Component" relationship="GENERALIZATION">
+      <point x="0.0" y="-0.0" />
+      <point x="429.0" y="92.0" />
+      <point x="-121.0" y="92.0" />
+      <point x="-121.0" y="702.0" />
+      <point x="-65.0" y="-0.0" />
+    </edge>
+    <edge source="org.example.jade.Window" target="org.example.observers.Observer" relationship="REALIZATION">
+      <point x="-51.5" y="-0.0" />
+      <point x="-122.0" y="843.0" />
+      <point x="-25.5" y="843.0" />
+      <point x="0.0" y="-0.0" />
+    </edge>
+    <edge source="org.example.scenes.LevelSceneInitializer" target="org.example.scenes.SceneInitializer" relationship="GENERALIZATION">
+      <point x="0.0" y="-0.0" />
+      <point x="1053.0" y="34.0" />
+      <point x="914.0" y="34.0" />
+      <point x="914.0" y="160.0" />
+      <point x="-78.5" y="-0.0" />
+    </edge>
+    <edge source="org.example.physics2d.colliders.GlideBox2DCollider" target="org.example.components.Component" relationship="GENERALIZATION">
+      <point x="0.0" y="-0.0" />
+      <point x="194.5" y="450.0" />
+      <point x="-121.0" y="450.0" />
+      <point x="-121.0" y="702.0" />
+      <point x="-65.0" y="-0.0" />
+    </edge>
+  </edges>
+  <settings layout="Compact" zoom="0.6177325581395349" showDependencies="false" x="551.3223529411765" y="352.24" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

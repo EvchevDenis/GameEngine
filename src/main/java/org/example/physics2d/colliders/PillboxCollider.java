@@ -1,31 +1,29 @@
-package org.example.physics2d.components;
+package org.example.physics2d.colliders;
 
 import org.example.components.Component;
 import org.example.jade.Window;
 import org.joml.Vector2f;
 
-public class OvalCollider extends Component {
+public class PillboxCollider extends Component {
     private transient CircleCollider bottomCircle = new CircleCollider();
-    private transient CircleCollider centerCircle = new CircleCollider();
-    private transient CircleCollider upperCircle = new CircleCollider();
+    private transient Box2DCollider box = new Box2DCollider();
     private transient boolean resetFixtureNextFrame = false;
 
     public float width = 0.1f;
+    public float height = 0.2f;
     public Vector2f offset = new Vector2f();
 
     @Override
     public void start() {
         this.bottomCircle.gameObject = this.gameObject;
-        this.centerCircle.gameObject = this.gameObject;
-        this.upperCircle.gameObject = this.gameObject;
+        this.box.gameObject = this.gameObject;
         recalculateColliders();
     }
 
     @Override
     public void editorUpdate(float dt) {
         bottomCircle.editorUpdate(dt);
-        centerCircle.editorUpdate(dt);
-        upperCircle.editorUpdate(dt);
+        box.editorUpdate(dt);
         recalculateColliders();
 
         if (resetFixtureNextFrame) {
@@ -46,6 +44,12 @@ public class OvalCollider extends Component {
         resetFixture();
     }
 
+    public void setHeight(float newVal) {
+        this.height = newVal;
+        recalculateColliders();
+        resetFixture();
+    }
+
     public void resetFixture() {
         if (Window.getPhysics().isLocked()) {
             resetFixtureNextFrame = true;
@@ -56,34 +60,25 @@ public class OvalCollider extends Component {
         if (gameObject != null) {
             Rigidbody2D rb = gameObject.getComponent(Rigidbody2D.class);
             if (rb != null) {
-                Window.getPhysics().resetOvalCollider(rb, this);
+                Window.getPhysics().resetPillboxCollider(rb, this);
             }
         }
     }
 
     public void recalculateColliders() {
-        float circleRadius = width;
-
+        float circleRadius = width / 2.0f;
+        float boxHeight = height - circleRadius;
         bottomCircle.setRadius(circleRadius);
-        bottomCircle.setOffset(new Vector2f(offset).add(0, -0.06f));
-
-        centerCircle.setRadius(circleRadius);
-        centerCircle.setOffset(new Vector2f(offset).add(0, -0.01f));
-
-        upperCircle.setRadius(circleRadius);
-        upperCircle.setOffset(new Vector2f(offset).add(0, 0.03f));
-
+        bottomCircle.setOffset(new Vector2f(offset).sub(0, (height - circleRadius * 2.0f) / 1.2f));
+        box.setHalfSize(new Vector2f(width - 0.05f, boxHeight - 0.03f));
+        box.setOffset(new Vector2f(offset).add(0, (height - boxHeight) / 2.0f));
     }
 
     public CircleCollider getBottomCircle() {
         return bottomCircle;
     }
 
-    public CircleCollider getCenterCircle() {
-        return centerCircle;
-    }
-
-    public CircleCollider getUpperCircle() {
-        return upperCircle;
+    public Box2DCollider getBox() {
+        return box;
     }
 }
