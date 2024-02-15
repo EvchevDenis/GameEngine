@@ -22,6 +22,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.swing.*;
+import javax.swing.filechooser.FileFilter;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import java.io.*;
 import java.lang.reflect.Type;
 import java.nio.file.Files;
@@ -472,8 +474,13 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
     }
 
     public void copyFileAndData() {
-        CustomFileChooser fileChooser = windowsJFileChooser(true);
-        int returnValue = fileChooser.showOpenDialog(null);
+        CustomFileChooser copyFileChooser = windowsJFileChooser(true);
+        copyFileChooser.setApproveButtonText("Import Asset");
+        FileFilter filter = new FileNameExtensionFilter("Image file", "png", "jpg", "jpeg");
+        copyFileChooser.setFileFilter(filter);
+        copyFileChooser.addChoosableFileFilter(filter);
+        copyFileChooser.setAcceptAllFileFilterUsed(false);
+        int returnValue = copyFileChooser.showOpenDialog(null);
         File jsonImport = new File("imported_files_data.json");
 
         if(jsonImport.exists() && jsonImport.length() > 0) {
@@ -481,13 +488,13 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
         }
 
         if (returnValue == JFileChooser.APPROVE_OPTION) {
-            File selectedFile = fileChooser.getSelectedFile();
+            File selectedFile = copyFileChooser.getSelectedFile();
             try {
                 Path destinationPath = Paths.get("assets/imported/" + selectedFile.getName());
                 String fileName = selectedFile.getName();
-                int widthValue = Integer.parseInt(fileChooser.getWidthValue());
-                int heightValue = Integer.parseInt(fileChooser.getHeightValue());
-                int spriteCountValue = Integer.parseInt(fileChooser.getSpriteCountValue());
+                int widthValue = Integer.parseInt(copyFileChooser.getWidthValue());
+                int heightValue = Integer.parseInt(copyFileChooser.getHeightValue());
+                int spriteCountValue = Integer.parseInt(copyFileChooser.getSpriteCountValue());
 
                 Files.copy(selectedFile.toPath(), destinationPath);
 
@@ -503,13 +510,18 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
     }
 
     public void deleteFileAndData() {
-        CustomFileChooser fileChooser = windowsJFileChooser(false);
-        fileChooser.setCurrentDirectory(new File("assets/imported/"));
-        int returnValue = fileChooser.showOpenDialog(null);
+        CustomFileChooser deleteFileChooser = windowsJFileChooser(false);
+        deleteFileChooser.setCurrentDirectory(new File("assets/imported/"));
+        deleteFileChooser.setApproveButtonText("Delete Asset");
+        FileFilter filter = new FileNameExtensionFilter("Image file", "png", "jpg", "jpeg");
+        deleteFileChooser.setFileFilter(filter);
+        deleteFileChooser.addChoosableFileFilter(filter);
+        deleteFileChooser.setAcceptAllFileFilterUsed(false);
+        int returnValue = deleteFileChooser.showOpenDialog(null);
         File jsonFile = new File("imported_files_data.json");
 
         if (returnValue == JFileChooser.APPROVE_OPTION) {
-            File selectedFile = fileChooser.getSelectedFile();
+            File selectedFile = deleteFileChooser.getSelectedFile();
             try {
                 Path destinationPath = Paths.get("assets/imported/" + selectedFile.getName());
                 String fileName = selectedFile.getName();

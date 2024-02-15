@@ -3,12 +3,15 @@ package org.example.utils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.IOException;
 
 public class CustomFileChooser extends JFileChooser {
-    private final transient Logger logger = LoggerFactory.getLogger(CustomFileChooser.class);
+    private static final Logger logger = LoggerFactory.getLogger(CustomFileChooser.class);
 
     private JTextField widthField;
     private JTextField heightField;
@@ -84,7 +87,21 @@ public class CustomFileChooser extends JFileChooser {
         CustomFileChooser chooser;
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-            chooser = new CustomFileChooser(isCustom);
+            chooser = new CustomFileChooser(isCustom) {
+                @Override
+                protected JDialog createDialog( Component parent ) throws HeadlessException {
+                    JDialog dialog = super.createDialog( parent );
+                    File file = new File("assets/folder.png");
+                    try {
+                        BufferedImage image = ImageIO.read(file);
+                        dialog.setIconImage( image );
+                        return dialog;
+                    } catch (IOException e) {
+                        logger.error("Error: Reading image.", e);
+                    }
+                    return dialog;
+                }
+            };
             UIManager.setLookAndFeel(previousLF);
         } catch (IllegalAccessException | UnsupportedLookAndFeelException | InstantiationException | ClassNotFoundException e) {
             throw new RuntimeException(e);

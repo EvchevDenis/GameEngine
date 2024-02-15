@@ -186,6 +186,7 @@ public class Scene {
 
         JFileChooser createLevelChooser = windowsJFileChooser(false);
         createLevelChooser.setCurrentDirectory(new File("."));
+        createLevelChooser.setApproveButtonText("Create Level");
         FileFilter filter = new FileNameExtensionFilter("TXT file", "txt");
         createLevelChooser.setFileFilter(filter);
         createLevelChooser.addChoosableFileFilter(filter);
@@ -252,6 +253,7 @@ public class Scene {
 
         JFileChooser saveChooser = windowsJFileChooser(false);
         saveChooser.setCurrentDirectory(new File("."));
+        saveChooser.setApproveButtonText("Save Level");
         FileFilter filter = new FileNameExtensionFilter("TXT file", "txt");
         saveChooser.setFileFilter(filter);
         saveChooser.addChoosableFileFilter(filter);
@@ -315,6 +317,7 @@ public class Scene {
 
         JFileChooser loadChooser = windowsJFileChooser(false);
         loadChooser.setCurrentDirectory(new File("."));
+        loadChooser.setApproveButtonText("Load Level");
         FileFilter filter = new FileNameExtensionFilter("TXT file", "txt");
         loadChooser.setFileFilter(filter);
         loadChooser.addChoosableFileFilter(filter);
