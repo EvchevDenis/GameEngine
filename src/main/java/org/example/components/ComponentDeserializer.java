@@ -1,7 +1,6 @@
 package org.example.components;
 
 import com.google.gson.*;
-import org.example.components.Component;
 
 import java.lang.reflect.Type;
 

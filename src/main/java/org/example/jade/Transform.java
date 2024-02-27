@@ -1,6 +1,5 @@
 package org.example.jade;
 
-import imgui.ImGui;
 import org.example.components.Component;
 import org.example.editor.JImGui;
 import org.joml.Vector2f;

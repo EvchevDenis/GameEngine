@@ -2,7 +2,6 @@ package org.example.renderer;
 
 import org.lwjgl.BufferUtils;
 
-import java.awt.*;
 import java.nio.ByteBuffer;
 import java.nio.IntBuffer;
 

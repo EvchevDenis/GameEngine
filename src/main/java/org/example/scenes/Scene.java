@@ -12,17 +12,19 @@ import org.joml.Vector2f;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.crypto.*;
 import javax.swing.*;
 import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
-import java.awt.*;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.ArrayList;
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
+import java.text.SimpleDateFormat;
+import java.util.*;
 import java.util.List;
-import java.util.Optional;
-import java.util.Properties;
+import javax.crypto.spec.SecretKeySpec;
 
 import static org.example.utils.CustomFileChooser.windowsJFileChooser;
 
@@ -38,6 +40,9 @@ public class Scene {
 
     private SceneInitializer sceneInitializer;
     private String currentLevel;
+
+    private static final String ALGORITHM = "AES";
+    private static final String DATE_FORMAT = "yyyy-MM-dd HH:mm:ss";
 
     public Scene(SceneInitializer sceneInitializer) {
         this.sceneInitializer = sceneInitializer;
@@ -178,13 +183,90 @@ public class Scene {
         return go;
     }
 
+    public void encryptLevel() {
+        CustomFileChooser encryptChooser = windowsJFileChooser("Default");
+        encryptChooser.setCurrentDirectory(new File("levels"));
+        encryptChooser.setApproveButtonText("Encrypt Level");
+        FileFilter filter = new FileNameExtensionFilter("TXT file", "txt");
+        encryptChooser.setFileFilter(filter);
+        encryptChooser.addChoosableFileFilter(filter);
+        encryptChooser.setDialogTitle("Encrypt File");
+        encryptChooser.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
+        encryptChooser.setAcceptAllFileFilterUsed(false);
+
+        if (encryptChooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
+            File selectedFile = encryptChooser.getSelectedFile();
+            try {
+                KeyGenerator keyGen = KeyGenerator.getInstance(ALGORITHM);
+                keyGen.init(256);
+                SecretKey secretKey = keyGen.generateKey();
+
+                Cipher cipher = Cipher.getInstance(ALGORITHM);
+                cipher.init(Cipher.ENCRYPT_MODE, secretKey);
+
+                byte[] encryptedBytes = cipher.doFinal(Files.readAllBytes(selectedFile.toPath()));
+
+                File encryptedFile = new File(selectedFile.getParent(), selectedFile.getName() + ".encrypted");
+                Files.write(encryptedFile.toPath(), Base64.getEncoder().encode(encryptedBytes));
+
+                saveKeyHistory(selectedFile.getName(), secretKey);
+
+            } catch (NoSuchAlgorithmException | NoSuchPaddingException | InvalidKeyException |
+                     BadPaddingException | IllegalBlockSizeException | IOException e) {
+                logger.error("Error: Encrypting level file.", e);
+            }
+        }
+    }
+
+    public void decryptLevel() {
+        CustomFileChooser decryptChooser = windowsJFileChooser("DecryptLevel");
+        decryptChooser.setCurrentDirectory(new File("levels"));
+        decryptChooser.setApproveButtonText("Decrypt Level");
+        FileFilter filter = new FileNameExtensionFilter("Encrypted file", "encrypted");
+        decryptChooser.setFileFilter(filter);
+        decryptChooser.addChoosableFileFilter(filter);
+        decryptChooser.setDialogTitle("Decrypt File");
+        decryptChooser.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
+        decryptChooser.setAcceptAllFileFilterUsed(false);
+
+        if (decryptChooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
+            File selectedFile = decryptChooser.getSelectedFile();
+            String encryptionKey = decryptChooser.getEncryptionKeyField();
+
+            try {
+                Cipher cipher = Cipher.getInstance(ALGORITHM);
+                cipher.init(Cipher.DECRYPT_MODE, new SecretKeySpec(Base64.getDecoder().decode(encryptionKey), ALGORITHM));
+
+                byte[] decryptedBytes = cipher.doFinal(Base64.getDecoder().decode(Files.readAllBytes(selectedFile.toPath())));
+
+                File decryptedFile = new File(selectedFile.getParent(), selectedFile.getName().replace(".encrypted", ""));
+                Files.write(decryptedFile.toPath(), decryptedBytes);
+
+            } catch (NoSuchAlgorithmException | NoSuchPaddingException | InvalidKeyException |
+                     BadPaddingException | IllegalBlockSizeException | IOException e) {
+                logger.error("Error: Decrypting level file.", e);
+            }
+        }
+    }
+
+    private void saveKeyHistory(String fileName, SecretKey secretKey) {
+        File keysFile = new File("levels/keys.txt");
+        try (FileWriter writer = new FileWriter(keysFile, true)) {
+            SimpleDateFormat dateFormat = new SimpleDateFormat(DATE_FORMAT);
+            String dateTime = dateFormat.format(new Date());
+            writer.write(fileName + " - " + Base64.getEncoder().encodeToString(secretKey.getEncoded()) + " - " + dateTime + "\n");
+        } catch (IOException e) {
+            logger.error("Error: Saving secret key history.", e);
+        }
+    }
+
     public void createNewLevel() {
         Properties properties = new Properties();
         String loadPath = null;
         String configFileName = "config.cfg";
         File configFile = new File(configFileName);
 
-        JFileChooser createLevelChooser = windowsJFileChooser(false);
+        JFileChooser createLevelChooser = windowsJFileChooser("Default");
         createLevelChooser.setCurrentDirectory(new File("."));
         createLevelChooser.setApproveButtonText("Create Level");
         FileFilter filter = new FileNameExtensionFilter("TXT file", "txt");
@@ -251,8 +333,8 @@ public class Scene {
                 .enableComplexMapKeySerialization()
                 .create();
 
-        JFileChooser saveChooser = windowsJFileChooser(false);
-        saveChooser.setCurrentDirectory(new File("."));
+        CustomFileChooser saveChooser = windowsJFileChooser("SaveLevel");
+        saveChooser.setCurrentDirectory(new File("levels"));
         saveChooser.setApproveButtonText("Save Level");
         FileFilter filter = new FileNameExtensionFilter("TXT file", "txt");
         saveChooser.setFileFilter(filter);
@@ -294,7 +376,7 @@ public class Scene {
             } catch (IOException e) {
                 logger.error("Error: Creating file " + configFileName + ".", e);
             }
-            loadLevelFrom();
+            createNewLevel();
         } else {
             try (FileInputStream input = new FileInputStream(configFileName)) {
                 properties.load(input);
@@ -315,8 +397,8 @@ public class Scene {
 
         boolean fileChooserClosed = false;
 
-        JFileChooser loadChooser = windowsJFileChooser(false);
-        loadChooser.setCurrentDirectory(new File("."));
+        CustomFileChooser loadChooser = windowsJFileChooser("LoadLevel");
+        loadChooser.setCurrentDirectory(new File("levels"));
         loadChooser.setApproveButtonText("Load Level");
         FileFilter filter = new FileNameExtensionFilter("TXT file", "txt");
         loadChooser.setFileFilter(filter);

@@ -13,7 +13,6 @@ import org.example.scenes.SceneInitializer;
 import org.example.utils.AssetPool;
 import org.example.utils.ImageParser;
 import org.joml.Vector4f;
-import org.lwjgl.Version;
 import org.lwjgl.glfw.GLFWErrorCallback;
 import org.lwjgl.glfw.GLFWImage;
 import org.lwjgl.openal.AL;
@@ -51,7 +50,7 @@ public class Window implements Observer {
     private Window() {
         this.width = 1920;
         this.height = 1080;
-        this.title = "GameEngine";
+        this.title = "Game Engine";
         EventSystem.addObserver(this);
     }
 
@@ -294,6 +293,12 @@ public class Window implements Observer {
             case CreateNewLevel:
                 currentScene.createNewLevel();
                 Window.changeScene(new LevelEditorSceneInitializer(), false);
+                break;
+            case EncryptLevel:
+                currentScene.encryptLevel();
+                break;
+            case DecryptLevel:
+                currentScene.decryptLevel();
                 break;
         }
     }

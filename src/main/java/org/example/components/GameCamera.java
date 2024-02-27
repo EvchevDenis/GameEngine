@@ -5,8 +5,6 @@ import org.example.jade.GameObject;
 import org.example.jade.Window;
 import org.joml.Vector4f;
 
-import static org.lwjgl.glfw.GLFW.*;
-
 public class GameCamera extends Component {
     private transient GameObject player;
     private transient Camera gameCamera;

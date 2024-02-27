@@ -3,19 +3,12 @@ package org.example.editor;
 import imgui.ImGui;
 import imgui.ImVec2;
 import imgui.flag.ImGuiWindowFlags;
-import org.example.components.MouseControls;
-import org.example.jade.GameObject;
 import org.example.jade.MouseListener;
-import org.example.jade.Prefabs;
 import org.example.jade.Window;
 import org.example.observers.EventSystem;
 import org.example.observers.events.Event;
 import org.example.observers.events.EventType;
-import org.example.utils.AssetPool;
 import org.joml.Vector2f;
-
-import java.util.Objects;
-
 
 public class GameViewWindow {
 
@@ -34,12 +27,12 @@ public class GameViewWindow {
         }
         if (ImGui.menuItem("Play", "", isPlaying, !isPlaying)) {
             isPlaying = true;
-            //Objects.requireNonNull(AssetPool.getSound("assets/sounds/sus_musica.ogg")).play();
+            //Objects.requireNonNull(AssetPool.getSound("assets/sounds/music.ogg")).play();
             EventSystem.notify(null, new Event(EventType.GameEngineStartPlay));
         }
         if (ImGui.menuItem("Stop", "", !isPlaying, isPlaying)) {
             isPlaying = false;
-            //Objects.requireNonNull(AssetPool.getSound("assets/sounds/sus_musica.ogg")).stop();
+            //Objects.requireNonNull(AssetPool.getSound("assets/sounds/music.ogg")).stop();
             EventSystem.notify(null, new Event(EventType.GameEngineStopPlay));
         }
         ImGui.endMenuBar();

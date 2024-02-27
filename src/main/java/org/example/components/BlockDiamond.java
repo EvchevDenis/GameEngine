@@ -1,6 +1,5 @@
 package org.example.components;
 
-import org.example.utils.AssetPool;
 import org.joml.Vector2f;
 
 public class BlockDiamond extends Component {

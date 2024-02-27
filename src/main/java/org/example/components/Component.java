@@ -4,7 +4,6 @@ import imgui.ImGui;
 import imgui.type.ImInt;
 import org.example.editor.JImGui;
 import org.example.jade.GameObject;
-import org.example.renderer.Shader;
 import org.jbox2d.dynamics.contacts.Contact;
 import org.joml.Vector2f;
 import org.joml.Vector3f;

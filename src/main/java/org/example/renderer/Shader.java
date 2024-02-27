@@ -1,6 +1,5 @@
 package org.example.renderer;
 
-import org.example.scenes.Scene;
 import org.joml.*;
 import org.lwjgl.BufferUtils;
 import org.slf4j.Logger;

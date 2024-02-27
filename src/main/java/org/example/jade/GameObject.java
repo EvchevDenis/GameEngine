@@ -6,7 +6,6 @@ import imgui.ImGui;
 import org.example.components.Component;
 import org.example.components.ComponentDeserializer;
 import org.example.components.SpriteRenderer;
-import org.example.renderer.Shader;
 import org.example.utils.AssetPool;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

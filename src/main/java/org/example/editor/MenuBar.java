@@ -6,9 +6,6 @@ import org.example.observers.EventSystem;
 import org.example.observers.events.Event;
 import org.example.observers.events.EventType;
 
-import javax.swing.*;
-import java.io.File;
-
 import static org.lwjgl.glfw.GLFW.*;
 
 public class MenuBar {
@@ -42,6 +39,16 @@ public class MenuBar {
             EventSystem.notify(null, new Event(EventType.CreateNewLevel));
         }
 
+        if(KeyListener.isKeyPressed(GLFW_KEY_LEFT_CONTROL) &&
+                KeyListener.keyBeginPress(GLFW_KEY_E)) {
+            EventSystem.notify(null, new Event(EventType.EncryptLevel));
+        }
+
+        if(KeyListener.isKeyPressed(GLFW_KEY_LEFT_CONTROL) &&
+                KeyListener.keyBeginPress(GLFW_KEY_D)) {
+            EventSystem.notify(null, new Event(EventType.DecryptLevel));
+        }
+
         if (ImGui.beginMenu("File")) {
             if (ImGui.menuItem("New Level", "Ctrl+N")) {
                 EventSystem.notify(null, new Event(EventType.CreateNewLevel));
@@ -61,6 +68,14 @@ public class MenuBar {
 
             if (ImGui.menuItem("Load From", "Ctrl+F")) {
                 EventSystem.notify(null, new Event(EventType.LoadLevelFrom));
+            }
+
+            if (ImGui.menuItem("Encrypt Level", "Ctrl+E")) {
+                EventSystem.notify(null, new Event(EventType.EncryptLevel));
+            }
+
+            if (ImGui.menuItem("Decrypt Level", "Ctrl+D")) {
+                EventSystem.notify(null, new Event(EventType.DecryptLevel));
             }
 
             ImGui.endMenu();

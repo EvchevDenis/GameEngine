@@ -99,7 +99,7 @@ public class LevelSceneInitializer extends SceneInitializer {
 
         // Sound assets
         AssetPool.addSound("assets/sounds/jump.ogg", false);
-        AssetPool.addSound("assets/sounds/sus_musica.ogg", true);
+        AssetPool.addSound("assets/sounds/music.ogg", true);
 
         for (GameObject g : scene.getGameObjects()) {
             if (g.getComponent(SpriteRenderer.class) != null) {

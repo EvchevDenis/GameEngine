@@ -1,7 +1,5 @@
 package org.example.components;
 
-import org.example.utils.AssetPool;
-
 public class BreakableObject extends Block {
     @Override
     void playerHit(PlayerController playerController) {

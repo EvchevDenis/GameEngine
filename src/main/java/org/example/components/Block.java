@@ -1,7 +1,6 @@
 package org.example.components;
 
 import org.example.jade.GameObject;
-import org.example.utils.AssetPool;
 import org.jbox2d.dynamics.contacts.Contact;
 import org.joml.Vector2f;
 

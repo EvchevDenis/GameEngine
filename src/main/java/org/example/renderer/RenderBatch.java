@@ -3,7 +3,6 @@ package org.example.renderer;
 import org.example.components.SpriteRenderer;
 import org.example.jade.GameObject;
 import org.example.jade.Window;
-import org.example.utils.AssetPool;
 import org.joml.Matrix4f;
 import org.joml.Vector2f;
 import org.joml.Vector4f;

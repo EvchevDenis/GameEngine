@@ -39,7 +39,6 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
     private transient Logger logger = LoggerFactory.getLogger(LevelEditorSceneInitializer.class);
     private transient Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
-
     public static class FileData {
         private String fileName;
         private int widthValue;
@@ -222,7 +221,7 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
 
         // Sound assets
         AssetPool.addSound("assets/sounds/jump.ogg", false);
-        AssetPool.addSound("assets/sounds/sus_musica.ogg", true);
+        AssetPool.addSound("assets/sounds/music.ogg", true);
 
         for (GameObject g : scene.getGameObjects()) {
             if (g.getComponent(SpriteRenderer.class) != null) {
@@ -474,12 +473,13 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
     }
 
     public void copyFileAndData() {
-        CustomFileChooser copyFileChooser = windowsJFileChooser(true);
+        CustomFileChooser copyFileChooser = windowsJFileChooser("ImportAsset");
         copyFileChooser.setApproveButtonText("Import Asset");
         FileFilter filter = new FileNameExtensionFilter("Image file", "png", "jpg", "jpeg");
         copyFileChooser.setFileFilter(filter);
         copyFileChooser.addChoosableFileFilter(filter);
         copyFileChooser.setAcceptAllFileFilterUsed(false);
+        copyFileChooser.setDialogTitle("Import Asset");
         int returnValue = copyFileChooser.showOpenDialog(null);
         File jsonImport = new File("imported_files_data.json");
 
@@ -510,13 +510,14 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
     }
 
     public void deleteFileAndData() {
-        CustomFileChooser deleteFileChooser = windowsJFileChooser(false);
+        CustomFileChooser deleteFileChooser = windowsJFileChooser("Default");
         deleteFileChooser.setCurrentDirectory(new File("assets/imported/"));
         deleteFileChooser.setApproveButtonText("Delete Asset");
         FileFilter filter = new FileNameExtensionFilter("Image file", "png", "jpg", "jpeg");
         deleteFileChooser.setFileFilter(filter);
         deleteFileChooser.addChoosableFileFilter(filter);
         deleteFileChooser.setAcceptAllFileFilterUsed(false);
+        deleteFileChooser.setDialogTitle("Delete Asset");
         int returnValue = deleteFileChooser.showOpenDialog(null);
         File jsonFile = new File("imported_files_data.json");
 
