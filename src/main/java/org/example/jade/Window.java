@@ -294,6 +294,9 @@ public class Window implements Observer {
                 currentScene.createNewLevel();
                 Window.changeScene(new LevelEditorSceneInitializer(), false);
                 break;
+            case EncryptCurrentLevel:
+                currentScene.encryptCurrentLevel();
+                break;
             case EncryptLevel:
                 currentScene.encryptLevel();
                 break;

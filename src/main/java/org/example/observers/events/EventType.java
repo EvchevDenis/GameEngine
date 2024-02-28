@@ -12,5 +12,6 @@ public enum EventType {
     ImportedAssetFile,
     DeleteImportedAsset,
     EncryptLevel,
+    EncryptCurrentLevel,
     DecryptLevel
 }

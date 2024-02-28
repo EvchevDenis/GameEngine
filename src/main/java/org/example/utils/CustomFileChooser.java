@@ -79,7 +79,10 @@ public class CustomFileChooser extends JFileChooser {
             default:
                 logger.info("Nothing to do!");
         }
+    }
 
+    public void decryptionFailed() {
+        JOptionPane.showMessageDialog(this, "Incorrect secret key.");
     }
 
     @Override

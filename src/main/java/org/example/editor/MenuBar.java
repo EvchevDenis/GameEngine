@@ -40,6 +40,11 @@ public class MenuBar {
         }
 
         if(KeyListener.isKeyPressed(GLFW_KEY_LEFT_CONTROL) &&
+                KeyListener.keyBeginPress(GLFW_KEY_L)) {
+            EventSystem.notify(null, new Event(EventType.EncryptCurrentLevel));
+        }
+
+        if(KeyListener.isKeyPressed(GLFW_KEY_LEFT_CONTROL) &&
                 KeyListener.keyBeginPress(GLFW_KEY_E)) {
             EventSystem.notify(null, new Event(EventType.EncryptLevel));
         }
@@ -68,6 +73,10 @@ public class MenuBar {
 
             if (ImGui.menuItem("Load From", "Ctrl+F")) {
                 EventSystem.notify(null, new Event(EventType.LoadLevelFrom));
+            }
+
+            if (ImGui.menuItem("Encrypt Current Level", "Ctrl+L")) {
+                EventSystem.notify(null, new Event(EventType.EncryptCurrentLevel));
             }
 
             if (ImGui.menuItem("Encrypt Level", "Ctrl+E")) {

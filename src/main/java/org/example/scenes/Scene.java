@@ -8,6 +8,7 @@ import org.example.jade.*;
 import org.example.physics2d.Physics2D;
 import org.example.renderer.Renderer;
 import org.example.utils.CustomFileChooser;
+import org.example.utils.EncryptionUtils;
 import org.joml.Vector2f;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -40,9 +41,6 @@ public class Scene {
 
     private SceneInitializer sceneInitializer;
     private String currentLevel;
-
-    private static final String ALGORITHM = "AES";
-    private static final String DATE_FORMAT = "yyyy-MM-dd HH:mm:ss";
 
     public Scene(SceneInitializer sceneInitializer) {
         this.sceneInitializer = sceneInitializer;
@@ -183,6 +181,11 @@ public class Scene {
         return go;
     }
 
+    public void encryptCurrentLevel() {
+        File selectedFile = new File(currentLevel);
+        EncryptionUtils.encryptFile(selectedFile);
+    }
+
     public void encryptLevel() {
         CustomFileChooser encryptChooser = windowsJFileChooser("Default");
         encryptChooser.setCurrentDirectory(new File("levels"));
@@ -196,25 +199,7 @@ public class Scene {
 
         if (encryptChooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
             File selectedFile = encryptChooser.getSelectedFile();
-            try {
-                KeyGenerator keyGen = KeyGenerator.getInstance(ALGORITHM);
-                keyGen.init(256);
-                SecretKey secretKey = keyGen.generateKey();
-
-                Cipher cipher = Cipher.getInstance(ALGORITHM);
-                cipher.init(Cipher.ENCRYPT_MODE, secretKey);
-
-                byte[] encryptedBytes = cipher.doFinal(Files.readAllBytes(selectedFile.toPath()));
-
-                File encryptedFile = new File(selectedFile.getParent(), selectedFile.getName() + ".encrypted");
-                Files.write(encryptedFile.toPath(), Base64.getEncoder().encode(encryptedBytes));
-
-                saveKeyHistory(selectedFile.getName(), secretKey);
-
-            } catch (NoSuchAlgorithmException | NoSuchPaddingException | InvalidKeyException |
-                     BadPaddingException | IllegalBlockSizeException | IOException e) {
-                logger.error("Error: Encrypting level file.", e);
-            }
+            EncryptionUtils.encryptFile(selectedFile);
         }
     }
 
@@ -232,31 +217,7 @@ public class Scene {
         if (decryptChooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
             File selectedFile = decryptChooser.getSelectedFile();
             String encryptionKey = decryptChooser.getEncryptionKeyField();
-
-            try {
-                Cipher cipher = Cipher.getInstance(ALGORITHM);
-                cipher.init(Cipher.DECRYPT_MODE, new SecretKeySpec(Base64.getDecoder().decode(encryptionKey), ALGORITHM));
-
-                byte[] decryptedBytes = cipher.doFinal(Base64.getDecoder().decode(Files.readAllBytes(selectedFile.toPath())));
-
-                File decryptedFile = new File(selectedFile.getParent(), selectedFile.getName().replace(".encrypted", ""));
-                Files.write(decryptedFile.toPath(), decryptedBytes);
-
-            } catch (NoSuchAlgorithmException | NoSuchPaddingException | InvalidKeyException |
-                     BadPaddingException | IllegalBlockSizeException | IOException e) {
-                logger.error("Error: Decrypting level file.", e);
-            }
-        }
-    }
-
-    private void saveKeyHistory(String fileName, SecretKey secretKey) {
-        File keysFile = new File("levels/keys.txt");
-        try (FileWriter writer = new FileWriter(keysFile, true)) {
-            SimpleDateFormat dateFormat = new SimpleDateFormat(DATE_FORMAT);
-            String dateTime = dateFormat.format(new Date());
-            writer.write(fileName + " - " + Base64.getEncoder().encodeToString(secretKey.getEncoded()) + " - " + dateTime + "\n");
-        } catch (IOException e) {
-            logger.error("Error: Saving secret key history.", e);
+            EncryptionUtils.decryptFile(decryptChooser, selectedFile, encryptionKey);
         }
     }
 
@@ -397,7 +358,7 @@ public class Scene {
 
         boolean fileChooserClosed = false;
 
-        CustomFileChooser loadChooser = windowsJFileChooser("LoadLevel");
+        CustomFileChooser loadChooser = windowsJFileChooser("Default");
         loadChooser.setCurrentDirectory(new File("levels"));
         loadChooser.setApproveButtonText("Load Level");
         FileFilter filter = new FileNameExtensionFilter("TXT file", "txt");
