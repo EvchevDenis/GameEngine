@@ -131,7 +131,6 @@ public class RenderBatch implements Comparable<RenderBatch> {
                 }
             }
 
-            // TODO: get better solution for this
             if (spr.gameObject.transform.zIndex != this.zIndex) {
                 destroyIfExists(spr.gameObject);
                 renderer.add(spr.gameObject);
@@ -276,10 +275,10 @@ public class RenderBatch implements Comparable<RenderBatch> {
         // Triangle 1
         elements[offsetArrayIndex] = offset + 3;
         elements[offsetArrayIndex + 1] = offset + 2;
-        elements[offsetArrayIndex + 2] = offset + 0;
+        elements[offsetArrayIndex + 2] = offset;
 
         // Triangle 2
-        elements[offsetArrayIndex + 3] = offset + 0;
+        elements[offsetArrayIndex + 3] = offset;
         elements[offsetArrayIndex + 4] = offset + 2;
         elements[offsetArrayIndex + 5] = offset + 1;
     }

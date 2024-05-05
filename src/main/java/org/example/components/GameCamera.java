@@ -2,19 +2,18 @@ package org.example.components;
 
 import org.example.jade.Camera;
 import org.example.jade.GameObject;
+import org.example.jade.KeyListener;
 import org.example.jade.Window;
 import org.joml.Vector4f;
+
+import static org.lwjgl.glfw.GLFW.*;
 
 public class GameCamera extends Component {
     private transient GameObject player;
     private transient Camera gameCamera;
-    private transient float highestX = Float.MIN_VALUE;
-    private transient float undergroundYLevel = 0.0f;
-    private transient float cameraBuffer = 1.5f;
-    private transient float playerBuffer = 0.25f;
+    private transient float lerpSpeed = 0.2f;
 
-    private Vector4f skyColor = new Vector4f(92.0f / 255.0f, 148.0f / 255.0f, 252.0f / 255.0f, 1.0f);
-    private Vector4f undergroundColor = new Vector4f(0, 0, 0, 1);
+    private transient Vector4f skyColor = new Vector4f(92.0f / 255.0f, 148.0f / 255.0f, 252.0f / 255.0f, 1.0f);
 
     public GameCamera(Camera gameCamera) {
         this.gameCamera = gameCamera;
@@ -24,23 +23,47 @@ public class GameCamera extends Component {
     public void start() {
         this.player = Window.getScene().getGameObjectWith(PlayerController.class);
         this.gameCamera.clearColor.set(skyColor);
-        this.undergroundYLevel = this.gameCamera.position.y -
-                this.gameCamera.getProjectionSize().y - this.cameraBuffer;
     }
 
     @Override
     public void update(float dt) {
         if (player != null && !player.getComponent(PlayerController.class).hasWon()) {
-            gameCamera.position.x = player.transform.position.x - 3.0f;
-            //gameCamera.position.y = player.transform.position.y;
+            float targetX = player.transform.position.x - 3.0f;
+            float targetY = player.transform.position.y - 1.5f;
 
-            if (player.transform.position.y < -playerBuffer) {
-                this.gameCamera.position.y = undergroundYLevel;
-                this.gameCamera.clearColor.set(undergroundColor);
-            } else if (player.transform.position.y >= 0.0f) {
-                this.gameCamera.position.y = 0.0f;
-                this.gameCamera.clearColor.set(skyColor);
+            boolean isMovingLeft = KeyListener.isKeyPressed(GLFW_KEY_A);
+            boolean isMovingRight = KeyListener.isKeyPressed(GLFW_KEY_D);
+            boolean isJumping = KeyListener.isKeyPressed(GLFW_KEY_SPACE);
+
+            if (isMovingLeft || isMovingRight) {
+                gameCamera.position.x = quad(gameCamera.position.x, targetX, lerpSpeed);
+            }
+
+            if (isJumping) {
+                gameCamera.position.y = quad(gameCamera.position.y, targetY, lerpSpeed);
+            }
+
+            if (!isMovingLeft && !isMovingRight && !isJumping) {
+                gameCamera.position.x = quad(gameCamera.position.x, targetX, lerpSpeed);
+                gameCamera.position.y = quad(gameCamera.position.y, targetY, lerpSpeed);
             }
         }
+    }
+
+    private float lerp(float start, float end, float t) {
+        return start + (end - start) * t;
+    }
+
+    private float quad(float start, float end, float t) {
+        return start + (end - start) * t * t;
+    }
+
+    private float cubic(float start, float end, float t) {
+        return start + (end - start) * t * t * (3 - 2 * t);
+    }
+
+    private float quadBezier(float start, float control, float end, float t) {
+        float oneMinusT = 1 - t;
+        return start * oneMinusT * oneMinusT + control * 2 * oneMinusT * t + end * t * t;
     }
 }

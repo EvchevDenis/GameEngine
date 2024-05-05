@@ -3,8 +3,11 @@ package org.example.components;
 import org.example.jade.GameObject;
 import org.example.jade.Window;
 import org.example.physics2d.colliders.Rigidbody2D;
+import org.example.utils.AssetPool;
 import org.jbox2d.dynamics.contacts.Contact;
 import org.joml.Vector2f;
+
+import java.util.Objects;
 
 public class BreakerAI extends Component {
 
@@ -128,14 +131,12 @@ public class BreakerAI extends Component {
         if (cuteEnemy != null) {
             cuteEnemy.stomp();
             contact.setEnabled(false);
-            //AssetPool.getSound("assets/sounds/kick.ogg").play();
         }
 
         SlimeAI slime = obj.getComponent(SlimeAI.class);
         if (slime != null) {
             slime.stomp(0);
             contact.setEnabled(false);
-            //AssetPool.getSound("assets/sounds/kick.ogg").play();
         }
     }
 

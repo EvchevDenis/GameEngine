@@ -93,7 +93,7 @@ public abstract class Component {
                     JImGui.colorPicker4(name, val);
                 } else if (type.isEnum()) {
                     String[] enumValues = getEnumValues(type);
-                    String enumType = ((Enum)value).name();
+                    String enumType = ((Enum<?>)value).name();
                     ImInt index = new ImInt(indexOf(enumType, enumValues));
                     if (ImGui.combo(field.getName(), index, enumValues, enumValues.length)) {
                         field.set(this, type.getEnumConstants()[index.get()]);

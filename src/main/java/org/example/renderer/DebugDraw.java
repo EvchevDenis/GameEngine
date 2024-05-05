@@ -115,7 +115,6 @@ public class DebugDraw {
     // Add line2D methods
     // ==================================================
     public static void addLine2D(Vector2f from, Vector2f to) {
-        // TODO: ADD CONSTANTS FOR COMMON COLORS
         addLine2D(from, to, new Vector3f(0, 1, 0), 1);
     }
 
@@ -142,7 +141,6 @@ public class DebugDraw {
     // Add Box2D methods
     // ==================================================
     public static void addBox2D(Vector2f center, Vector2f dimensions, float rotation) {
-        // TODO: ADD CONSTANTS FOR COMMON COLORS
         addBox2D(center, dimensions, rotation, new Vector3f(0, 1, 0), 1);
     }
 
@@ -176,7 +174,6 @@ public class DebugDraw {
     // Add Circle methods
     // ==================================================
     public static void addCircle(Vector2f center, float radius) {
-        // TODO: ADD CONSTANTS FOR COMMON COLORS
         addCircle(center, radius, new Vector3f(0, 1, 0), 1);
     }
 

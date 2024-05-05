@@ -4,8 +4,11 @@ import org.example.jade.GameObject;
 import org.example.jade.Window;
 import org.example.physics2d.Physics2D;
 import org.example.physics2d.colliders.Rigidbody2D;
+import org.example.utils.AssetPool;
 import org.jbox2d.dynamics.contacts.Contact;
 import org.joml.Vector2f;
+
+import java.util.Objects;
 
 public class CuteEnemyAI extends Component {
 
@@ -187,5 +190,6 @@ public class CuteEnemyAI extends Component {
         this.rb.setGravityScale(0.0f);
         this.stateMachine.trigger("dead");
         this.rb.setIsSensor();
+        Objects.requireNonNull(AssetPool.getSound("assets/sounds/enemy_death.ogg")).play();
     }
 }

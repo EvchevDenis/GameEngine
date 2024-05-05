@@ -55,6 +55,24 @@ public class LevelSceneInitializer extends SceneInitializer {
         AssetPool.addSpritesheet("assets/images/spikes.png",
                 new Spritesheet(AssetPool.getTexture("assets/images/spikes.png"),
                         32, 16, 10, 0));
+        AssetPool.addSpritesheet("assets/images/saw.png",
+                new Spritesheet(AssetPool.getTexture("assets/images/saw.png"),
+                        32, 32, 8, 0));
+        AssetPool.addSpritesheet("assets/images/fan.png",
+                new Spritesheet(AssetPool.getTexture("assets/images/fan.png"),
+                        32, 16, 8, 0));
+        AssetPool.addSpritesheet("assets/images/platform.png",
+                new Spritesheet(AssetPool.getTexture("assets/images/platform.png"),
+                        32, 16, 8, 0));
+        AssetPool.addSpritesheet("assets/images/shooter_arrow.png",
+                new Spritesheet(AssetPool.getTexture("assets/images/shooter_arrow.png"),
+                        16, 16, 7, 0));
+        AssetPool.addSpritesheet("assets/images/fire.png",
+                new Spritesheet(AssetPool.getTexture("assets/images/fire.png"),
+                        16, 16, 4, 0));
+        AssetPool.addSpritesheet("assets/images/firebox.png",
+                new Spritesheet(AssetPool.getTexture("assets/images/firebox.png"),
+                        16, 16, 13, 0));
 
 
         AssetPool.addSpritesheet("assets/images/gizmos.png",
@@ -84,6 +102,12 @@ public class LevelSceneInitializer extends SceneInitializer {
         AssetPool.addSpritesheet("assets/images/flag.png",
                 new Spritesheet(AssetPool.getTexture("assets/images/flag.png"),
                         48, 64, 5, 0));
+        AssetPool.addSpritesheet("assets/images/arrow.png",
+                new Spritesheet(AssetPool.getTexture("assets/images/arrow.png"),
+                        16, 16, 4, 0));
+        AssetPool.addSpritesheet("assets/images/chest.png",
+                new Spritesheet(AssetPool.getTexture("assets/images/chest.png"),
+                        16, 16, 7, 0));
 
 
         AssetPool.addSpritesheet("assets/images/Hoodie.png",
@@ -95,11 +119,13 @@ public class LevelSceneInitializer extends SceneInitializer {
         AssetPool.addSpritesheet("assets/images/HoodieRed.png",
                 new Spritesheet(AssetPool.getTexture("assets/images/HoodieRed.png"),
                         32, 32, 72, 0));
+        AssetPool.addSpritesheet("assets/images/fireball.png",
+                new Spritesheet(AssetPool.getTexture("assets/images/fireball.png"),
+                        32, 32, 5, 0));
 
 
         // Sound assets
         AssetPool.addSound("assets/sounds/jump.ogg", false);
-        AssetPool.addSound("assets/sounds/music.ogg", true);
 
         for (GameObject g : scene.getGameObjects()) {
             if (g.getComponent(SpriteRenderer.class) != null) {

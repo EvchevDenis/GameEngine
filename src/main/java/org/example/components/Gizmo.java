@@ -19,11 +19,11 @@ public class Gizmo extends Component {
     private SpriteRenderer yAxisSprite;
     protected GameObject activeGameObject = null;
 
-    private Vector2f xAxisOffset = new Vector2f(24f / 80f, -6f / 80f);
-    private Vector2f yAxisOffset = new Vector2f(-7f / 80f, 21f / 80f);
+    private Vector2f xAxisOffset = new Vector2f(24f / 160f, -6f / 160f);
+    private Vector2f yAxisOffset = new Vector2f(-7f / 160f, 21f / 160f);
 
-    private float gizmoWidth = 16f / 80f;
-    private float gizmoHeight = 48f / 80f;
+    private float gizmoWidth = 16f / 160f;
+    private float gizmoHeight = 48f / 160f;
 
     protected boolean xAxisActive = false;
     protected boolean yAxisActive = false;

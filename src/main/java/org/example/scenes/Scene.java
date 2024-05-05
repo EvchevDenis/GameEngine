@@ -228,7 +228,7 @@ public class Scene {
         File configFile = new File(configFileName);
 
         JFileChooser createLevelChooser = windowsJFileChooser("Default");
-        createLevelChooser.setCurrentDirectory(new File("."));
+        createLevelChooser.setCurrentDirectory(new File("levels"));
         createLevelChooser.setApproveButtonText("Create Level");
         FileFilter filter = new FileNameExtensionFilter("TXT file", "txt");
         createLevelChooser.setFileFilter(filter);

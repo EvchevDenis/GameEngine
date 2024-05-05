@@ -148,7 +148,6 @@ public class ImGuiLayer {
             fontConfig.destroy(); // After all fonts were added we don't need this config more
         }
 
-
         // Method initializes LWJGL3 renderer.
         // This method SHOULD be called after you've initialized your ImGui configuration (fonts and so on).
         // ImGui context should be created as well.

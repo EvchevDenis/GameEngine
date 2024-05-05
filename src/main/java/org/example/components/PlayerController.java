@@ -109,9 +109,7 @@ public class PlayerController extends Component {
                     walkSpeed = 0;
                     stateMachine.trigger("stopRunning");
                 }
-                /*if (!AssetPool.getSound("assets/sounds/stage_clear.ogg").isPlaying()) {
-                    AssetPool.getSound("assets/sounds/stage_clear.ogg").play();
-                }*/
+
                 timeToCastle -= dt;
                 walkTime -= dt;
 
@@ -274,7 +272,7 @@ public class PlayerController extends Component {
         stateMachine.trigger("powerup");
         if (playerState == PlayerState.Regular) {
             playerState = PlayerState.Shadow;
-            //AssetPool.getSound("assets/sounds/powerup.ogg").play();
+            Objects.requireNonNull(AssetPool.getSound("assets/sounds/powerup.ogg")).play();
             PillboxCollider pb = gameObject.getComponent(PillboxCollider.class);
             if (pb != null) {
                 jumpBoost *= bigJumpBoostFactor + 3;
@@ -282,7 +280,7 @@ public class PlayerController extends Component {
             }
         } else if (playerState == PlayerState.Shadow) {
             playerState = PlayerState.Red;
-            //AssetPool.getSound("assets/sounds/powerup.ogg").play();
+            Objects.requireNonNull(AssetPool.getSound("assets/sounds/powerup.ogg")).play();
             PillboxCollider pb = gameObject.getComponent(PillboxCollider.class);
             if (pb != null) {
                 jumpBoost *= bigJumpBoostFactor + 5;
@@ -314,7 +312,7 @@ public class PlayerController extends Component {
             rb.setVelocity(velocity);
             rb.setIsSensor();
             rb.setBodyType(BodyType.Static);
-            //AssetPool.getSound("assets/sounds/flagpole.ogg").play();
+            Objects.requireNonNull(AssetPool.getSound("assets/sounds/you_win.ogg")).play();
         }
     }
 
@@ -343,7 +341,7 @@ public class PlayerController extends Component {
             setPlayerGravity(3.0f);
             this.isDead = true;
             //this.rb.setIsSensor();
-            //AssetPool.getSound("assets/sounds/die.ogg").play();
+            Objects.requireNonNull(AssetPool.getSound("assets/sounds/die.ogg")).play();
         } else if (this.playerState == PlayerState.Shadow) {
             this.playerState = PlayerState.Regular;
             PillboxCollider pb = gameObject.getComponent(PillboxCollider.class);
@@ -351,7 +349,7 @@ public class PlayerController extends Component {
                 defaultCharacteristics();
             }
             hurtInvincibilityTimeLeft = hurtInvincibilityTime;
-            //AssetPool.getSound("assets/sounds/pipe.ogg").play();
+            Objects.requireNonNull(AssetPool.getSound("assets/sounds/hurt.ogg")).play();
         } else if (playerState == PlayerState.Red) {
             this.playerState = PlayerState.Shadow;
             PillboxCollider pb = gameObject.getComponent(PillboxCollider.class);
@@ -360,7 +358,7 @@ public class PlayerController extends Component {
                 walkSpeed *= bigJumpBoostFactor + 3;
             }
             hurtInvincibilityTimeLeft = hurtInvincibilityTime;
-            //AssetPool.getSound("assets/sounds/pipe.ogg").play();
+            Objects.requireNonNull(AssetPool.getSound("assets/sounds/hurt.ogg")).play();
         }
         this.stateMachine.trigger("die");
     }
@@ -372,6 +370,7 @@ public class PlayerController extends Component {
             this.playerState = PlayerState.Invisible;
             jumpBoost *= bigJumpBoostFactor + 10;
             walkSpeed *= bigJumpBoostFactor + 10;
+            //Objects.requireNonNull(AssetPool.getSound("assets/sounds/start_invisible.ogg")).play();
             this.stateMachine.trigger("invisible");
         }
     }
@@ -383,6 +382,7 @@ public class PlayerController extends Component {
             if (pb != null) {
                 defaultCharacteristics();
             }
+            //Objects.requireNonNull(AssetPool.getSound("assets/sounds/end_invisible.ogg")).play();
             this.stateMachine.trigger("notInvisible");
         }
     }

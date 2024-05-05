@@ -8,7 +8,7 @@ import org.joml.Vector2f;
 
 import java.util.Objects;
 
-public class Ring extends Component {
+public class Bottle extends Component {
     private transient Rigidbody2D rb;
 
     @Override
@@ -18,7 +18,7 @@ public class Ring extends Component {
     }
 
     @Override
-    public void beginCollision(GameObject obj, Contact contact, Vector2f contactNormal) {
+    public void preSolve(GameObject obj, Contact contact, Vector2f contactNormal) {
         PlayerController playerController = obj.getComponent(PlayerController.class);
         if (playerController != null) {
             contact.setEnabled(false);

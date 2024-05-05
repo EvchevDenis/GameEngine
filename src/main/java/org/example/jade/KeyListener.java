@@ -42,4 +42,5 @@ public class KeyListener {
     public static boolean keyBeginPress(int keyCode) {
         return get().keyBeginPress[keyCode];
     }
+
 }

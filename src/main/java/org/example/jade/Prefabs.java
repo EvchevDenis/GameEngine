@@ -397,7 +397,7 @@ public class Prefabs {
         CircleCollider circleCollider = new CircleCollider();
         circleCollider.setRadius(0.08f);
         bottle.addComponent(circleCollider);
-        bottle.addComponent(new BottleAI());
+        bottle.addComponent(new Bottle());
 
         return bottle;
     }
@@ -407,7 +407,7 @@ public class Prefabs {
         GameObject necklace = generateSpriteObject(weapons.getSprite(55), 0.15f, 0.15f);
 
         Rigidbody2D rb = new Rigidbody2D();
-        rb.setBodyType(BodyType.Dynamic);
+        rb.setBodyType(BodyType.Static);
         rb.setFixedRotation(true);
         rb.setContinuousCollision(false);
         necklace.addComponent(rb);
@@ -425,7 +425,7 @@ public class Prefabs {
         GameObject ring = generateSpriteObject(weapons.getSprite(29), 0.15f, 0.15f);
 
         Rigidbody2D rb = new Rigidbody2D();
-        rb.setBodyType(BodyType.Dynamic);
+        rb.setBodyType(BodyType.Static);
         rb.setFixedRotation(true);
         rb.setContinuousCollision(false);
         ring.addComponent(rb);

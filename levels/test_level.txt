@@ -1,0 +1,5342 @@
+[
+  {
+    "uid": 6855,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "org.example.jade.Transform",
+        "properties": {
+          "position": {
+            "x": 2.125,
+            "y": 1.875
+          },
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "rotation": 0.0,
+          "zIndex": 0,
+          "uid": 7848796
+        }
+      },
+      {
+        "type": "org.example.components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spritesheets/blocks_spritesheet.png",
+              "width": 320,
+              "height": 1424
+            },
+            "texCoords": [
+              {
+                "x": 0.05,
+                "y": 1.0
+              },
+              {
+                "x": 0.05,
+                "y": 0.98876405
+              },
+              {
+                "x": 0.0,
+                "y": 0.98876405
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 7848797
+        }
+      },
+      {
+        "type": "org.example.physics2d.colliders.Rigidbody2D",
+        "properties": {
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "angularVelocity": 0.0,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true,
+          "uid": 7848798
+        }
+      },
+      {
+        "type": "org.example.physics2d.colliders.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "uid": 7848799
+        }
+      },
+      {
+        "type": "org.example.components.Ground",
+        "properties": {
+          "uid": 7848800
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false
+  },
+  {
+    "uid": 6856,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "org.example.jade.Transform",
+        "properties": {
+          "position": {
+            "x": 2.375,
+            "y": 1.625
+          },
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "rotation": 0.0,
+          "zIndex": 0,
+          "uid": 7848796
+        }
+      },
+      {
+        "type": "org.example.components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spritesheets/blocks_spritesheet.png",
+              "width": 320,
+              "height": 1424
+            },
+            "texCoords": [
+              {
+                "x": 0.05,
+                "y": 1.0
+              },
+              {
+                "x": 0.05,
+                "y": 0.98876405
+              },
+              {
+                "x": 0.0,
+                "y": 0.98876405
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 7848797
+        }
+      },
+      {
+        "type": "org.example.physics2d.colliders.Rigidbody2D",
+        "properties": {
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "angularVelocity": 0.0,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true,
+          "uid": 7848798
+        }
+      },
+      {
+        "type": "org.example.physics2d.colliders.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "uid": 7848799
+        }
+      },
+      {
+        "type": "org.example.components.Ground",
+        "properties": {
+          "uid": 7848800
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false
+  },
+  {
+    "uid": 6857,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "org.example.jade.Transform",
+        "properties": {
+          "position": {
+            "x": 2.625,
+            "y": 1.375
+          },
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "rotation": 0.0,
+          "zIndex": 0,
+          "uid": 7848796
+        }
+      },
+      {
+        "type": "org.example.components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spritesheets/blocks_spritesheet.png",
+              "width": 320,
+              "height": 1424
+            },
+            "texCoords": [
+              {
+                "x": 0.05,
+                "y": 1.0
+              },
+              {
+                "x": 0.05,
+                "y": 0.98876405
+              },
+              {
+                "x": 0.0,
+                "y": 0.98876405
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 7848797
+        }
+      },
+      {
+        "type": "org.example.physics2d.colliders.Rigidbody2D",
+        "properties": {
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "angularVelocity": 0.0,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true,
+          "uid": 7848798
+        }
+      },
+      {
+        "type": "org.example.physics2d.colliders.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "uid": 7848799
+        }
+      },
+      {
+        "type": "org.example.components.Ground",
+        "properties": {
+          "uid": 7848800
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false
+  },
+  {
+    "uid": 6858,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "org.example.jade.Transform",
+        "properties": {
+          "position": {
+            "x": 2.875,
+            "y": 1.625
+          },
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "rotation": 0.0,
+          "zIndex": 0,
+          "uid": 7848796
+        }
+      },
+      {
+        "type": "org.example.components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spritesheets/blocks_spritesheet.png",
+              "width": 320,
+              "height": 1424
+            },
+            "texCoords": [
+              {
+                "x": 0.05,
+                "y": 1.0
+              },
+              {
+                "x": 0.05,
+                "y": 0.98876405
+              },
+              {
+                "x": 0.0,
+                "y": 0.98876405
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 7848797
+        }
+      },
+      {
+        "type": "org.example.physics2d.colliders.Rigidbody2D",
+        "properties": {
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "angularVelocity": 0.0,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true,
+          "uid": 7848798
+        }
+      },
+      {
+        "type": "org.example.physics2d.colliders.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "uid": 7848799
+        }
+      },
+      {
+        "type": "org.example.components.Ground",
+        "properties": {
+          "uid": 7848800
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false
+  },
+  {
+    "uid": 6859,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "org.example.jade.Transform",
+        "properties": {
+          "position": {
+            "x": 3.125,
+            "y": 1.875
+          },
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "rotation": 0.0,
+          "zIndex": 0,
+          "uid": 7848796
+        }
+      },
+      {
+        "type": "org.example.components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spritesheets/blocks_spritesheet.png",
+              "width": 320,
+              "height": 1424
+            },
+            "texCoords": [
+              {
+                "x": 0.05,
+                "y": 1.0
+              },
+              {
+                "x": 0.05,
+                "y": 0.98876405
+              },
+              {
+                "x": 0.0,
+                "y": 0.98876405
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 7848797
+        }
+      },
+      {
+        "type": "org.example.physics2d.colliders.Rigidbody2D",
+        "properties": {
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "angularVelocity": 0.0,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true,
+          "uid": 7848798
+        }
+      },
+      {
+        "type": "org.example.physics2d.colliders.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "uid": 7848799
+        }
+      },
+      {
+        "type": "org.example.components.Ground",
+        "properties": {
+          "uid": 7848800
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false
+  },
+  {
+    "uid": 6860,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "org.example.jade.Transform",
+        "properties": {
+          "position": {
+            "x": 3.375,
+            "y": 1.875
+          },
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "rotation": 0.0,
+          "zIndex": 0,
+          "uid": 7848796
+        }
+      },
+      {
+        "type": "org.example.components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spritesheets/blocks_spritesheet.png",
+              "width": 320,
+              "height": 1424
+            },
+            "texCoords": [
+              {
+                "x": 0.05,
+                "y": 1.0
+              },
+              {
+                "x": 0.05,
+                "y": 0.98876405
+              },
+              {
+                "x": 0.0,
+                "y": 0.98876405
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 7848797
+        }
+      },
+      {
+        "type": "org.example.physics2d.colliders.Rigidbody2D",
+        "properties": {
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "angularVelocity": 0.0,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true,
+          "uid": 7848798
+        }
+      },
+      {
+        "type": "org.example.physics2d.colliders.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "uid": 7848799
+        }
+      },
+      {
+        "type": "org.example.components.Ground",
+        "properties": {
+          "uid": 7848800
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false
+  },
+  {
+    "uid": 6861,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "org.example.jade.Transform",
+        "properties": {
+          "position": {
+            "x": 2.125,
+            "y": 1.875
+          },
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "rotation": 0.0,
+          "zIndex": 0,
+          "uid": 7848796
+        }
+      },
+      {
+        "type": "org.example.components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spritesheets/blocks_spritesheet.png",
+              "width": 320,
+              "height": 1424
+            },
+            "texCoords": [
+              {
+                "x": 0.05,
+                "y": 1.0
+              },
+              {
+                "x": 0.05,
+                "y": 0.98876405
+              },
+              {
+                "x": 0.0,
+                "y": 0.98876405
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 7848797
+        }
+      },
+      {
+        "type": "org.example.physics2d.colliders.Rigidbody2D",
+        "properties": {
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "angularVelocity": 0.0,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true,
+          "uid": 7848798
+        }
+      },
+      {
+        "type": "org.example.physics2d.colliders.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "uid": 7848799
+        }
+      },
+      {
+        "type": "org.example.components.Ground",
+        "properties": {
+          "uid": 7848800
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false
+  },
+  {
+    "uid": 6862,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "org.example.jade.Transform",
+        "properties": {
+          "position": {
+            "x": 1.875,
+            "y": 1.875
+          },
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "rotation": 0.0,
+          "zIndex": 0,
+          "uid": 7848796
+        }
+      },
+      {
+        "type": "org.example.components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spritesheets/blocks_spritesheet.png",
+              "width": 320,
+              "height": 1424
+            },
+            "texCoords": [
+              {
+                "x": 0.05,
+                "y": 1.0
+              },
+              {
+                "x": 0.05,
+                "y": 0.98876405
+              },
+              {
+                "x": 0.0,
+                "y": 0.98876405
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 7848797
+        }
+      },
+      {
+        "type": "org.example.physics2d.colliders.Rigidbody2D",
+        "properties": {
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "angularVelocity": 0.0,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true,
+          "uid": 7848798
+        }
+      },
+      {
+        "type": "org.example.physics2d.colliders.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "uid": 7848799
+        }
+      },
+      {
+        "type": "org.example.components.Ground",
+        "properties": {
+          "uid": 7848800
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false
+  },
+  {
+    "uid": 6863,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "org.example.jade.Transform",
+        "properties": {
+          "position": {
+            "x": 1.625,
+            "y": 1.625
+          },
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "rotation": 0.0,
+          "zIndex": 0,
+          "uid": 7848796
+        }
+      },
+      {
+        "type": "org.example.components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spritesheets/blocks_spritesheet.png",
+              "width": 320,
+              "height": 1424
+            },
+            "texCoords": [
+              {
+                "x": 0.05,
+                "y": 1.0
+              },
+              {
+                "x": 0.05,
+                "y": 0.98876405
+              },
+              {
+                "x": 0.0,
+                "y": 0.98876405
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 7848797
+        }
+      },
+      {
+        "type": "org.example.physics2d.colliders.Rigidbody2D",
+        "properties": {
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "angularVelocity": 0.0,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true,
+          "uid": 7848798
+        }
+      },
+      {
+        "type": "org.example.physics2d.colliders.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "uid": 7848799
+        }
+      },
+      {
+        "type": "org.example.components.Ground",
+        "properties": {
+          "uid": 7848800
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false
+  },
+  {
+    "uid": 6864,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "org.example.jade.Transform",
+        "properties": {
+          "position": {
+            "x": 1.625,
+            "y": 1.375
+          },
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "rotation": 0.0,
+          "zIndex": 0,
+          "uid": 7848796
+        }
+      },
+      {
+        "type": "org.example.components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spritesheets/blocks_spritesheet.png",
+              "width": 320,
+              "height": 1424
+            },
+            "texCoords": [
+              {
+                "x": 0.05,
+                "y": 1.0
+              },
+              {
+                "x": 0.05,
+                "y": 0.98876405
+              },
+              {
+                "x": 0.0,
+                "y": 0.98876405
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 7848797
+        }
+      },
+      {
+        "type": "org.example.physics2d.colliders.Rigidbody2D",
+        "properties": {
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "angularVelocity": 0.0,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true,
+          "uid": 7848798
+        }
+      },
+      {
+        "type": "org.example.physics2d.colliders.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "uid": 7848799
+        }
+      },
+      {
+        "type": "org.example.components.Ground",
+        "properties": {
+          "uid": 7848800
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false
+  },
+  {
+    "uid": 6865,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "org.example.jade.Transform",
+        "properties": {
+          "position": {
+            "x": 1.625,
+            "y": 1.125
+          },
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "rotation": 0.0,
+          "zIndex": 0,
+          "uid": 7848796
+        }
+      },
+      {
+        "type": "org.example.components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spritesheets/blocks_spritesheet.png",
+              "width": 320,
+              "height": 1424
+            },
+            "texCoords": [
+              {
+                "x": 0.05,
+                "y": 1.0
+              },
+              {
+                "x": 0.05,
+                "y": 0.98876405
+              },
+              {
+                "x": 0.0,
+                "y": 0.98876405
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 7848797
+        }
+      },
+      {
+        "type": "org.example.physics2d.colliders.Rigidbody2D",
+        "properties": {
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "angularVelocity": 0.0,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true,
+          "uid": 7848798
+        }
+      },
+      {
+        "type": "org.example.physics2d.colliders.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "uid": 7848799
+        }
+      },
+      {
+        "type": "org.example.components.Ground",
+        "properties": {
+          "uid": 7848800
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false
+  },
+  {
+    "uid": 6866,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "org.example.jade.Transform",
+        "properties": {
+          "position": {
+            "x": 1.875,
+            "y": 0.875
+          },
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "rotation": 0.0,
+          "zIndex": 0,
+          "uid": 7848796
+        }
+      },
+      {
+        "type": "org.example.components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spritesheets/blocks_spritesheet.png",
+              "width": 320,
+              "height": 1424
+            },
+            "texCoords": [
+              {
+                "x": 0.05,
+                "y": 1.0
+              },
+              {
+                "x": 0.05,
+                "y": 0.98876405
+              },
+              {
+                "x": 0.0,
+                "y": 0.98876405
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 7848797
+        }
+      },
+      {
+        "type": "org.example.physics2d.colliders.Rigidbody2D",
+        "properties": {
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "angularVelocity": 0.0,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true,
+          "uid": 7848798
+        }
+      },
+      {
+        "type": "org.example.physics2d.colliders.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "uid": 7848799
+        }
+      },
+      {
+        "type": "org.example.components.Ground",
+        "properties": {
+          "uid": 7848800
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false
+  },
+  {
+    "uid": 6867,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "org.example.jade.Transform",
+        "properties": {
+          "position": {
+            "x": 2.125,
+            "y": 0.625
+          },
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "rotation": 0.0,
+          "zIndex": 0,
+          "uid": 7848796
+        }
+      },
+      {
+        "type": "org.example.components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spritesheets/blocks_spritesheet.png",
+              "width": 320,
+              "height": 1424
+            },
+            "texCoords": [
+              {
+                "x": 0.05,
+                "y": 1.0
+              },
+              {
+                "x": 0.05,
+                "y": 0.98876405
+              },
+              {
+                "x": 0.0,
+                "y": 0.98876405
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 7848797
+        }
+      },
+      {
+        "type": "org.example.physics2d.colliders.Rigidbody2D",
+        "properties": {
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "angularVelocity": 0.0,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true,
+          "uid": 7848798
+        }
+      },
+      {
+        "type": "org.example.physics2d.colliders.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "uid": 7848799
+        }
+      },
+      {
+        "type": "org.example.components.Ground",
+        "properties": {
+          "uid": 7848800
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false
+  },
+  {
+    "uid": 6868,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "org.example.jade.Transform",
+        "properties": {
+          "position": {
+            "x": 2.375,
+            "y": 0.375
+          },
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "rotation": 0.0,
+          "zIndex": 0,
+          "uid": 7848796
+        }
+      },
+      {
+        "type": "org.example.components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spritesheets/blocks_spritesheet.png",
+              "width": 320,
+              "height": 1424
+            },
+            "texCoords": [
+              {
+                "x": 0.05,
+                "y": 1.0
+              },
+              {
+                "x": 0.05,
+                "y": 0.98876405
+              },
+              {
+                "x": 0.0,
+                "y": 0.98876405
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 7848797
+        }
+      },
+      {
+        "type": "org.example.physics2d.colliders.Rigidbody2D",
+        "properties": {
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "angularVelocity": 0.0,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true,
+          "uid": 7848798
+        }
+      },
+      {
+        "type": "org.example.physics2d.colliders.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "uid": 7848799
+        }
+      },
+      {
+        "type": "org.example.components.Ground",
+        "properties": {
+          "uid": 7848800
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false
+  },
+  {
+    "uid": 6869,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "org.example.jade.Transform",
+        "properties": {
+          "position": {
+            "x": 2.625,
+            "y": 0.125
+          },
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "rotation": 0.0,
+          "zIndex": 0,
+          "uid": 7848796
+        }
+      },
+      {
+        "type": "org.example.components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spritesheets/blocks_spritesheet.png",
+              "width": 320,
+              "height": 1424
+            },
+            "texCoords": [
+              {
+                "x": 0.05,
+                "y": 1.0
+              },
+              {
+                "x": 0.05,
+                "y": 0.98876405
+              },
+              {
+                "x": 0.0,
+                "y": 0.98876405
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 7848797
+        }
+      },
+      {
+        "type": "org.example.physics2d.colliders.Rigidbody2D",
+        "properties": {
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "angularVelocity": 0.0,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true,
+          "uid": 7848798
+        }
+      },
+      {
+        "type": "org.example.physics2d.colliders.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "uid": 7848799
+        }
+      },
+      {
+        "type": "org.example.components.Ground",
+        "properties": {
+          "uid": 7848800
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false
+  },
+  {
+    "uid": 6870,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "org.example.jade.Transform",
+        "properties": {
+          "position": {
+            "x": 2.875,
+            "y": 0.375
+          },
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "rotation": 0.0,
+          "zIndex": 0,
+          "uid": 7848796
+        }
+      },
+      {
+        "type": "org.example.components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spritesheets/blocks_spritesheet.png",
+              "width": 320,
+              "height": 1424
+            },
+            "texCoords": [
+              {
+                "x": 0.05,
+                "y": 1.0
+              },
+              {
+                "x": 0.05,
+                "y": 0.98876405
+              },
+              {
+                "x": 0.0,
+                "y": 0.98876405
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 7848797
+        }
+      },
+      {
+        "type": "org.example.physics2d.colliders.Rigidbody2D",
+        "properties": {
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "angularVelocity": 0.0,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true,
+          "uid": 7848798
+        }
+      },
+      {
+        "type": "org.example.physics2d.colliders.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "uid": 7848799
+        }
+      },
+      {
+        "type": "org.example.components.Ground",
+        "properties": {
+          "uid": 7848800
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false
+  },
+  {
+    "uid": 6871,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "org.example.jade.Transform",
+        "properties": {
+          "position": {
+            "x": 3.125,
+            "y": 0.625
+          },
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "rotation": 0.0,
+          "zIndex": 0,
+          "uid": 7848796
+        }
+      },
+      {
+        "type": "org.example.components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spritesheets/blocks_spritesheet.png",
+              "width": 320,
+              "height": 1424
+            },
+            "texCoords": [
+              {
+                "x": 0.05,
+                "y": 1.0
+              },
+              {
+                "x": 0.05,
+                "y": 0.98876405
+              },
+              {
+                "x": 0.0,
+                "y": 0.98876405
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 7848797
+        }
+      },
+      {
+        "type": "org.example.physics2d.colliders.Rigidbody2D",
+        "properties": {
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "angularVelocity": 0.0,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true,
+          "uid": 7848798
+        }
+      },
+      {
+        "type": "org.example.physics2d.colliders.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "uid": 7848799
+        }
+      },
+      {
+        "type": "org.example.components.Ground",
+        "properties": {
+          "uid": 7848800
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false
+  },
+  {
+    "uid": 6872,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "org.example.jade.Transform",
+        "properties": {
+          "position": {
+            "x": 3.375,
+            "y": 0.875
+          },
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "rotation": 0.0,
+          "zIndex": 0,
+          "uid": 7848796
+        }
+      },
+      {
+        "type": "org.example.components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spritesheets/blocks_spritesheet.png",
+              "width": 320,
+              "height": 1424
+            },
+            "texCoords": [
+              {
+                "x": 0.05,
+                "y": 1.0
+              },
+              {
+                "x": 0.05,
+                "y": 0.98876405
+              },
+              {
+                "x": 0.0,
+                "y": 0.98876405
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 7848797
+        }
+      },
+      {
+        "type": "org.example.physics2d.colliders.Rigidbody2D",
+        "properties": {
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "angularVelocity": 0.0,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true,
+          "uid": 7848798
+        }
+      },
+      {
+        "type": "org.example.physics2d.colliders.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "uid": 7848799
+        }
+      },
+      {
+        "type": "org.example.components.Ground",
+        "properties": {
+          "uid": 7848800
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false
+  },
+  {
+    "uid": 6873,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "org.example.jade.Transform",
+        "properties": {
+          "position": {
+            "x": 3.625,
+            "y": 1.125
+          },
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "rotation": 0.0,
+          "zIndex": 0,
+          "uid": 7848796
+        }
+      },
+      {
+        "type": "org.example.components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spritesheets/blocks_spritesheet.png",
+              "width": 320,
+              "height": 1424
+            },
+            "texCoords": [
+              {
+                "x": 0.05,
+                "y": 1.0
+              },
+              {
+                "x": 0.05,
+                "y": 0.98876405
+              },
+              {
+                "x": 0.0,
+                "y": 0.98876405
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 7848797
+        }
+      },
+      {
+        "type": "org.example.physics2d.colliders.Rigidbody2D",
+        "properties": {
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "angularVelocity": 0.0,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true,
+          "uid": 7848798
+        }
+      },
+      {
+        "type": "org.example.physics2d.colliders.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "uid": 7848799
+        }
+      },
+      {
+        "type": "org.example.components.Ground",
+        "properties": {
+          "uid": 7848800
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false
+  },
+  {
+    "uid": 6874,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "org.example.jade.Transform",
+        "properties": {
+          "position": {
+            "x": 3.625,
+            "y": 1.375
+          },
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "rotation": 0.0,
+          "zIndex": 0,
+          "uid": 7848796
+        }
+      },
+      {
+        "type": "org.example.components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spritesheets/blocks_spritesheet.png",
+              "width": 320,
+              "height": 1424
+            },
+            "texCoords": [
+              {
+                "x": 0.05,
+                "y": 1.0
+              },
+              {
+                "x": 0.05,
+                "y": 0.98876405
+              },
+              {
+                "x": 0.0,
+                "y": 0.98876405
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 7848797
+        }
+      },
+      {
+        "type": "org.example.physics2d.colliders.Rigidbody2D",
+        "properties": {
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "angularVelocity": 0.0,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true,
+          "uid": 7848798
+        }
+      },
+      {
+        "type": "org.example.physics2d.colliders.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "uid": 7848799
+        }
+      },
+      {
+        "type": "org.example.components.Ground",
+        "properties": {
+          "uid": 7848800
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false
+  },
+  {
+    "uid": 6875,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "org.example.jade.Transform",
+        "properties": {
+          "position": {
+            "x": 3.625,
+            "y": 1.625
+          },
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "rotation": 0.0,
+          "zIndex": 0,
+          "uid": 7848796
+        }
+      },
+      {
+        "type": "org.example.components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filepath": "assets/images/spritesheets/blocks_spritesheet.png",
+              "width": 320,
+              "height": 1424
+            },
+            "texCoords": [
+              {
+                "x": 0.05,
+                "y": 1.0
+              },
+              {
+                "x": 0.05,
+                "y": 0.98876405
+              },
+              {
+                "x": 0.0,
+                "y": 0.98876405
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 7848797
+        }
+      },
+      {
+        "type": "org.example.physics2d.colliders.Rigidbody2D",
+        "properties": {
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 0.0,
+          "bodyType": "Static",
+          "friction": 0.1,
+          "angularVelocity": 0.0,
+          "gravityScale": 1.0,
+          "isSensor": false,
+          "fixedRotation": false,
+          "continuousCollision": true,
+          "uid": 7848798
+        }
+      },
+      {
+        "type": "org.example.physics2d.colliders.Box2DCollider",
+        "properties": {
+          "halfSize": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "origin": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "uid": 7848799
+        }
+      },
+      {
+        "type": "org.example.components.Ground",
+        "properties": {
+          "uid": 7848800
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false
+  },
+  {
+    "uid": 6876,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "org.example.jade.Transform",
+        "properties": {
+          "position": {
+            "x": 1.875,
+            "y": 2.125
+          },
+          "scale": {
+            "x": 0.25,
+            "y": 0.25
+          },
+          "rotation": 0.0,
+          "zIndex": 0,
+          "uid": 7854837
+        }
+      },
+      {
+        "type": "org.example.components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 32.0,
+            "height": 32.0,
+            "texture": {
+              "filepath": "assets/images/Hoodie.png",
+              "width": 256,
+              "height": 288
+            },
+            "texCoords": [
+              {
+                "x": 0.125,
+                "y": 1.0
+              },
+              {
+                "x": 0.125,
+                "y": 0.8888889
+              },
+              {
+                "x": 0.0,
+                "y": 0.8888889
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 7854838
+        }
+      },
+      {
+        "type": "org.example.components.StateMachine",
+        "properties": {
+          "stateTransfers": [
+            [
+              {
+                "state": "Switch Red Direction",
+                "trigger": "jump"
+              },
+              "JumpRed"
+            ],
+            [
+              {
+                "state": "ShadowRun",
+                "trigger": "invisible"
+              },
+              "Be Invisible"
+            ],
+            [
+              {
+                "state": "ShadowRun",
+                "trigger": "stopRunning"
+              },
+              "IdleShadow"
+            ],
+            [
+              {
+                "state": "JumpShadow",
+                "trigger": "powerup"
+              },
+              "JumpRed"
+            ],
+            [
+              {
+                "state": "Run",
+                "trigger": "switchDirection"
+              },
+              "Switch Direction"
+            ],
+            [
+              {
+                "state": "Switch Red Direction",
+                "trigger": "die"
+              },
+              "Switch Shadow Direction"
+            ],
+            [
+              {
+                "state": "ShadowRun",
+                "trigger": "jump"
+              },
+              "JumpShadow"
+            ],
+            [
+              {
+                "state": "Switch Red Direction",
+                "trigger": "stopRunning"
+              },
+              "IdleRed"
+            ],
+            [
+              {
+                "state": "ShadowRun",
+                "trigger": "powerup"
+              },
+              "RedRun"
+            ],
+            [
+              {
+                "state": "ShadowRun",
+                "trigger": "die"
+              },
+              "Run"
+            ],
+            [
+              {
+                "state": "JumpShadow",
+                "trigger": "die"
+              },
+              "Jump"
+            ],
+            [
+              {
+                "state": "Switch Direction",
+                "trigger": "jump"
+              },
+              "Jump"
+            ],
+            [
+              {
+                "state": "Jump",
+                "trigger": "invisible"
+              },
+              "Be Invisible"
+            ],
+            [
+              {
+                "state": "Switch Direction",
+                "trigger": "die"
+              },
+              "Die"
+            ],
+            [
+              {
+                "state": "Run",
+                "trigger": "stopRunning"
+              },
+              "Idle"
+            ],
+            [
+              {
+                "state": "Run",
+                "trigger": "powerup"
+              },
+              "ShadowRun"
+            ],
+            [
+              {
+                "state": "Attack",
+                "trigger": "stopAttack"
+              },
+              "JumpRed"
+            ],
+            [
+              {
+                "state": "JumpShadow",
+                "trigger": "stopJumping"
+              },
+              "IdleShadow"
+            ],
+            [
+              {
+                "state": "Switch Direction",
+                "trigger": "invisible"
+              },
+              "Be Invisible"
+            ],
+            [
+              {
+                "state": "ShadowRun",
+                "trigger": "switchDirection"
+              },
+              "Switch Shadow Direction"
+            ],
+            [
+              {
+                "state": "JumpRed",
+                "trigger": "die"
+              },
+              "JumpShadow"
+            ],
+            [
+              {
+                "state": "Idle",
+                "trigger": "jump"
+              },
+              "Jump"
+            ],
+            [
+              {
+                "state": "Switch Red Direction",
+                "trigger": "startRunning"
+              },
+              "RedRun"
+            ],
+            [
+              {
+                "state": "Run",
+                "trigger": "die"
+              },
+              "Die"
+            ],
+            [
+              {
+                "state": "RedRun",
+                "trigger": "stopRunning"
+              },
+              "IdleRed"
+            ],
+            [
+              {
+                "state": "Jump",
+                "trigger": "stopJumping"
+              },
+              "Idle"
+            ],
+            [
+              {
+                "state": "IdleShadow",
+                "trigger": "startRunning"
+              },
+              "ShadowRun"
+            ],
+            [
+              {
+                "state": "Idle",
+                "trigger": "invisible"
+              },
+              "Be Invisible"
+            ],
+            [
+              {
+                "state": "Switch Shadow Direction",
+                "trigger": "startRunning"
+              },
+              "ShadowRun"
+            ],
+            [
+              {
+                "state": "RedRun",
+                "trigger": "jump"
+              },
+              "JumpRed"
+            ],
+            [
+              {
+                "state": "Run",
+                "trigger": "invisible"
+              },
+              "Be Invisible"
+            ],
+            [
+              {
+                "state": "Switch Shadow Direction",
+                "trigger": "invisible"
+              },
+              "Be Invisible"
+            ],
+            [
+              {
+                "state": "RedRun",
+                "trigger": "switchDirection"
+              },
+              "Switch Red Direction"
+            ],
+            [
+              {
+                "state": "JumpRed",
+                "trigger": "invisible"
+              },
+              "Be Invisible"
+            ],
+            [
+              {
+                "state": "RedRun",
+                "trigger": "attack"
+              },
+              "Attack"
+            ],
+            [
+              {
+                "state": "RedRun",
+                "trigger": "invisible"
+              },
+              "Be Invisible"
+            ],
+            [
+              {
+                "state": "Switch Direction",
+                "trigger": "powerup"
+              },
+              "Switch Shadow Direction"
+            ],
+            [
+              {
+                "state": "Switch Direction",
+                "trigger": "stopRunning"
+              },
+              "Idle"
+            ],
+            [
+              {
+                "state": "Attack",
+                "trigger": "attack"
+              },
+              "Attack"
+            ],
+            [
+              {
+                "state": "Switch Shadow Direction",
+                "trigger": "jump"
+              },
+              "JumpShadow"
+            ],
+            [
+              {
+                "state": "Idle",
+                "trigger": "powerup"
+              },
+              "IdleShadow"
+            ],
+            [
+              {
+                "state": "Jump",
+                "trigger": "powerup"
+              },
+              "JumpShadow"
+            ],
+            [
+              {
+                "state": "Back To Regular",
+                "trigger": "startRunning"
+              },
+              "Run"
+            ],
+            [
+              {
+                "state": "Back To Regular",
+                "trigger": "switchDirection"
+              },
+              "Switch Direction"
+            ],
+            [
+              {
+                "state": "JumpShadow",
+                "trigger": "invisible"
+              },
+              "Be Invisible"
+            ],
+            [
+              {
+                "state": "Run",
+                "trigger": "jump"
+              },
+              "Jump"
+            ],
+            [
+              {
+                "state": "IdleRed",
+                "trigger": "die"
+              },
+              "IdleShadow"
+            ],
+            [
+              {
+                "state": "Back To Regular",
+                "trigger": "jump"
+              },
+              "Jump"
+            ],
+            [
+              {
+                "state": "JumpRed",
+                "trigger": "attack"
+              },
+              "Attack"
+            ],
+            [
+              {
+                "state": "IdleShadow",
+                "trigger": "jump"
+              },
+              "JumpShadow"
+            ],
+            [
+              {
+                "state": "IdleRed",
+                "trigger": "jump"
+              },
+              "JumpRed"
+            ],
+            [
+              {
+                "state": "IdleShadow",
+                "trigger": "die"
+              },
+              "Idle"
+            ],
+            [
+              {
+                "state": "Back To Regular",
+                "trigger": "stopRunning"
+              },
+              "Idle"
+            ],
+            [
+              {
+                "state": "IdleShadow",
+                "trigger": "powerup"
+              },
+              "IdleRed"
+            ],
+            [
+              {
+                "state": "Switch Red Direction",
+                "trigger": "attack"
+              },
+              "Attack"
+            ],
+            [
+              {
+                "state": "Idle",
+                "trigger": "startRunning"
+              },
+              "Run"
+            ],
+            [
+              {
+                "state": "Switch Shadow Direction",
+                "trigger": "stopRunning"
+              },
+              "IdleShadow"
+            ],
+            [
+              {
+                "state": "IdleRed",
+                "trigger": "invisible"
+              },
+              "Be Invisible"
+            ],
+            [
+              {
+                "state": "Switch Shadow Direction",
+                "trigger": "powerup"
+              },
+              "Switch Red Direction"
+            ],
+            [
+              {
+                "state": "Be Invisible",
+                "trigger": "notInvisible"
+              },
+              "Back To Regular"
+            ],
+            [
+              {
+                "state": "Switch Shadow Direction",
+                "trigger": "die"
+              },
+              "Switch Direction"
+            ],
+            [
+              {
+                "state": "IdleShadow",
+                "trigger": "invisible"
+              },
+              "Be Invisible"
+            ],
+            [
+              {
+                "state": "Switch Direction",
+                "trigger": "startRunning"
+              },
+              "Run"
+            ],
+            [
+              {
+                "state": "RedRun",
+                "trigger": "die"
+              },
+              "ShadowRun"
+            ],
+            [
+              {
+                "state": "IdleRed",
+                "trigger": "attack"
+              },
+              "Attack"
+            ],
+            [
+              {
+                "state": "JumpRed",
+                "trigger": "stopJumping"
+              },
+              "IdleRed"
+            ],
+            [
+              {
+                "state": "IdleRed",
+                "trigger": "startRunning"
+              },
+              "RedRun"
+            ],
+            [
+              {
+                "state": "Switch Red Direction",
+                "trigger": "invisible"
+              },
+              "Be Invisible"
+            ],
+            [
+              {
+                "state": "Idle",
+                "trigger": "die"
+              },
+              "Die"
+            ],
+            [
+              {
+                "state": "Jump",
+                "trigger": "die"
+              },
+              "Die"
+            ]
+          ],
+          "states": [
+            {
+              "title": "Run",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/Hoodie.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.125,
+                        "y": 0.6666667
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.6666667
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/Hoodie.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.25,
+                        "y": 0.6666667
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.6666667
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/Hoodie.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.375,
+                        "y": 0.6666667
+                      },
+                      {
+                        "x": 0.375,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.6666667
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/Hoodie.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.5,
+                        "y": 0.6666667
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.375,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.375,
+                        "y": 0.6666667
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/Hoodie.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.625,
+                        "y": 0.6666667
+                      },
+                      {
+                        "x": 0.625,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.6666667
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/Hoodie.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.75,
+                        "y": 0.6666667
+                      },
+                      {
+                        "x": 0.75,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.625,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.625,
+                        "y": 0.6666667
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/Hoodie.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.875,
+                        "y": 0.6666667
+                      },
+                      {
+                        "x": 0.875,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.75,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.75,
+                        "y": 0.6666667
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/Hoodie.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 0.6666667
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.875,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.875,
+                        "y": 0.6666667
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                }
+              ],
+              "time": 0.0,
+              "doesLoop": true
+            },
+            {
+              "title": "Idle",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/Hoodie.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.125,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.8888889
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.8888889
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.4
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/Hoodie.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.25,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.8888889
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.8888889
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.4
+                }
+              ],
+              "time": 0.05001679,
+              "doesLoop": true
+            },
+            {
+              "title": "Switch Direction",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/Hoodie.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.125,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.8888889
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.8888889
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                }
+              ],
+              "time": 0.0,
+              "doesLoop": false
+            },
+            {
+              "title": "Jump",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/Hoodie.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.125,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.44444445
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/Hoodie.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.25,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.44444445
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/Hoodie.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.375,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.375,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.44444445
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/Hoodie.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.5,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.375,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.375,
+                        "y": 0.44444445
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/Hoodie.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.625,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.625,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.44444445
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/Hoodie.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.75,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.75,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.625,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.625,
+                        "y": 0.44444445
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/Hoodie.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.875,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.875,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.75,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.75,
+                        "y": 0.44444445
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/Hoodie.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.875,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.875,
+                        "y": 0.44444445
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                }
+              ],
+              "time": 0.0,
+              "doesLoop": true
+            },
+            {
+              "title": "Die",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/Hoodie.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.22222222
+                      },
+                      {
+                        "x": 0.875,
+                        "y": 0.22222222
+                      },
+                      {
+                        "x": 0.875,
+                        "y": 0.33333334
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/Hoodie.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.125,
+                        "y": 0.22222222
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.11111111
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.11111111
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.22222222
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/Hoodie.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.25,
+                        "y": 0.22222222
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.11111111
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.11111111
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.22222222
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/Hoodie.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.375,
+                        "y": 0.22222222
+                      },
+                      {
+                        "x": 0.375,
+                        "y": 0.11111111
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.11111111
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.22222222
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/Hoodie.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.5,
+                        "y": 0.22222222
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.11111111
+                      },
+                      {
+                        "x": 0.375,
+                        "y": 0.11111111
+                      },
+                      {
+                        "x": 0.375,
+                        "y": 0.22222222
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/Hoodie.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.625,
+                        "y": 0.22222222
+                      },
+                      {
+                        "x": 0.625,
+                        "y": 0.11111111
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.11111111
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.22222222
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/Hoodie.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.75,
+                        "y": 0.22222222
+                      },
+                      {
+                        "x": 0.75,
+                        "y": 0.11111111
+                      },
+                      {
+                        "x": 0.625,
+                        "y": 0.11111111
+                      },
+                      {
+                        "x": 0.625,
+                        "y": 0.22222222
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/Hoodie.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.875,
+                        "y": 0.22222222
+                      },
+                      {
+                        "x": 0.875,
+                        "y": 0.11111111
+                      },
+                      {
+                        "x": 0.75,
+                        "y": 0.11111111
+                      },
+                      {
+                        "x": 0.75,
+                        "y": 0.22222222
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                }
+              ],
+              "time": 0.0,
+              "doesLoop": false
+            },
+            {
+              "title": "Be Invisible",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/Hoodie.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.875,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.875,
+                        "y": 0.44444445
+                      }
+                    ]
+                  },
+                  "frameTime": 0.2
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/Hoodie.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.125,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.22222222
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.22222222
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.33333334
+                      }
+                    ]
+                  },
+                  "frameTime": 0.2
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/Hoodie.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.25,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.22222222
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.22222222
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.33333334
+                      }
+                    ]
+                  },
+                  "frameTime": 0.2
+                }
+              ],
+              "time": 0.0,
+              "doesLoop": false
+            },
+            {
+              "title": "Back To Regular",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/Hoodie.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.25,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.22222222
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.22222222
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.33333334
+                      }
+                    ]
+                  },
+                  "frameTime": 0.2
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/Hoodie.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.125,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.22222222
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.22222222
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.33333334
+                      }
+                    ]
+                  },
+                  "frameTime": 0.2
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/Hoodie.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.875,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.875,
+                        "y": 0.44444445
+                      }
+                    ]
+                  },
+                  "frameTime": 0.2
+                }
+              ],
+              "time": 0.0,
+              "doesLoop": false
+            },
+            {
+              "title": "ShadowRun",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/HoodieShadow.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.125,
+                        "y": 0.6666667
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.6666667
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/HoodieShadow.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.25,
+                        "y": 0.6666667
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.6666667
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/HoodieShadow.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.375,
+                        "y": 0.6666667
+                      },
+                      {
+                        "x": 0.375,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.6666667
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/HoodieShadow.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.5,
+                        "y": 0.6666667
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.375,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.375,
+                        "y": 0.6666667
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/HoodieShadow.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.625,
+                        "y": 0.6666667
+                      },
+                      {
+                        "x": 0.625,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.6666667
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/HoodieShadow.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.75,
+                        "y": 0.6666667
+                      },
+                      {
+                        "x": 0.75,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.625,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.625,
+                        "y": 0.6666667
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/HoodieShadow.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.875,
+                        "y": 0.6666667
+                      },
+                      {
+                        "x": 0.875,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.75,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.75,
+                        "y": 0.6666667
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/HoodieShadow.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 0.6666667
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.875,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.875,
+                        "y": 0.6666667
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                }
+              ],
+              "time": 0.0,
+              "doesLoop": true
+            },
+            {
+              "title": "Switch Shadow Direction",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/HoodieShadow.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.125,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.8888889
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.8888889
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                }
+              ],
+              "time": 0.0,
+              "doesLoop": false
+            },
+            {
+              "title": "IdleShadow",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/HoodieShadow.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.125,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.8888889
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.8888889
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.4
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/HoodieShadow.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.25,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.8888889
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.8888889
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.4
+                }
+              ],
+              "time": 0.0,
+              "doesLoop": true
+            },
+            {
+              "title": "JumpShadow",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/HoodieShadow.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.125,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.44444445
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/HoodieShadow.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.25,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.44444445
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/HoodieShadow.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.375,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.375,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.44444445
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/HoodieShadow.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.5,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.375,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.375,
+                        "y": 0.44444445
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/HoodieShadow.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.625,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.625,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.44444445
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/HoodieShadow.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.75,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.75,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.625,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.625,
+                        "y": 0.44444445
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/HoodieShadow.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.875,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.875,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.75,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.75,
+                        "y": 0.44444445
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/HoodieShadow.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.875,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.875,
+                        "y": 0.44444445
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                }
+              ],
+              "time": 0.0,
+              "doesLoop": true
+            },
+            {
+              "title": "RedRun",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/HoodieRed.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.125,
+                        "y": 0.6666667
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.6666667
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/HoodieRed.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.25,
+                        "y": 0.6666667
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.6666667
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/HoodieRed.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.375,
+                        "y": 0.6666667
+                      },
+                      {
+                        "x": 0.375,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.6666667
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/HoodieRed.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.5,
+                        "y": 0.6666667
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.375,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.375,
+                        "y": 0.6666667
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/HoodieRed.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.625,
+                        "y": 0.6666667
+                      },
+                      {
+                        "x": 0.625,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.6666667
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/HoodieRed.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.75,
+                        "y": 0.6666667
+                      },
+                      {
+                        "x": 0.75,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.625,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.625,
+                        "y": 0.6666667
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/HoodieRed.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.875,
+                        "y": 0.6666667
+                      },
+                      {
+                        "x": 0.875,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.75,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.75,
+                        "y": 0.6666667
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/HoodieRed.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 0.6666667
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.875,
+                        "y": 0.5555556
+                      },
+                      {
+                        "x": 0.875,
+                        "y": 0.6666667
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                }
+              ],
+              "time": 0.0,
+              "doesLoop": true
+            },
+            {
+              "title": "IdleRed",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/HoodieRed.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.125,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.8888889
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.8888889
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.4
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/HoodieRed.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.25,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.8888889
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.8888889
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.4
+                }
+              ],
+              "time": 0.0,
+              "doesLoop": true
+            },
+            {
+              "title": "Switch Red Direction",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/HoodieRed.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.125,
+                        "y": 1.0
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.8888889
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.8888889
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 1.0
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                }
+              ],
+              "time": 0.0,
+              "doesLoop": false
+            },
+            {
+              "title": "JumpRed",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/HoodieRed.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.125,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.44444445
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/HoodieRed.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.25,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.44444445
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/HoodieRed.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.375,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.375,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.44444445
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/HoodieRed.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.5,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.375,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.375,
+                        "y": 0.44444445
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/HoodieRed.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.625,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.625,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.44444445
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/HoodieRed.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.75,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.75,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.625,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.625,
+                        "y": 0.44444445
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/HoodieRed.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.875,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 0.875,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.75,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.75,
+                        "y": 0.44444445
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/HoodieRed.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 0.44444445
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.875,
+                        "y": 0.33333334
+                      },
+                      {
+                        "x": 0.875,
+                        "y": 0.44444445
+                      }
+                    ]
+                  },
+                  "frameTime": 0.1
+                }
+              ],
+              "time": 0.0,
+              "doesLoop": true
+            },
+            {
+              "title": "Attack",
+              "animationFrames": [
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/HoodieRed.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 1.0,
+                        "y": 0.22222222
+                      },
+                      {
+                        "x": 1.0,
+                        "y": 0.11111111
+                      },
+                      {
+                        "x": 0.875,
+                        "y": 0.11111111
+                      },
+                      {
+                        "x": 0.875,
+                        "y": 0.22222222
+                      }
+                    ]
+                  },
+                  "frameTime": 0.05
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/HoodieRed.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.125,
+                        "y": 0.11111111
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.0,
+                        "y": 0.11111111
+                      }
+                    ]
+                  },
+                  "frameTime": 0.05
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/HoodieRed.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.25,
+                        "y": 0.11111111
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.125,
+                        "y": 0.11111111
+                      }
+                    ]
+                  },
+                  "frameTime": 0.05
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/HoodieRed.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.375,
+                        "y": 0.11111111
+                      },
+                      {
+                        "x": 0.375,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.25,
+                        "y": 0.11111111
+                      }
+                    ]
+                  },
+                  "frameTime": 0.05
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/HoodieRed.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.5,
+                        "y": 0.11111111
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.375,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.375,
+                        "y": 0.11111111
+                      }
+                    ]
+                  },
+                  "frameTime": 0.05
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/HoodieRed.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.625,
+                        "y": 0.11111111
+                      },
+                      {
+                        "x": 0.625,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.5,
+                        "y": 0.11111111
+                      }
+                    ]
+                  },
+                  "frameTime": 0.05
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/HoodieRed.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.75,
+                        "y": 0.11111111
+                      },
+                      {
+                        "x": 0.75,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.625,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.625,
+                        "y": 0.11111111
+                      }
+                    ]
+                  },
+                  "frameTime": 0.05
+                },
+                {
+                  "sprite": {
+                    "width": 32.0,
+                    "height": 32.0,
+                    "texture": {
+                      "filepath": "assets/images/HoodieRed.png",
+                      "width": 256,
+                      "height": 288
+                    },
+                    "texCoords": [
+                      {
+                        "x": 0.875,
+                        "y": 0.11111111
+                      },
+                      {
+                        "x": 0.875,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.75,
+                        "y": 0.0
+                      },
+                      {
+                        "x": 0.75,
+                        "y": 0.11111111
+                      }
+                    ]
+                  },
+                  "frameTime": 0.05
+                }
+              ],
+              "time": 0.0,
+              "doesLoop": false
+            }
+          ],
+          "defaultStateTitle": "Idle",
+          "uid": 7854839
+        }
+      },
+      {
+        "type": "org.example.physics2d.colliders.Rigidbody2D",
+        "properties": {
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "angularDamping": 0.8,
+          "linearDamping": 0.9,
+          "mass": 25.0,
+          "bodyType": "Dynamic",
+          "friction": 0.1,
+          "angularVelocity": 0.0,
+          "gravityScale": 0.0,
+          "isSensor": false,
+          "fixedRotation": true,
+          "continuousCollision": false,
+          "uid": 7854840
+        }
+      },
+      {
+        "type": "org.example.physics2d.colliders.PillboxCollider",
+        "properties": {
+          "width": 0.16,
+          "height": 0.21,
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "uid": 7854841
+        }
+      },
+      {
+        "type": "org.example.components.PlayerController",
+        "properties": {
+          "walkSpeed": 1.1,
+          "jumpBoost": 1.0,
+          "jumpImpulse": 3.0,
+          "slowDownForce": 0.05,
+          "terminalVelocity": {
+            "x": 2.1,
+            "y": 3.1
+          },
+          "playerState": "Regular",
+          "uid": 7854842
+        }
+      }
+    ],
+    "doSerialization": true,
+    "isDead": false
+  }
+]

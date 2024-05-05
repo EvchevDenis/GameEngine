@@ -8,7 +8,10 @@ import org.example.jade.Window;
 import org.example.observers.EventSystem;
 import org.example.observers.events.Event;
 import org.example.observers.events.EventType;
+import org.example.utils.AssetPool;
 import org.joml.Vector2f;
+
+import java.util.Objects;
 
 public class GameViewWindow {
 
@@ -27,12 +30,12 @@ public class GameViewWindow {
         }
         if (ImGui.menuItem("Play", "", isPlaying, !isPlaying)) {
             isPlaying = true;
-            //Objects.requireNonNull(AssetPool.getSound("assets/sounds/music.ogg")).play();
+            Objects.requireNonNull(AssetPool.getSound("assets/sounds/theme.ogg")).play();
             EventSystem.notify(null, new Event(EventType.GameEngineStartPlay));
         }
         if (ImGui.menuItem("Stop", "", !isPlaying, isPlaying)) {
             isPlaying = false;
-            //Objects.requireNonNull(AssetPool.getSound("assets/sounds/music.ogg")).stop();
+            Objects.requireNonNull(AssetPool.getSound("assets/sounds/theme.ogg")).stop();
             EventSystem.notify(null, new Event(EventType.GameEngineStopPlay));
         }
         ImGui.endMenuBar();

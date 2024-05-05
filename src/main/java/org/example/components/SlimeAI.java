@@ -5,8 +5,11 @@ import org.example.jade.GameObject;
 import org.example.jade.Window;
 import org.example.physics2d.Physics2D;
 import org.example.physics2d.colliders.Rigidbody2D;
+import org.example.utils.AssetPool;
 import org.jbox2d.dynamics.contacts.Contact;
 import org.joml.Vector2f;
+
+import java.util.Objects;
 
 public class SlimeAI extends Component {
     private transient boolean goingRight = false;
@@ -157,7 +160,7 @@ public class SlimeAI extends Component {
             this.rb.setAngularVelocity(0.0f);
             this.rb.setGravityScale(0.0f);
             this.stateMachine.trigger("dead");
-            //AssetPool.getSound("assets/sounds/bump.ogg").play();
+            Objects.requireNonNull(AssetPool.getSound("assets/sounds/bump.ogg")).play();
         }
         if (hp == 1){
             this.attacked = true;

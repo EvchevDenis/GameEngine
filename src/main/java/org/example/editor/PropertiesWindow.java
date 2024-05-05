@@ -68,7 +68,7 @@ public class PropertiesWindow {
     }
 
     public void clearSelected() {
-        if (activeGameObjectsOgColor.size() > 0) {
+        if (!activeGameObjectsOgColor.isEmpty()) {
             int i = 0;
             for (GameObject go : activeGameObjects) {
                 SpriteRenderer spr = go.getComponent(SpriteRenderer.class);

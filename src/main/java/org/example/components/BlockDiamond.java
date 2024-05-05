@@ -1,6 +1,9 @@
 package org.example.components;
 
+import org.example.utils.AssetPool;
 import org.joml.Vector2f;
+
+import java.util.Objects;
 
 public class BlockDiamond extends Component {
     private Vector2f topY;
@@ -9,7 +12,7 @@ public class BlockDiamond extends Component {
     @Override
     public void start() {
         topY = new Vector2f(this.gameObject.transform.position.y).add(0, 0.5f);
-        //AssetPool.getSound("assets/sounds/coin.ogg").play();
+        Objects.requireNonNull(AssetPool.getSound("assets/sounds/coin.ogg")).play();
     }
 
     @Override

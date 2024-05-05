@@ -22,8 +22,11 @@ import org.lwjgl.openal.ALCapabilities;
 import org.lwjgl.opengl.GL;
 import java.util.Objects;
 
+import static org.example.utils.Settings.SCREEN_HEIGHT;
+import static org.example.utils.Settings.SCREEN_WIDTH;
 import static org.lwjgl.glfw.Callbacks.glfwFreeCallbacks;
 import static org.lwjgl.glfw.GLFW.*;
+import static org.lwjgl.openal.AL10.*;
 import static org.lwjgl.openal.ALC10.*;
 import static org.lwjgl.opengl.GL11.*;
 import static org.lwjgl.opengl.GL14.glBlendFuncSeparate;
@@ -48,8 +51,8 @@ public class Window implements Observer {
     private final ImageParser iconImage = ImageParser.loadImage("assets/icon.png");
 
     private Window() {
-        this.width = 1920;
-        this.height = 1080;
+        this.width = SCREEN_WIDTH;
+        this.height = SCREEN_HEIGHT;
         this.title = "Game Engine";
         EventSystem.addObserver(this);
     }
@@ -145,6 +148,7 @@ public class Window implements Observer {
         audioDevice = alcOpenDevice(defaultDeviceName);
 
         int[] attributes = {0};
+        float maxVolume = 0.3f;
         audioContext = alcCreateContext(audioDevice, attributes);
         alcMakeContextCurrent(audioContext);
 
@@ -154,6 +158,7 @@ public class Window implements Observer {
         if (!alCapabilities.OpenAL10) {
             assert false : "Audio library not supported.";
         }
+        alListenerf(AL_GAIN, maxVolume);
 
         // Critical for LWJGL's interoperation with GLFW's
         GL.createCapabilities();
@@ -162,9 +167,9 @@ public class Window implements Observer {
         glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
         glBlendFuncSeparate(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA, GL_ONE, GL_ONE);
 
-        this.framebuffer = new Framebuffer(1920, 1080);
-        this.pickingTexture = new PickingTexture(1920, 1080);
-        glViewport(0, 0, 1920, 1080);
+        this.framebuffer = new Framebuffer(SCREEN_WIDTH, SCREEN_HEIGHT);
+        this.pickingTexture = new PickingTexture(SCREEN_WIDTH, SCREEN_HEIGHT);
+        glViewport(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
 
         this.imguiLayer = new ImGuiLayer(glfwWindow, pickingTexture);
         this.imguiLayer.initImGui();
@@ -193,7 +198,7 @@ public class Window implements Observer {
             glDisable(GL_BLEND);
             pickingTexture.enableWriting();
 
-            glViewport(0, 0, 1920, 1080);
+            glViewport(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
 
             glClearColor(0, 0, 0, 0);
             glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -237,11 +242,11 @@ public class Window implements Observer {
     }
 
     public static int getWindowWidth() {
-        return 1920;
+        return SCREEN_WIDTH;
     }
 
     public static int getWindowHeight() {
-        return 1080;
+        return SCREEN_HEIGHT;
     }
 
     public static void setWidth(int newWidth) {

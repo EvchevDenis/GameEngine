@@ -50,7 +50,7 @@ public class MenuBar {
         }
 
         if(KeyListener.isKeyPressed(GLFW_KEY_LEFT_CONTROL) &&
-                KeyListener.keyBeginPress(GLFW_KEY_D)) {
+                KeyListener.keyBeginPress(GLFW_KEY_J)) {
             EventSystem.notify(null, new Event(EventType.DecryptLevel));
         }
 
@@ -83,7 +83,7 @@ public class MenuBar {
                 EventSystem.notify(null, new Event(EventType.EncryptLevel));
             }
 
-            if (ImGui.menuItem("Decrypt Level", "Ctrl+D")) {
+            if (ImGui.menuItem("Decrypt Level", "Ctrl+J")) {
                 EventSystem.notify(null, new Event(EventType.DecryptLevel));
             }
 

@@ -4,21 +4,21 @@ import org.example.jade.Direction;
 import org.example.jade.GameObject;
 import org.example.jade.KeyListener;
 import org.example.jade.Window;
-import org.example.physics2d.colliders.Rigidbody2D;
+import org.example.utils.AssetPool;
 import org.jbox2d.dynamics.contacts.Contact;
 import org.joml.Vector2f;
+
+
+import java.util.Objects;
 
 import static org.lwjgl.glfw.GLFW.*;
 
 public class Portal extends Component {
     private Direction direction;
-    private String connectingPipeName = "";
+    private String connectingPortalName = "";
     private boolean isEntrance = false;
-    private transient Rigidbody2D rb;
-    private transient GameObject connectingPipe = null;
+    private transient GameObject connectingPortal = null;
     private transient PlayerController collidingPlayer = null;
-    private transient StateMachine stateMachine;
-    private transient float endAnimation = 0;
 
     public Portal(Direction direction) {
         this.direction = direction;
@@ -26,21 +26,13 @@ public class Portal extends Component {
 
     @Override
     public void start() {
-        this.connectingPipe = Window.getScene().getGameObject(connectingPipeName);
-        this.rb = gameObject.getComponent(Rigidbody2D.class);
-        this.stateMachine = gameObject.getComponent(StateMachine.class);
-        this.rb.setNotSensor();
+        connectingPortal = Window.getScene().getGameObject(connectingPortalName);
     }
 
     @Override
     public void update(float dt) {
-        if(connectingPipe == null) {
-            if(endAnimation <= 0.8f) {
-                endAnimation += dt;
-            } else {
-                this.gameObject.destroy();
-                return;
-            }
+        if (connectingPortal == null) {
+            return;
         }
 
         if (collidingPlayer != null) {
@@ -82,14 +74,9 @@ public class Portal extends Component {
 
             if (playerEntering) {
                 collidingPlayer.setPosition(
-                        getPlayerPosition(connectingPipe)
+                        getPlayerPosition(connectingPortal)
                 );
-                //AssetPool.getSound("assets/sounds/pipe.ogg").play();
-            }
-
-            if(!isEntrance) {
-                connectingPipe = null;
-                stateMachine.trigger("endPortal");
+                Objects.requireNonNull(AssetPool.getSound("assets/sounds/portal.ogg")).play();
             }
         }
     }
@@ -118,7 +105,7 @@ public class Portal extends Component {
                         playerMax.x > min.x &&
                         playerMin.x < max.x;
             case Right:
-                return  playerMin.x >= max.x &&
+                return playerMin.x >= max.x &&
                         playerMax.y > min.y &&
                         playerMin.y < max.y;
             case Left:
@@ -127,6 +114,7 @@ public class Portal extends Component {
                         playerMin.y < max.y;
         }
 
+        System.out.println("HAHAHA");
         return false;
     }
 
@@ -146,17 +134,17 @@ public class Portal extends Component {
         }
     }
 
-    private Vector2f getPlayerPosition(GameObject pipe) {
-        Portal pipeComponent = pipe.getComponent(Portal.class);
-        switch (pipeComponent.direction) {
+    private Vector2f getPlayerPosition(GameObject portal) {
+        Portal portalComponent = portal.getComponent(Portal.class);
+        switch (portalComponent.direction) {
             case Up:
-                return new Vector2f(pipe.transform.position).add(0.0f, 0.30f);
+                return new Vector2f(portal.transform.position).add(0.0f, 0.5f);
             case Left:
-                return new Vector2f(pipe.transform.position).add(-0.20f, 0.0f);
+                return new Vector2f(portal.transform.position).add(-0.5f, 0.0f);
             case Right:
-                return new Vector2f(pipe.transform.position).add(0.20f, 0.0f);
+                return new Vector2f(portal.transform.position).add(0.5f, 0.0f);
             case Down:
-                return new Vector2f(pipe.transform.position).add(0.0f, -0.30f);
+                return new Vector2f(portal.transform.position).add(0.0f, -0.5f);
         }
 
         return new Vector2f();

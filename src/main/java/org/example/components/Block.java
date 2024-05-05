@@ -1,8 +1,11 @@
 package org.example.components;
 
 import org.example.jade.GameObject;
+import org.example.utils.AssetPool;
 import org.jbox2d.dynamics.contacts.Contact;
 import org.joml.Vector2f;
+
+import java.util.Objects;
 
 public abstract class Block extends Component {
     private transient boolean bopGoingUp = true;
@@ -45,7 +48,7 @@ public abstract class Block extends Component {
         PlayerController playerController = obj.getComponent(PlayerController.class);
         if (active && playerController != null && contactNormal.y < -0.8f) {
             doBopAnimation = true;
-            //AssetPool.getSound("assets/sounds/bump.ogg").play();
+            Objects.requireNonNull(AssetPool.getSound("assets/sounds/bump.ogg")).play();
             playerHit(playerController);
         }
     }
