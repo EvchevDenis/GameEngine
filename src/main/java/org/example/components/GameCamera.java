@@ -30,26 +30,12 @@ public class GameCamera extends Component {
         if (player != null && !player.getComponent(PlayerController.class).hasWon()) {
             float targetX = player.transform.position.x - 3.0f;
             float targetY = player.transform.position.y - 1.5f;
-
-            boolean isMovingLeft = KeyListener.isKeyPressed(GLFW_KEY_A);
-            boolean isMovingRight = KeyListener.isKeyPressed(GLFW_KEY_D);
-            boolean isJumping = KeyListener.isKeyPressed(GLFW_KEY_SPACE);
-
-            if (isMovingLeft || isMovingRight) {
-                gameCamera.position.x = quad(gameCamera.position.x, targetX, lerpSpeed);
-            }
-
-            if (isJumping) {
-                gameCamera.position.y = quad(gameCamera.position.y, targetY, lerpSpeed);
-            }
-
-            if (!isMovingLeft && !isMovingRight && !isJumping) {
-                gameCamera.position.x = quad(gameCamera.position.x, targetX, lerpSpeed);
-                gameCamera.position.y = quad(gameCamera.position.y, targetY, lerpSpeed);
-            }
+            gameCamera.position.x = quad(gameCamera.position.x, targetX, lerpSpeed);
+            gameCamera.position.y = quad(gameCamera.position.y, targetY, lerpSpeed);
         }
     }
 
+    // Examples of interpolation functions
     private float lerp(float start, float end, float t) {
         return start + (end - start) * t;
     }

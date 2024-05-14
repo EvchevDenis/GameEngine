@@ -56,8 +56,10 @@ public class MouseListener {
     }
 
     public static void mousePosCallback(long window, double xpos, double ypos) {
-        if (!Window.getImguiLayer().getGameViewWindow().getWantCaptureMouse()) {
-            clear();
+        if (!Window.GAME_RELEASE) {
+            if (!Window.getImguiLayer().getGameViewWindow().getWantCaptureMouse()) {
+                clear();
+            }
         }
 
         if (get().mouseButtonDown > 0) {

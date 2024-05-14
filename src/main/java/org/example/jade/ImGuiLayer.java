@@ -43,7 +43,6 @@ public class ImGuiLayer {
 
     // Initialize Dear ImGui.
     public void initImGui() {
-        // IMPORTANT!!
         // This line is critical for Dear ImGui to work.
         ImGui.createContext();
 
@@ -155,7 +154,7 @@ public class ImGuiLayer {
         imGuiGl3.init("#version 330 core");
     }
 
-    public void update(float dt, Scene currentScene) {
+    public void update(float dt, Scene currentScene, boolean runtimePlaying) {
         startFrame();
 
         // Any Dear ImGui code SHOULD go between ImGui.newFrame()/ImGui.render() methods
@@ -163,8 +162,10 @@ public class ImGuiLayer {
         currentScene.imgui();
         //ImGui.showDemoWindow();
         gameViewWindow.imgui();
-        propertiesWindow.imgui();
-        sceneHeirarchyWindow.imgui();
+        if(!runtimePlaying) {
+            sceneHeirarchyWindow.imgui();
+            propertiesWindow.imgui();
+        }
 
         endFrame();
     }
@@ -191,7 +192,6 @@ public class ImGuiLayer {
         glfwMakeContextCurrent(backupWindowPtr);
     }
 
-    // If you want to clean a room after yourself - do it by yourself
     private void destroyImGui() {
         imGuiGl3.dispose();
         ImGui.destroyContext();

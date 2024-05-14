@@ -124,8 +124,20 @@ public class LevelSceneInitializer extends SceneInitializer {
                         32, 32, 5, 0));
 
 
-        // Sound assets
+        // Sound assets - can't loop
         AssetPool.addSound("assets/sounds/jump.ogg", false);
+        AssetPool.addSound("assets/sounds/powerup.ogg", false);
+        AssetPool.addSound("assets/sounds/you_win.ogg", false);
+        AssetPool.addSound("assets/sounds/die.ogg", false);
+        AssetPool.addSound("assets/sounds/hurt.ogg", false);
+        AssetPool.addSound("assets/sounds/powerup_appears.ogg", false);
+        AssetPool.addSound("assets/sounds/enemy_death.ogg", false);
+        AssetPool.addSound("assets/sounds/bump.ogg", false);
+        AssetPool.addSound("assets/sounds/coin.ogg", false);
+        AssetPool.addSound("assets/sounds/portal.ogg", false);
+
+        // Sound assets - can loop
+        AssetPool.addSound("assets/sounds/theme.ogg", true);
 
         for (GameObject g : scene.getGameObjects()) {
             if (g.getComponent(SpriteRenderer.class) != null) {

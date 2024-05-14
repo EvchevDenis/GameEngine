@@ -114,8 +114,13 @@ public class PlayerController extends Component {
                 walkTime -= dt;
 
                 if (timeToCastle <= 0) {
-                    Window.changeScene(new LevelEditorSceneInitializer(), false);
-                    EventSystem.notify(null, new Event(EventType.GameEngineStopPlay));
+                    if (Window.GAME_RELEASE) {
+                        Window.changeScene(new LevelSceneInitializer(), false);
+                    } else {
+                        Window.changeScene(new LevelEditorSceneInitializer(), false);
+                        EventSystem.notify(null, new Event(EventType.GameEngineStopPlay));
+                    }
+
                 }
             }
             return;

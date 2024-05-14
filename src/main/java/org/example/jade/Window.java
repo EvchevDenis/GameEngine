@@ -20,6 +20,9 @@ import org.lwjgl.openal.ALC;
 import org.lwjgl.openal.ALCCapabilities;
 import org.lwjgl.openal.ALCapabilities;
 import org.lwjgl.opengl.GL;
+
+import java.awt.*;
+import java.awt.image.BufferedImage;
 import java.util.Objects;
 
 import static org.example.utils.Settings.SCREEN_HEIGHT;
@@ -29,10 +32,14 @@ import static org.lwjgl.glfw.GLFW.*;
 import static org.lwjgl.openal.AL10.*;
 import static org.lwjgl.openal.ALC10.*;
 import static org.lwjgl.opengl.GL11.*;
+import static org.lwjgl.opengl.GL30.*;
 import static org.lwjgl.opengl.GL14.glBlendFuncSeparate;
 import static org.lwjgl.system.MemoryUtil.NULL;
 
 public class Window implements Observer {
+
+    public static final boolean GAME_RELEASE = false;
+
     private int width, height;
     private String title;
     private long glfwWindow;
@@ -57,14 +64,17 @@ public class Window implements Observer {
         EventSystem.addObserver(this);
     }
 
-    public static void changeScene(SceneInitializer sceneInitializer, boolean loadFromFile) {
+    public static void changeScene(SceneInitializer sceneInitializer, boolean useLevelChooser) {
         if (currentScene != null) {
             currentScene.destroy();
         }
 
-        getImguiLayer().getPropertiesWindow().setActiveGameObject(null);
+        if (!GAME_RELEASE) {
+            getImguiLayer().getPropertiesWindow().setActiveGameObject(null);
+        }
+
         currentScene = new Scene(sceneInitializer);
-        if(!loadFromFile) {
+        if(!useLevelChooser) {
             currentScene.loadLevel();
         } else {
             currentScene.loadLevelFrom();
@@ -171,10 +181,15 @@ public class Window implements Observer {
         this.pickingTexture = new PickingTexture(SCREEN_WIDTH, SCREEN_HEIGHT);
         glViewport(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
 
-        this.imguiLayer = new ImGuiLayer(glfwWindow, pickingTexture);
-        this.imguiLayer.initImGui();
+        if (GAME_RELEASE) {
+            runtimePlaying = true;
+            Window.changeScene(new LevelSceneInitializer(), false);
+        } else {
+            this.imguiLayer = new ImGuiLayer(glfwWindow, pickingTexture);
+            this.imguiLayer.initImGui();
+            Window.changeScene(new LevelEditorSceneInitializer(), false);
+        }
 
-        Window.changeScene(new LevelEditorSceneInitializer(), false);
         GLFWImage image = GLFWImage.malloc();
         GLFWImage.Buffer imageBuffer = GLFWImage.malloc(1);
         image.set(iconImage.getWidth(), iconImage.getHeight(), iconImage.getImage());
@@ -186,6 +201,9 @@ public class Window implements Observer {
         float beginTime = (float)glfwGetTime();
         float endTime;
         float dt = -1.0f;
+        int frames = 0;
+        String fpsText;
+        long timer = System.currentTimeMillis();
 
         Shader defaultShader = AssetPool.getShader("assets/shaders/default.glsl");
         Shader pickingShader = AssetPool.getShader("assets/shaders/pickingShader.glsl");
@@ -229,7 +247,14 @@ public class Window implements Observer {
             }
             this.framebuffer.unbind();
 
-            this.imguiLayer.update(dt, currentScene);
+            if (GAME_RELEASE) {
+                glBindFramebuffer(GL_READ_FRAMEBUFFER, framebuffer.getFboID());
+                glBindFramebuffer(GL_DRAW_FRAMEBUFFER, 0);
+                glBlitFramebuffer(0, 0, framebuffer.width, framebuffer.height, 0, 0, this.width, this.height,
+                        GL_COLOR_BUFFER_BIT, GL_NEAREST);
+            } else {
+                this.imguiLayer.update(dt, currentScene, runtimePlaying);
+            }
 
             KeyListener.endFrame();
             MouseListener.endFrame();
@@ -238,6 +263,15 @@ public class Window implements Observer {
             endTime = (float)glfwGetTime();
             dt = endTime - beginTime;
             beginTime = endTime;
+
+            // FPS calculation
+            frames++;
+            if (System.currentTimeMillis() - timer > 1000) {
+                timer += 1000;
+                fpsText = "FPS: " + frames;
+                System.out.println(fpsText);
+                frames = 0;
+            }
         }
     }
 
