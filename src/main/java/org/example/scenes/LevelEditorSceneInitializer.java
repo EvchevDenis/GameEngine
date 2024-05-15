@@ -21,9 +21,11 @@ import org.joml.Vector2f;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
+import java.awt.image.BufferedImage;
 import java.io.*;
 import java.lang.reflect.Type;
 import java.nio.file.Files;
@@ -537,11 +539,22 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
         if (returnValue == JFileChooser.APPROVE_OPTION) {
             File selectedFile = copyFileChooser.getSelectedFile();
             try {
+                BufferedImage bufferedImage = ImageIO.read(selectedFile);
+                int imageWidth = bufferedImage.getWidth();
+                int imageHeight = bufferedImage.getHeight();
                 Path destinationPath = Paths.get("assets/imported/" + selectedFile.getName());
+
                 String fileName = selectedFile.getName();
                 int widthValue = Integer.parseInt(copyFileChooser.getWidthValue());
                 int heightValue = Integer.parseInt(copyFileChooser.getHeightValue());
-                int spriteCountValue = Integer.parseInt(copyFileChooser.getSpriteCountValue());
+                int maximumAssetCount = (imageWidth / widthValue) * (imageHeight / heightValue);
+                int spriteCountValue;
+
+                if(Integer.parseInt(copyFileChooser.getSpriteCountValue()) > maximumAssetCount) {
+                    spriteCountValue = Integer.parseInt(Integer.toString(maximumAssetCount));
+                } else {
+                    spriteCountValue = Integer.parseInt(copyFileChooser.getSpriteCountValue());
+                }
 
                 Files.copy(selectedFile.toPath(), destinationPath);
 

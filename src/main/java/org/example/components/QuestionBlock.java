@@ -4,6 +4,8 @@ import org.example.jade.GameObject;
 import org.example.jade.Prefabs;
 import org.example.jade.Window;
 
+import java.util.Random;
+
 public class QuestionBlock extends Block {
     private enum BlockType {
         Diamond,
@@ -59,7 +61,10 @@ public class QuestionBlock extends Block {
     }
 
     private void spawnCuteEnemy() {
-        GameObject enemy = Prefabs.generateCuteEnemy("assets/images/Owlet.png");
+        Random random = new Random();
+        int randomNumber = random.nextInt(3) + 1;
+        String[] cuteEnemyType = {"assets/images/Owlet.png", "assets/images/Pink.png", "assets/images/Dude.png"};
+        GameObject enemy = Prefabs.generateCuteEnemy(cuteEnemyType[randomNumber]);
         enemy.transform.position.set(gameObject.transform.position);
         enemy.transform.position.y += 0.25f;
         Window.getScene().addGameObjectToScene(enemy);

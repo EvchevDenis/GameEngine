@@ -6,6 +6,8 @@ import org.example.jade.Window;
 import org.jbox2d.dynamics.contacts.Contact;
 import org.joml.Vector2f;
 
+import java.util.Random;
+
 public class Chest extends Component {
     private enum BlockType {
         Diamond,
@@ -67,7 +69,10 @@ public class Chest extends Component {
     }
 
     private void spawnCuteEnemy() {
-        GameObject enemy = Prefabs.generateCuteEnemy("assets/images/Owlet.png");
+        Random random = new Random();
+        int randomNumber = random.nextInt(3) + 1;
+        String[] cuteEnemyType = {"assets/images/Owlet.png", "assets/images/Pink.png", "assets/images/Dude.png"};
+        GameObject enemy = Prefabs.generateCuteEnemy(cuteEnemyType[randomNumber]);
         enemy.transform.position.set(gameObject.transform.position);
         enemy.transform.position.y += 0.25f;
         Window.getScene().addGameObjectToScene(enemy);
