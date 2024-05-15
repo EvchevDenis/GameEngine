@@ -276,7 +276,7 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
 
                     ImGui.pushID(i);
                     if (ImGui.imageButton(id, spriteWidth, spriteHeight, texCoords[2].x, texCoords[0].y, texCoords[0].x, texCoords[2].y)) {
-                        GameObject object = Prefabs.generateSpriteObject(sprite, 0.25f, 0.25f);
+                        GameObject object = Prefabs.generateSpriteObject(sprite, 0.25f, 0.25f, "Regular_Block");
                         Rigidbody2D rb = new Rigidbody2D();
                         rb.setBodyType(BodyType.Static);
                         object.addComponent(rb);
@@ -321,7 +321,7 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
 
                     ImGui.pushID(i);
                     if (ImGui.imageButton(id, spriteWidth, spriteHeight, texCoords[2].x, texCoords[0].y, texCoords[0].x, texCoords[2].y)) {
-                        GameObject object = Prefabs.generateSpriteObject(sprite, 0.25f, 0.25f);
+                        GameObject object = Prefabs.generateSpriteObject(sprite, 0.25f, 0.25f, "Background_Block");
                         object.transform.zIndex = -10;
                         levelEditorStuff.getComponent(MouseControls.class).pickupObject(object);
                     }
@@ -357,7 +357,7 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
 
                     ImGui.pushID(i);
                     if (ImGui.imageButton(id, spriteWidth, spriteHeight, texCoords[2].x, texCoords[0].y, texCoords[0].x, texCoords[2].y)) {
-                        GameObject object = Prefabs.generateSpriteObject(sprite, 0.25f, 0.25f);
+                        GameObject object = Prefabs.generateSpriteObject(sprite, 0.25f, 0.25f, "Decoration_Block");
                         levelEditorStuff.getComponent(MouseControls.class).pickupObject(object);
                     }
                     ImGui.popID();
@@ -457,7 +457,7 @@ public class LevelEditorSceneInitializer extends SceneInitializer {
 
                             ImGui.pushID(i);
                             if (ImGui.imageButton(id, spriteWidth, spriteHeight, texCoords[2].x, texCoords[0].y, texCoords[0].x, texCoords[2].y)) {
-                                GameObject object = Prefabs.generateSpriteObject(sprite, 0.25f, 0.25f);
+                                GameObject object = Prefabs.generateSpriteObject(sprite, 0.25f, 0.25f, "Imported_Block");
                                 levelEditorStuff.getComponent(MouseControls.class).pickupObject(object);
                             }
                             ImGui.popID();

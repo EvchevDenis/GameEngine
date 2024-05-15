@@ -8,8 +8,8 @@ import org.joml.Vector2f;
 
 public class Prefabs {
 
-    public static GameObject generateSpriteObject(Sprite sprite, float sizeX, float sizeY) {
-        GameObject block = Window.getScene().createGameObject("Sprite_Object_Gen");
+    public static GameObject generateSpriteObject(Sprite sprite, float sizeX, float sizeY, String name) {
+        GameObject block = Window.getScene().createGameObject(name);
         block.transform.scale.x = sizeX;
         block.transform.scale.y = sizeY;
         SpriteRenderer renderer = new SpriteRenderer();
@@ -24,7 +24,7 @@ public class Prefabs {
         Spritesheet playerHoodieShadow = AssetPool.getSpritesheet("assets/images/HoodieShadow.png");
         Spritesheet playerHoodieRed = AssetPool.getSpritesheet("assets/images/HoodieRed.png");
 
-        GameObject mainCharacter = generateSpriteObject(playerHoodie.getSprite(0), 0.25f, 0.25f);
+        GameObject mainCharacter = generateSpriteObject(playerHoodie.getSprite(0), 0.25f, 0.25f, "Main_Character");
 
         // ------------------------------------------------------- //
         AnimationState run = new AnimationState();
@@ -318,7 +318,7 @@ public class Prefabs {
 
     public static GameObject generateQuestionBlock() {
         Spritesheet playerSprites = AssetPool.getSpritesheet("assets/images/items.png");
-        GameObject questionBlock = generateSpriteObject(playerSprites.getSprite(0), 0.25f, 0.25f);
+        GameObject questionBlock = generateSpriteObject(playerSprites.getSprite(0), 0.25f, 0.25f, "Question_Block");
 
         AnimationState flicker = new AnimationState();
         flicker.title = "Question";
@@ -358,7 +358,7 @@ public class Prefabs {
 
     public static GameObject generateBlockDiamond() {
         Spritesheet items = AssetPool.getSpritesheet("assets/images/diamond.png");
-        GameObject diamond = generateSpriteObject(items.getSprite(0), 0.15f, 0.15f);
+        GameObject diamond = generateSpriteObject(items.getSprite(0), 0.15f, 0.15f, "Diamond");
 
         AnimationState diamondFlip = new AnimationState();
         diamondFlip.title = "DiamondFlip";
@@ -386,7 +386,7 @@ public class Prefabs {
 
     public static GameObject generateBottle() {
         Spritesheet items = AssetPool.getSpritesheet("assets/images/bottles.png");
-        GameObject bottle = generateSpriteObject(items.getSprite(14), 0.15f, 0.15f);
+        GameObject bottle = generateSpriteObject(items.getSprite(14), 0.15f, 0.15f, "Bottle");
 
         Rigidbody2D rb = new Rigidbody2D();
         rb.setBodyType(BodyType.Dynamic);
@@ -404,7 +404,7 @@ public class Prefabs {
 
     public static GameObject generateNecklace() {
         Spritesheet weapons = AssetPool.getSpritesheet("assets/images/weapons.png");
-        GameObject necklace = generateSpriteObject(weapons.getSprite(55), 0.15f, 0.15f);
+        GameObject necklace = generateSpriteObject(weapons.getSprite(55), 0.15f, 0.15f, "Necklace");
 
         Rigidbody2D rb = new Rigidbody2D();
         rb.setBodyType(BodyType.Static);
@@ -422,7 +422,7 @@ public class Prefabs {
 
     public static GameObject generateRing() {
         Spritesheet weapons = AssetPool.getSpritesheet("assets/images/weapons.png");
-        GameObject ring = generateSpriteObject(weapons.getSprite(29), 0.15f, 0.15f);
+        GameObject ring = generateSpriteObject(weapons.getSprite(29), 0.15f, 0.15f, "Ring");
 
         Rigidbody2D rb = new Rigidbody2D();
         rb.setBodyType(BodyType.Static);
@@ -440,7 +440,7 @@ public class Prefabs {
 
     public static GameObject generateCrate() {
         Spritesheet items = AssetPool.getSpritesheet("assets/images/crate.png");
-        GameObject crate = generateSpriteObject(items.getSprite(0), 0.25f, 0.25f);
+        GameObject crate = generateSpriteObject(items.getSprite(0), 0.25f, 0.25f, "Crate");
 
         Rigidbody2D rb = new Rigidbody2D();
         rb.setBodyType(BodyType.Dynamic);
@@ -459,7 +459,7 @@ public class Prefabs {
 
     public static GameObject generateBarrel() {
         Spritesheet items = AssetPool.getSpritesheet("assets/images/barrel.png");
-        GameObject barrel = generateSpriteObject(items.getSprite(0), 0.25f, 0.25f);
+        GameObject barrel = generateSpriteObject(items.getSprite(0), 0.25f, 0.25f, "Barrel");
 
         Rigidbody2D rb = new Rigidbody2D();
         rb.setBodyType(BodyType.Dynamic);
@@ -477,7 +477,7 @@ public class Prefabs {
 
     public static GameObject generateCuteEnemy(String spritesheetPath) {
         Spritesheet sprites = AssetPool.getSpritesheet(spritesheetPath);
-        GameObject owletEnemy = generateSpriteObject(sprites.getSprite(0), 0.25f, 0.25f);
+        GameObject owletEnemy = generateSpriteObject(sprites.getSprite(0), 0.25f, 0.25f, "Cute_Enemy");
 
         AnimationState walk = new AnimationState();
         walk.title = "Walk";
@@ -558,7 +558,7 @@ public class Prefabs {
                         direction == Direction.Right ? 2 :
                                 direction == Direction.Left ? 3 : -1;
         assert index != -1 : "Invalid pipe direction.";
-        GameObject portal = generateSpriteObject(portalSprite.getSprite(index), 0.5f, 0.75f);
+        GameObject portal = generateSpriteObject(portalSprite.getSprite(index), 0.5f, 0.75f, "Portal");
 
         AnimationState portalAnimation = new AnimationState();
         portalAnimation.title = "Portal Animation";
@@ -609,7 +609,7 @@ public class Prefabs {
 
     public static GameObject generateBreaker() {
         Spritesheet sprites = AssetPool.getSpritesheet("assets/images/breaker.png");
-        GameObject breakerEnemy = generateSpriteObject(sprites.getSprite(0), 0.50f, 0.50f);
+        GameObject breakerEnemy = generateSpriteObject(sprites.getSprite(0), 0.50f, 0.50f, "Breaker_Enemy");
 
         float defaultFrameTime = 0.1f;
         AnimationState fly = new AnimationState();
@@ -689,7 +689,7 @@ public class Prefabs {
 
     public static GameObject generateSlime() {
         Spritesheet slimeSprites = AssetPool.getSpritesheet("assets/images/slimeSheet.png");
-        GameObject slimeEnemy = generateSpriteObject(slimeSprites.getSprite(0), 0.25f, 0.25f);
+        GameObject slimeEnemy = generateSpriteObject(slimeSprites.getSprite(0), 0.25f, 0.25f, "Slime_Enemy");
 
         AnimationState walk = new AnimationState();
         walk.title = "Walk";
@@ -779,7 +779,7 @@ public class Prefabs {
 
     public static GameObject generateLava() {
         Spritesheet lavaSprites = AssetPool.getSpritesheet("assets/images/lava.png");
-        GameObject lava = generateSpriteObject(lavaSprites.getSprite(0), 0.25f, 0.25f);
+        GameObject lava = generateSpriteObject(lavaSprites.getSprite(0), 0.25f, 0.25f, "Lava");
 
         AnimationState bubbling = new AnimationState();
         bubbling.title = "Bubbling";
@@ -809,7 +809,7 @@ public class Prefabs {
 
     public static GameObject generateWater() {
         Spritesheet waterSprites = AssetPool.getSpritesheet("assets/images/water.png");
-        GameObject water = generateSpriteObject(waterSprites.getSprite(0), 0.25f, 0.25f);
+        GameObject water = generateSpriteObject(waterSprites.getSprite(0), 0.25f, 0.25f, "Water");
 
         AnimationState waving = new AnimationState();
         waving.title = "Waving";
@@ -867,7 +867,7 @@ public class Prefabs {
 
     public static GameObject generateFlag() {
         Spritesheet flagSprites = AssetPool.getSpritesheet("assets/images/flag.png");
-        GameObject flag = generateSpriteObject(flagSprites.getSprite(0), 0.75f, 0.9f);
+        GameObject flag = generateSpriteObject(flagSprites.getSprite(0), 0.75f, 0.9f, "Flag");
 
         AnimationState windy = new AnimationState();
         windy.title = "Bubbling";
@@ -898,7 +898,7 @@ public class Prefabs {
 
     public static GameObject generateSpikes() {
         Spritesheet spikesSprites = AssetPool.getSpritesheet("assets/images/spikes.png");
-        GameObject spikes = generateSpriteObject(spikesSprites.getSprite(0), 0.50f, 0.25f);
+        GameObject spikes = generateSpriteObject(spikesSprites.getSprite(0), 0.50f, 0.25f, "Spikes");
 
         AnimationState piercing = new AnimationState();
         piercing.title = "Piercing";
@@ -937,7 +937,7 @@ public class Prefabs {
 
     public static GameObject generateFireball(Vector2f position) {
         Spritesheet fireballSprites = AssetPool.getSpritesheet("assets/images/fireball.png");
-        GameObject fireball = generateSpriteObject(fireballSprites.getSprite(0), 0.1f, 0.1f);
+        GameObject fireball = generateSpriteObject(fireballSprites.getSprite(0), 0.1f, 0.1f, "Fireball");
         fireball.transform.position = position;
 
         AnimationState flying = new AnimationState();
@@ -971,7 +971,7 @@ public class Prefabs {
 
     public static GameObject generateSaw() {
         Spritesheet sawSprites = AssetPool.getSpritesheet("assets/images/saw.png");
-        GameObject saw = generateSpriteObject(sawSprites.getSprite(0), 0.25f, 0.25f);
+        GameObject saw = generateSpriteObject(sawSprites.getSprite(0), 0.25f, 0.25f, "Saw");
 
         AnimationState rolling = new AnimationState();
         rolling.title = "Rolling";
@@ -1007,7 +1007,7 @@ public class Prefabs {
 
     public static GameObject generateFan() {
         Spritesheet fanSprites = AssetPool.getSpritesheet("assets/images/fan.png");
-        GameObject fan = generateSpriteObject(fanSprites.getSprite(0), 0.50f, 0.25f);
+        GameObject fan = generateSpriteObject(fanSprites.getSprite(0), 0.50f, 0.25f, "Fan");
 
         AnimationState spinning = new AnimationState();
         spinning.title = "Spinning";
@@ -1044,7 +1044,7 @@ public class Prefabs {
 
     public static GameObject generatePlatform() {
         Spritesheet platformSprites = AssetPool.getSpritesheet("assets/images/platform.png");
-        GameObject platform = generateSpriteObject(platformSprites.getSprite(0), 0.50f, 0.25f);
+        GameObject platform = generateSpriteObject(platformSprites.getSprite(0), 0.50f, 0.25f, "Flaying_Platform");
 
         AnimationState spinning = new AnimationState();
         spinning.title = "Spinning";
@@ -1081,7 +1081,7 @@ public class Prefabs {
 
     public static GameObject generateJumpingArrow() {
         Spritesheet jumpingArrowSprites = AssetPool.getSpritesheet("assets/images/arrow.png");
-        GameObject jumpingArrow = generateSpriteObject(jumpingArrowSprites.getSprite(0), 0.25f, 0.25f);
+        GameObject jumpingArrow = generateSpriteObject(jumpingArrowSprites.getSprite(0), 0.25f, 0.25f, "Jumping_Arrow");
 
         AnimationState bouncing = new AnimationState();
         bouncing.title = "Bouncing";
@@ -1113,7 +1113,7 @@ public class Prefabs {
 
     public static GameObject generateArrowShooter() {
         Spritesheet arrowShooterSprites = AssetPool.getSpritesheet("assets/images/shooter_arrow.png");
-        GameObject arrowShooter = generateSpriteObject(arrowShooterSprites.getSprite(0), 0.25f, 0.25f);
+        GameObject arrowShooter = generateSpriteObject(arrowShooterSprites.getSprite(0), 0.25f, 0.25f, "Arrow_Shooter");
 
         AnimationState prepareArrow = new AnimationState();
         prepareArrow.title = "Prepare Arrow";
@@ -1152,7 +1152,7 @@ public class Prefabs {
 
     public static GameObject generateDeadlyArrow(Vector2f position) {
         Spritesheet arrowSprites = AssetPool.getSpritesheet("assets/images/shooter_arrow.png");
-        GameObject arrow = generateSpriteObject(arrowSprites.getSprite(6), 0.25f, 0.25f);
+        GameObject arrow = generateSpriteObject(arrowSprites.getSprite(6), 0.25f, 0.25f, "Deadly_Arrow");
         arrow.transform.position = position;
 
         AnimationState flying = new AnimationState();
@@ -1181,7 +1181,7 @@ public class Prefabs {
 
     public static GameObject generateFire(Vector2f position) {
         Spritesheet fireSprites = AssetPool.getSpritesheet("assets/images/fire.png");
-        GameObject fire = generateSpriteObject(fireSprites.getSprite(0), 0.25f, 0.25f);
+        GameObject fire = generateSpriteObject(fireSprites.getSprite(0), 0.25f, 0.25f, "Fire");
         fire.transform.position = position;
 
         AnimationState fireDefault = new AnimationState();
@@ -1214,7 +1214,7 @@ public class Prefabs {
 
     public static GameObject generateFirebox() {
         Spritesheet fireboxSprites = AssetPool.getSpritesheet("assets/images/firebox.png");
-        GameObject firebox = generateSpriteObject(fireboxSprites.getSprite(0), 0.25f, 0.25f);
+        GameObject firebox = generateSpriteObject(fireboxSprites.getSprite(0), 0.25f, 0.25f, "Firebox");
 
         AnimationState fireboxDefault = new AnimationState();
         fireboxDefault.title = "Firebox Default";
@@ -1251,7 +1251,7 @@ public class Prefabs {
 
     public static GameObject generateChest() {
         Spritesheet chestSprites = AssetPool.getSpritesheet("assets/images/chest.png");
-        GameObject chestBlock = generateSpriteObject(chestSprites.getSprite(0), 0.25f, 0.25f);
+        GameObject chestBlock = generateSpriteObject(chestSprites.getSprite(0), 0.25f, 0.25f, "Chest");
 
         AnimationState closed = new AnimationState();
         closed.title = "Closed chest";
