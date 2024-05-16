@@ -21,8 +21,6 @@ import org.lwjgl.openal.ALCCapabilities;
 import org.lwjgl.openal.ALCapabilities;
 import org.lwjgl.opengl.GL;
 
-import java.awt.*;
-import java.awt.image.BufferedImage;
 import java.util.Objects;
 
 import static org.example.utils.Settings.SCREEN_HEIGHT;
@@ -269,7 +267,7 @@ public class Window implements Observer {
             if (System.currentTimeMillis() - timer > 1000) {
                 timer += 1000;
                 fpsText = "FPS: " + frames;
-                System.out.println(fpsText);
+                //System.out.println(fpsText);
                 frames = 0;
             }
         }

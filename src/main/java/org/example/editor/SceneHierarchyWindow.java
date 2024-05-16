@@ -41,6 +41,11 @@ public class SceneHierarchyWindow {
                         ImGuiTreeNodeFlags.SpanAvailWidth,
                 obj.name
         );
+
+        if(!treeNodeOpen) {
+            obj.imgui();
+        }
+
         ImGui.popID();
 
         if (ImGui.beginDragDropSource()) {
