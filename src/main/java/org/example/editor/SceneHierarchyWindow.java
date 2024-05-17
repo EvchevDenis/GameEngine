@@ -1,7 +1,9 @@
 package org.example.editor;
 
 import imgui.ImGui;
+import imgui.flag.ImGuiInputTextFlags;
 import imgui.flag.ImGuiTreeNodeFlags;
+import imgui.type.ImString;
 import org.example.jade.GameObject;
 import org.example.jade.Window;
 
@@ -10,23 +12,52 @@ import java.util.List;
 public class SceneHierarchyWindow {
 
     private static String payloadDragDropType = "SceneHierarchy";
+    private ImString searchQuery = new ImString(256);
+    private boolean searchRequested = false;
 
     public void imgui() {
         ImGui.begin("Scene Hierarchy");
 
+        ImGui.inputTextWithHint(" ","Type object name", searchQuery, ImGuiInputTextFlags.None);
+        ImGui.sameLine();
+        if (ImGui.button("Search")) {
+            searchRequested = true;
+        }
+
+        ImGui.beginChild("ScrollableRegion", 0, 0, true);
+
         List<GameObject> gameObjects = Window.getScene().getGameObjects();
         int index = 0;
+        int targetIndex = -1;
+
         for (GameObject obj : gameObjects) {
             if (!obj.doSerialization()) {
                 continue;
             }
 
+            ImGui.separator();
             boolean treeNodeOpen = doTreeNode(obj, index);
             if (treeNodeOpen) {
                 ImGui.treePop();
             }
+            ImGui.separator();
+
+            if(searchRequested && !searchQuery.get().isEmpty()) {
+                if (obj.name.contains(searchQuery.get())) {
+                    targetIndex = index;
+                }
+            }
+
             index++;
         }
+
+        if (searchRequested && targetIndex != -1) {
+            float scrollPosition = (float) targetIndex / gameObjects.size() * ImGui.getScrollMaxY() + 5;
+            ImGui.setScrollY(scrollPosition);
+            searchRequested = false;
+        }
+
+        ImGui.endChild();
 
         ImGui.end();
     }
