@@ -24,12 +24,13 @@ public class SceneHierarchyWindow {
             searchRequested = true;
         }
 
-        ImGui.beginChild("ScrollableRegion", 0, 0, true);
-
         List<GameObject> gameObjects = Window.getScene().getGameObjects();
         int index = 0;
         int targetIndex = -1;
 
+        ImGui.text("Total objects on scene: " + gameObjects.size());
+
+        ImGui.beginChild("ScrollableRegion", 0, 0, true);
         for (GameObject obj : gameObjects) {
             if (!obj.doSerialization()) {
                 continue;
