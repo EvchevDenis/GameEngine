@@ -327,7 +327,7 @@ public class Scene {
         String configFileName = "config.cfg";
         File configFile = new File(configFileName);
 
-        if (!configFile.exists()) {
+        if (!configFile.exists() || configFile.length() == 0) {
             try {
                 if (configFile.createNewFile()) {
                     System.out.println("File " + configFileName + " successfully created.");

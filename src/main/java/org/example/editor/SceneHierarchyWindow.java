@@ -28,7 +28,7 @@ public class SceneHierarchyWindow {
         int index = 0;
         int targetIndex = -1;
 
-        ImGui.text("Total objects on scene: " + gameObjects.size());
+        ImGui.text("Total objects on scene: " + (gameObjects.size() - 5));
 
         ImGui.beginChild("ScrollableRegion", 0, 0, true);
         for (GameObject obj : gameObjects) {
