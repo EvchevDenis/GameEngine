@@ -39,6 +39,7 @@ public class SceneHierarchyWindow {
             ImGui.separator();
             boolean treeNodeOpen = doTreeNode(obj, index);
             if (treeNodeOpen) {
+                //ImGui.text("Object ID: " + obj.getUid());
                 ImGui.treePop();
             }
             ImGui.separator();

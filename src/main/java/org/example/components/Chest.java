@@ -70,7 +70,7 @@ public class Chest extends Component {
 
     private void spawnCuteEnemy() {
         Random random = new Random();
-        int randomNumber = random.nextInt(3) + 1;
+        int randomNumber = random.nextInt(2) + 1;
         String[] cuteEnemyType = {"assets/images/Owlet.png", "assets/images/Pink.png", "assets/images/Dude.png"};
         GameObject enemy = Prefabs.generateCuteEnemy(cuteEnemyType[randomNumber]);
         enemy.transform.position.set(gameObject.transform.position);

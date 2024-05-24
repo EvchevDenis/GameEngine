@@ -3,9 +3,7 @@ package org.example.editor;
 import imgui.ImGui;
 import org.example.components.SpriteRenderer;
 import org.example.jade.GameObject;
-import org.example.physics2d.colliders.Box2DCollider;
-import org.example.physics2d.colliders.CircleCollider;
-import org.example.physics2d.colliders.Rigidbody2D;
+import org.example.physics2d.colliders.*;
 import org.example.renderer.PickingTexture;
 import org.joml.Vector4f;
 
@@ -13,10 +11,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PropertiesWindow {
-    private List<GameObject> activeGameObjects;
-    private List<Vector4f> activeGameObjectsOgColor;
+    private final List<GameObject> activeGameObjects;
+    private final List<Vector4f> activeGameObjectsOgColor;
     private GameObject activeGameObject = null;
-    private PickingTexture pickingTexture;
+    private final PickingTexture pickingTexture;
 
     public PropertiesWindow(PickingTexture pickingTexture) {
         this.activeGameObjects = new ArrayList<>();
@@ -36,17 +34,41 @@ public class PropertiesWindow {
                     }
                 }
 
+                ImGui.separator();
+
                 if (ImGui.menuItem("Add Box Collider")) {
-                    if (activeGameObject.getComponent(Box2DCollider.class) == null &&
-                            activeGameObject.getComponent(CircleCollider.class) == null) {
+                    if (activeGameObject.getComponent(Box2DCollider.class) == null) {
                         activeGameObject.addComponent(new Box2DCollider());
                     }
                 }
 
                 if (ImGui.menuItem("Add Circle Collider")) {
-                    if (activeGameObject.getComponent(CircleCollider.class) == null &&
-                            activeGameObject.getComponent(Box2DCollider.class) == null) {
+                    if (activeGameObject.getComponent(CircleCollider.class) == null) {
                         activeGameObject.addComponent(new CircleCollider());
+                    }
+                }
+
+                if (ImGui.menuItem("Add BarrelBoat Collider")) {
+                    if (activeGameObject.getComponent(BarrelBoatCollider.class) == null) {
+                        activeGameObject.addComponent(new BarrelBoatCollider());
+                    }
+                }
+
+                if (ImGui.menuItem("Add GlideBox2D Collider")) {
+                    if (activeGameObject.getComponent(GlideBox2DCollider.class) == null) {
+                        activeGameObject.addComponent(new GlideBox2DCollider());
+                    }
+                }
+
+                if (ImGui.menuItem("Add Oval Collider")) {
+                    if (activeGameObject.getComponent(OvalCollider.class) == null) {
+                        activeGameObject.addComponent(new OvalCollider());
+                    }
+                }
+
+                if (ImGui.menuItem("Add Pillbox Collider")) {
+                    if (activeGameObject.getComponent(PillboxCollider.class) == null) {
+                        activeGameObject.addComponent(new PillboxCollider());
                     }
                 }
 
@@ -91,7 +113,7 @@ public class PropertiesWindow {
 
     public void addActiveGameObject(GameObject go) {
         SpriteRenderer spr = go.getComponent(SpriteRenderer.class);
-        if (spr != null ) {
+        if (spr != null) {
             this.activeGameObjectsOgColor.add(new Vector4f(spr.getColor()));
             spr.setColor(new Vector4f(0.8f, 0.8f, 0.0f, 0.8f));
         } else {

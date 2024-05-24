@@ -1,6 +1,7 @@
 package org.example.physics2d.colliders;
 
 import org.example.components.Component;
+import org.example.jade.GameObject;
 import org.example.jade.Window;
 import org.joml.Vector2f;
 
@@ -28,11 +29,11 @@ public class GlideBox2DCollider extends Component {
 
     @Override
     public void editorUpdate(float dt) {
-        leftUpperCircle.editorUpdate(dt);
-        rightUpperCircle.editorUpdate(dt);
-        leftBottomCircle.editorUpdate(dt);
-        rightBottomCircle.editorUpdate(dt);
-        box2DCollider.editorUpdate(dt);
+        leftUpperCircle.editorUpdate(dt, this.gameObject);
+        rightUpperCircle.editorUpdate(dt, this.gameObject);
+        leftBottomCircle.editorUpdate(dt, this.gameObject);
+        rightBottomCircle.editorUpdate(dt, this.gameObject);
+        box2DCollider.editorUpdate(dt, this.gameObject);
         recalculateColliders();
 
         if (resetFixtureNextFrame) {

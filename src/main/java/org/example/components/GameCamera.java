@@ -13,7 +13,8 @@ public class GameCamera extends Component {
     private transient Camera gameCamera;
     private transient float lerpSpeed = 0.2f;
 
-    private transient Vector4f skyColor = new Vector4f(92.0f / 255.0f, 148.0f / 255.0f, 252.0f / 255.0f, 1.0f);
+    //private transient Vector4f skyColor = new Vector4f(92.0f / 255.0f, 148.0f / 255.0f, 252.0f / 255.0f, 1.0f);
+    private transient Vector4f skyColor = new Vector4f(0.0f, 0.0f, 0.0f, 1.0f);
 
     public GameCamera(Camera gameCamera) {
         this.gameCamera = gameCamera;

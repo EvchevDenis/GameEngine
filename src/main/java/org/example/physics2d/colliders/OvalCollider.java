@@ -23,9 +23,9 @@ public class OvalCollider extends Component {
 
     @Override
     public void editorUpdate(float dt) {
-        bottomCircle.editorUpdate(dt);
-        centerCircle.editorUpdate(dt);
-        upperCircle.editorUpdate(dt);
+        bottomCircle.editorUpdate(dt, this.gameObject);
+        centerCircle.editorUpdate(dt, this.gameObject);
+        upperCircle.editorUpdate(dt, this.gameObject);
         recalculateColliders();
 
         if (resetFixtureNextFrame) {

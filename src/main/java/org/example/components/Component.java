@@ -34,6 +34,10 @@ public abstract class Component {
 
     }
 
+    public void editorUpdate(float dt, GameObject gameObject) {
+
+    }
+
     public void beginCollision(GameObject collidingObject, Contact contact, Vector2f hitNormal) {
 
     }

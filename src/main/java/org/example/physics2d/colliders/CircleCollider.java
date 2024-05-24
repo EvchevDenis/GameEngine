@@ -1,6 +1,7 @@
 package org.example.physics2d.colliders;
 
 import org.example.components.Component;
+import org.example.jade.GameObject;
 import org.example.jade.Window;
 import org.example.renderer.DebugDraw;
 import org.joml.Vector2f;
@@ -8,7 +9,7 @@ import org.joml.Vector2f;
 public class CircleCollider extends Component {
     private float radius = 1f;
     private transient boolean resetFixtureNextFrame = false;
-    protected Vector2f offset = new Vector2f();
+    private Vector2f offset = new Vector2f();
 
     public float getRadius() {
         return radius;
@@ -23,6 +24,16 @@ public class CircleCollider extends Component {
     public void setRadius(float radius) {
         resetFixtureNextFrame = true;
         this.radius = radius;
+    }
+
+    @Override
+    public void editorUpdate(float dt, GameObject gameObject) {
+        Vector2f center = new Vector2f(gameObject.transform.position).add(this.offset);
+        DebugDraw.addCircle(center, this.radius);
+
+        if (resetFixtureNextFrame) {
+            resetFixture();
+        }
     }
 
     @Override

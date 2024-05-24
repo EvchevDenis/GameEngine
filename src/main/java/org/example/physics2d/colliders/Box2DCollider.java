@@ -1,6 +1,7 @@
 package org.example.physics2d.colliders;
 
 import org.example.components.Component;
+import org.example.jade.GameObject;
 import org.example.renderer.DebugDraw;
 import org.joml.Vector2f;
 
@@ -25,6 +26,12 @@ public class Box2DCollider extends Component {
 
     public Vector2f getOrigin() {
         return this.origin;
+    }
+
+    @Override
+    public void editorUpdate(float dt, GameObject gameObject) {
+        Vector2f center = new Vector2f(gameObject.transform.position).add(this.offset);
+        DebugDraw.addBox2D(center, this.halfSize, gameObject.transform.rotation);
     }
 
     @Override

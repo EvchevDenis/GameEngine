@@ -6,7 +6,7 @@ import org.joml.Vector2f;
 
 public class PillboxCollider extends Component {
     private transient CircleCollider bottomCircle = new CircleCollider();
-    private transient Box2DCollider box = new Box2DCollider();
+    private transient Box2DCollider box2DCollider = new Box2DCollider();
     private transient boolean resetFixtureNextFrame = false;
 
     public float width = 0.1f;
@@ -16,14 +16,14 @@ public class PillboxCollider extends Component {
     @Override
     public void start() {
         this.bottomCircle.gameObject = this.gameObject;
-        this.box.gameObject = this.gameObject;
+        this.box2DCollider.gameObject = this.gameObject;
         recalculateColliders();
     }
 
     @Override
     public void editorUpdate(float dt) {
-        bottomCircle.editorUpdate(dt);
-        box.editorUpdate(dt);
+        bottomCircle.editorUpdate(dt, this.gameObject);
+        box2DCollider.editorUpdate(dt, this.gameObject);
         recalculateColliders();
 
         if (resetFixtureNextFrame) {
@@ -70,8 +70,8 @@ public class PillboxCollider extends Component {
         float boxHeight = height - circleRadius;
         bottomCircle.setRadius(circleRadius);
         bottomCircle.setOffset(new Vector2f(offset).sub(0, (height - circleRadius * 2.0f) / 1.2f));
-        box.setHalfSize(new Vector2f(width - 0.05f, boxHeight - 0.03f));
-        box.setOffset(new Vector2f(offset).add(0, (height - boxHeight) / 2.0f));
+        box2DCollider.setHalfSize(new Vector2f(width - 0.05f, boxHeight - 0.03f));
+        box2DCollider.setOffset(new Vector2f(offset).add(0, (height - boxHeight) / 2.0f));
     }
 
     public CircleCollider getBottomCircle() {
@@ -79,6 +79,6 @@ public class PillboxCollider extends Component {
     }
 
     public Box2DCollider getBox() {
-        return box;
+        return box2DCollider;
     }
 }
