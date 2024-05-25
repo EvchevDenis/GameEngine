@@ -239,8 +239,16 @@ public class Scene {
 
         if (createLevelChooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
             try {
-                FileWriter writer = new FileWriter(createLevelChooser.getSelectedFile());
-                loadPath = createLevelChooser.getSelectedFile().getAbsolutePath();
+                File selectedFile = createLevelChooser.getSelectedFile();
+                String filePath = selectedFile.getAbsolutePath();
+
+                if (!filePath.toLowerCase().endsWith(".txt")) {
+                    filePath += ".txt";
+                    selectedFile = new File(filePath);
+                }
+
+                FileWriter writer = new FileWriter(selectedFile);
+                loadPath = selectedFile.getAbsolutePath();
                 writer.write("");
                 writer.close();
             } catch (IOException e) {
