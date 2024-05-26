@@ -314,13 +314,22 @@ public class Scene {
 
         if (saveChooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
             try {
-                FileWriter writer = new FileWriter(saveChooser.getSelectedFile());
+                File selectedFile = saveChooser.getSelectedFile();
+                String filePath = selectedFile.getAbsolutePath();
+
                 List<GameObject> objsToSerialize = new ArrayList<>();
                 for (GameObject obj : this.gameObjects) {
                     if (obj.doSerialization()) {
                         objsToSerialize.add(obj);
                     }
                 }
+
+                if (!filePath.toLowerCase().endsWith(".txt")) {
+                    filePath += ".txt";
+                    selectedFile = new File(filePath);
+                }
+
+                FileWriter writer = new FileWriter(selectedFile);
                 writer.write(gson.toJson(objsToSerialize));
                 writer.close();
             } catch (IOException e) {
