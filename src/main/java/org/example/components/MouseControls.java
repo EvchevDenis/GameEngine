@@ -21,7 +21,7 @@ import static org.lwjgl.glfw.GLFW.GLFW_MOUSE_BUTTON_LEFT;
 
 public class MouseControls extends Component {
     GameObject holdingObject = null;
-    private float debounceTime = 0.2f;
+    private final float debounceTime = 0.2f;
     private float debounce = debounceTime;
 
     private boolean boxSelectSet = false;

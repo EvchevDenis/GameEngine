@@ -13,10 +13,10 @@ public class BreakerAI extends Component {
 
     private transient GameObject player;
     private transient Rigidbody2D rb;
-    private transient float flySpeed = 0.6f;
-    private transient Vector2f velocity = new Vector2f();
-    private transient Vector2f acceleration = new Vector2f();
-    private transient Vector2f terminalVelocity = new Vector2f(0.5f, 0.5f);
+    private final transient float flySpeed = 0.6f;
+    private final transient Vector2f velocity = new Vector2f();
+    private final transient Vector2f acceleration = new Vector2f();
+    private final transient Vector2f terminalVelocity = new Vector2f(0.5f, 0.5f);
     private transient StateMachine stateMachine;
     private transient boolean shouldMoveUpDown = false;
 

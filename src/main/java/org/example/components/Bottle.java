@@ -9,11 +9,8 @@ import org.joml.Vector2f;
 import java.util.Objects;
 
 public class Bottle extends Component {
-    private transient Rigidbody2D rb;
-
     @Override
     public void start() {
-        this.rb = gameObject.getComponent(Rigidbody2D.class);
         Objects.requireNonNull(AssetPool.getSound("assets/sounds/powerup_appears.ogg")).play();
     }
 

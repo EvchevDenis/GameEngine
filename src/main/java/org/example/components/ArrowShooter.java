@@ -8,8 +8,8 @@ import org.joml.Vector2f;
 public class ArrowShooter extends Component {
 
     private StateMachine stateMachine;
-    private float shootingTime = 0.2f;
-    private float preparingTime = 0.8f;
+    private final float shootingTime = 0.2f;
+    private final float preparingTime = 0.8f;
     private boolean isShooting = false;
     private float animationTimer = 0.0f;
 

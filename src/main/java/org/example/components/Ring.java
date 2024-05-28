@@ -15,6 +15,7 @@ public class Ring extends Component {
     public void start() {
         this.rb = gameObject.getComponent(Rigidbody2D.class);
         Objects.requireNonNull(AssetPool.getSound("assets/sounds/powerup_appears.ogg")).play();
+        this.rb.setIsSensor();
     }
 
     @Override
@@ -22,7 +23,7 @@ public class Ring extends Component {
         PlayerController playerController = obj.getComponent(PlayerController.class);
         if (playerController != null) {
             contact.setEnabled(false);
-            playerController.powerup();
+            playerController.setInvisible();
             this.gameObject.destroy();
         }
     }

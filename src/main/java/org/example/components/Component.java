@@ -113,7 +113,7 @@ public abstract class Component {
                 }
             }
         } catch (IllegalAccessException e) {
-            logger.error("Error: File type cast.", e);
+            logger.error("Error: Component ImGui initialize.", e);
         }
     }
 

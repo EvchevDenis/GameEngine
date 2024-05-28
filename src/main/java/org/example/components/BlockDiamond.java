@@ -7,7 +7,7 @@ import java.util.Objects;
 
 public class BlockDiamond extends Component {
     private Vector2f topY;
-    private float coinSpeed = 1.4f;
+    private final float coinSpeed = 1.4f;
 
     @Override
     public void start() {

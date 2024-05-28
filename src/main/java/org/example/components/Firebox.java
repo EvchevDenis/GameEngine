@@ -6,14 +6,8 @@ import org.example.jade.Window;
 import org.joml.Vector2f;
 
 public class Firebox extends Component {
-    private transient StateMachine stateMachine;
     private float animationTime = 0.0f;
     private boolean isFiring = false;
-
-    @Override
-    public void start() {
-        this.stateMachine = gameObject.getComponent(StateMachine.class);
-    }
 
     @Override
     public void update(float dt) {

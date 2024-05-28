@@ -10,6 +10,8 @@ import org.example.utils.AssetPool;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.lang.reflect.Field;
+import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -104,6 +106,19 @@ public class GameObject {
 
     public void imgui() {
         for (Component c : components) {
+            Field[] fields = c.getClass().getDeclaredFields();
+            int transientCounter = 0;
+            for (Field field : fields) {
+                boolean isTransient = Modifier.isTransient(field.getModifiers());
+                if (isTransient) {
+                    transientCounter++;
+                }
+            }
+
+            if(transientCounter == fields.length) {
+                continue;
+            }
+
             if (ImGui.collapsingHeader(c.getClass().getSimpleName()))
                 c.imgui();
         }

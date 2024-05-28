@@ -114,7 +114,6 @@ public class Portal extends Component {
                         playerMin.y < max.y;
         }
 
-        System.out.println("HAHAHA");
         return false;
     }
 

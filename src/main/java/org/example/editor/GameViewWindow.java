@@ -25,19 +25,21 @@ public class GameViewWindow {
         MenuBar.imgui();
 
         ImGui.beginMenuBar();
-        if (ImGui.menuItem("|", "")) {
 
-        }
+        ImGui.menuItem("|", "");
+
         if (ImGui.menuItem("Play", "", isPlaying, !isPlaying)) {
             isPlaying = true;
             Objects.requireNonNull(AssetPool.getSound("assets/sounds/theme.ogg")).play();
             EventSystem.notify(null, new Event(EventType.GameEngineStartPlay));
         }
+
         if (ImGui.menuItem("Stop", "", !isPlaying, isPlaying)) {
             isPlaying = false;
             Objects.requireNonNull(AssetPool.getSound("assets/sounds/theme.ogg")).stop();
             EventSystem.notify(null, new Event(EventType.GameEngineStopPlay));
         }
+
         ImGui.endMenuBar();
 
         ImGui.setCursorPos(ImGui.getCursorPosX(), ImGui.getCursorPosY());

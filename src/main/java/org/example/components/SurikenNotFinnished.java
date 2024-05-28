@@ -7,7 +7,7 @@ import org.example.physics2d.colliders.Rigidbody2D;
 import org.jbox2d.dynamics.contacts.Contact;
 import org.joml.Vector2f;
 
-public class SurikenNf extends Component {
+public class SurikenNotFinnished extends Component {
     public transient boolean goingRight = false;
     private transient Rigidbody2D rb;
     private transient float surikenSpeed = 1.7f;

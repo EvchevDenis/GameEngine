@@ -251,7 +251,6 @@ public class Physics2D {
         PolygonShape shape = new PolygonShape();
         Vector2f halfSize = new Vector2f(boxCollider.getHalfSize()).mul(0.5f);
         Vector2f offset = boxCollider.getOffset();
-        Vector2f origin = new Vector2f(boxCollider.getOrigin());
         shape.setAsBox(halfSize.x, halfSize.y, new Vec2(offset.x, offset.y), 0);
 
         FixtureDef fixtureDef = new FixtureDef();

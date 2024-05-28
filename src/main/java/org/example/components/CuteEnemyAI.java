@@ -15,10 +15,10 @@ public class CuteEnemyAI extends Component {
     private transient GameObject player;
     private transient boolean goingRight = false;
     private transient Rigidbody2D rb;
-    private transient float walkSpeed = 0.6f;
-    private transient Vector2f velocity = new Vector2f();
-    private transient Vector2f acceleration = new Vector2f();
-    private transient Vector2f terminalVelocity = new Vector2f(2.1f, 3.1f);
+    private final transient float walkSpeed = 0.6f;
+    private final transient Vector2f velocity = new Vector2f();
+    private final transient Vector2f acceleration = new Vector2f();
+    private final transient Vector2f terminalVelocity = new Vector2f(2.1f, 3.1f);
     private transient boolean onGround = false;
     private final transient float enemyWidth = 0.25f;
     private transient boolean isDead = false;
@@ -147,6 +147,13 @@ public class CuteEnemyAI extends Component {
         onGround = Physics2D.checkOnGround(this.gameObject, innerPlayerWidth, yVal);
     }
 
+    public void beginCollision(GameObject obj, Contact contact, Vector2f contactNormal) {
+        if(obj.getComponent(Projectile.class) != null) {
+            stomp();
+            obj.getComponent(Projectile.class).disappear();
+        }
+    }
+
     @Override
     public void preSolve(GameObject obj, Contact contact, Vector2f contactNormal) {
         if (isDead) {
@@ -174,11 +181,6 @@ public class CuteEnemyAI extends Component {
 
         if (Math.abs(contactNormal.x) > 0.8f) {
             goingRight = contactNormal.x < 0;
-        }
-
-        if(obj.getComponent(Projectile.class) != null) {
-            stomp();
-            obj.getComponent(Projectile.class).disappear();
         }
     }
 
