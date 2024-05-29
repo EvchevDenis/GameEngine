@@ -109,6 +109,7 @@ public class SlimeAI extends Component {
         this.velocity.y += this.acceleration.y * dt;
         this.velocity.y = Math.max(Math.min(this.velocity.y, this.terminalVelocity.y), -terminalVelocity.y);
         this.rb.setVelocity(velocity);
+        this.rb.setAngularVelocity(0);
     }
 
     public void setToDefaultState() {
@@ -120,7 +121,7 @@ public class SlimeAI extends Component {
 
     public void checkOnGround() {
         float innerPlayerWidth = 0.25f * 0.7f;
-        float yVal = -0.7f;
+        float yVal = -0.14f;
         onGround = Physics2D.checkOnGround(this.gameObject, innerPlayerWidth, yVal);
     }
 
