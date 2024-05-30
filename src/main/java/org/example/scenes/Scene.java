@@ -116,7 +116,7 @@ public class Scene {
     public void editorUpdate(float dt) {
         this.camera.adjustProjection();
 
-        for (int i=0; i < gameObjects.size(); i++) {
+        for (int i = 0; i < gameObjects.size(); i++) {
             GameObject go = gameObjects.get(i);
             go.editorUpdate(dt);
 

@@ -1,5 +1,6 @@
 package org.example.jade;
 
+import org.example.components.SpriteRenderer;
 import org.example.observers.EventSystem;
 import org.example.observers.Observer;
 import org.example.observers.events.Event;
@@ -21,6 +22,7 @@ import org.lwjgl.openal.ALCCapabilities;
 import org.lwjgl.openal.ALCapabilities;
 import org.lwjgl.opengl.GL;
 
+import java.util.List;
 import java.util.Objects;
 
 import static org.example.utils.Settings.SCREEN_HEIGHT;
@@ -305,6 +307,15 @@ public class Window implements Observer {
     public void onNotify(GameObject object, Event event) {
         switch (event.type) {
             case GameEngineStartPlay:
+                List<GameObject> gameObjects = getScene().getGameObjects();
+                for (GameObject go : gameObjects) {
+                    SpriteRenderer spr = go.getComponent(SpriteRenderer.class);
+                    if(spr == null || spr.getColor().equals(new Vector4f(1, 1, 1, 1))) {
+                        continue;
+                    }
+                    spr.setColor(new Vector4f(1, 1, 1, 1));
+                }
+
                 this.runtimePlaying = true;
                 currentScene.saveLevel();
                 Window.changeScene(new LevelSceneInitializer(), false);

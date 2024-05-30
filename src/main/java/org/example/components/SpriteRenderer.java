@@ -47,7 +47,7 @@ public class SpriteRenderer extends Component {
             this.isDirty = true;
         }
         if (ImGui.menuItem("Original Color", "", false, true)) {
-            this.color = new Vector4f(1, 1, 1, 1);;
+            this.color = new Vector4f(1, 1, 1, 1);
         }
     }
 
