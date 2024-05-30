@@ -307,15 +307,6 @@ public class Window implements Observer {
     public void onNotify(GameObject object, Event event) {
         switch (event.type) {
             case GameEngineStartPlay:
-                List<GameObject> gameObjects = getScene().getGameObjects();
-                for (GameObject go : gameObjects) {
-                    SpriteRenderer spr = go.getComponent(SpriteRenderer.class);
-                    if(spr == null || spr.getColor().equals(new Vector4f(1, 1, 1, 1))) {
-                        continue;
-                    }
-                    spr.setColor(new Vector4f(1, 1, 1, 1));
-                }
-
                 this.runtimePlaying = true;
                 currentScene.saveLevel();
                 Window.changeScene(new LevelSceneInitializer(), false);

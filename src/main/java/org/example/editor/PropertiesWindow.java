@@ -85,6 +85,10 @@ public class PropertiesWindow {
                 null;
     }
 
+    public void clearOgColors() {
+        activeGameObjectsOgColor.clear();
+    }
+
     public List<GameObject> getActiveGameObjects() {
         return this.activeGameObjects;
     }

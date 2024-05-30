@@ -16,8 +16,7 @@ import org.joml.Vector4f;
 import java.util.HashSet;
 import java.util.Set;
 
-import static org.lwjgl.glfw.GLFW.GLFW_KEY_ESCAPE;
-import static org.lwjgl.glfw.GLFW.GLFW_MOUSE_BUTTON_LEFT;
+import static org.lwjgl.glfw.GLFW.*;
 
 public class MouseControls extends Component {
     GameObject holdingObject = null;
@@ -131,6 +130,7 @@ public class MouseControls extends Component {
             for (float objId : gameObjectIds) {
                 uniqueGameObjectIds.add((int)objId);
             }
+            System.out.println(uniqueGameObjectIds.size());
 
             for (Integer gameObjectId : uniqueGameObjectIds) {
                 GameObject pickedObj = Window.getScene().getGameObject(gameObjectId);

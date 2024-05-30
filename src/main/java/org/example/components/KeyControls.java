@@ -5,6 +5,7 @@ import org.example.jade.GameObject;
 import org.example.jade.KeyListener;
 import org.example.jade.Window;
 import org.example.utils.Settings;
+import org.joml.Vector4f;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,6 +46,18 @@ public class KeyControls extends Component {
                     copy.getComponent(StateMachine.class).refreshTextures();
                 }
             }
+        } else if (KeyListener.isKeyPressed(GLFW_KEY_LEFT_CONTROL) &&
+                KeyListener.keyBeginPress(GLFW_KEY_R)) {
+            for (GameObject go : activeGameObjects) {
+                if (go != null) {
+                    SpriteRenderer spr = go.getComponent(SpriteRenderer.class);
+                    if (spr == null || spr.getColor().equals(new Vector4f(1, 1, 1, 1))) {
+                        continue;
+                    }
+                    spr.setColor(new Vector4f(1, 1, 1, 1));
+                }
+            }
+            propertiesWindow.clearOgColors();
         } else if (KeyListener.keyBeginPress(GLFW_KEY_DELETE)) {
             for (GameObject go : activeGameObjects) {
                 go.destroy();
