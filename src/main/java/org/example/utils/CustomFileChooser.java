@@ -112,6 +112,13 @@ public class CustomFileChooser extends JFileChooser {
             return;
         }
 
+        if(getSelectedFile().getName().equals("keys.txt") || getSelectedFile().getName().equals("key.txt")
+                || getSelectedFile().getName().equals("key") || getSelectedFile().getName().equals("keys")
+                || getSelectedFile().getName().equals("config") || getSelectedFile().getName().equals("config.cfg")) {
+            JOptionPane.showMessageDialog(this, "Can't create or load file with such a name!", "Invalid file name", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
         super.approveSelection();
     }
 

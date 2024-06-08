@@ -126,11 +126,11 @@ public class MouseControls extends Component {
                     new Vector2i(screenStartX, screenStartY),
                     new Vector2i(screenEndX, screenEndY)
             );
+
             Set<Integer> uniqueGameObjectIds = new HashSet<>();
             for (float objId : gameObjectIds) {
                 uniqueGameObjectIds.add((int)objId);
             }
-            System.out.println(uniqueGameObjectIds.size());
 
             for (Integer gameObjectId : uniqueGameObjectIds) {
                 GameObject pickedObj = Window.getScene().getGameObject(gameObjectId);
